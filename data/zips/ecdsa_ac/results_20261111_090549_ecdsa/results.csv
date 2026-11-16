@@ -1,0 +1,7 @@
+family,parameter,constraints,replicate,compile_s,setup_s,witness_s,proof_s,verify_s,verify_passed,source_log,compile_inner_s,setup_inner_s,witness_inner_s,proof_inner_s,verify_inner_s,storage,visit_position,timestamp_utc,status
+"ECDSA secp256k1 verify (real)","5 limbs of 60 bits, 2-bit Strauss-Shamir",842212,0,97.306,31.593,6.309,17.785,0.507,True,raw_run.log,97.095,31.277,5.871,17.337,0.015,local,1,2026-11-11T03:38:59Z,"OK"
+"ECDSA secp256k1 verify (real)","5 limbs of 60 bits, 2-bit Strauss-Shamir",842212,1,116.906,41.839,7.800,21.157,0.400,True,raw_run.log,116.571,41.272,7.037,20.637,0.010,local,1,2026-11-11T03:42:15Z,"OK"
+"ECDSA secp256k1 verify (real)","5 limbs of 60 bits, 2-bit Strauss-Shamir",842212,2,96.785,32.741,6.410,16.725,0.393,True,raw_run.log,96.467,32.367,6.039,16.357,0.010,local,1,2026-11-11T03:44:56Z,"OK"
+"ECDSA secp256k1 verify (real)","5 limbs of 60 bits, 2-bit Strauss-Shamir",842212,3,95.513,32.452,5.306,16.135,0.415,True,raw_run.log,95.230,32.072,4.885,15.780,0.011,local,1,2026-11-11T03:47:34Z,"OK"
+"ECDSA secp256k1 verify (real)","5 limbs of 60 bits, 2-bit Strauss-Shamir",842212,4,97.097,33.093,6.397,16.864,0.391,True,raw_run.log,96.757,32.776,5.979,16.481,0.011,local,1,2026-11-11T03:50:15Z,"OK"
+"ECDSA secp256k1 verify (real)","5 limbs of 60 bits, 2-bit Strauss-Shamir",842212,5,93.078,31.937,5.254,17.164,0.418,True,raw_run.log,92.753,31.624,4.824,16.813,0.011,local,1,2026-11-11T03:52:50Z,"OK"

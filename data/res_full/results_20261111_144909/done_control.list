@@ -1,0 +1,12 @@
+poseidon_256 0
+rsa_1024_64 0
+poseidon_256 1
+rsa_1024_64 1
+rsa_1024_64 2
+poseidon_256 2
+poseidon_256 3
+rsa_1024_64 3
+poseidon_256 4
+rsa_1024_64 4
+poseidon_256 5
+rsa_1024_64 5

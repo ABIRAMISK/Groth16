@@ -1,0 +1,3230 @@
+Run folder: results_20261113_074010   mode=full REPS=5 WARMUP=1 CONTROL=0 ONLY=''
+battery status now (2 = on AC power, 1 = on battery): 
+mode: native   cpus: 2   Intel(R) Xeon(R) CPU @ 2.20GHz
+--- prepare merkle_8 (Merkle path d=8)
+    21:const u32 DEPTH = 8;
+        return-only variant: Number of constraints: 1961
+        discovered expected root: 7028720585430303887570002302278980460894336162115285260509585927530919019891
+    READY merkle_poseidon_8.zok
+    same value as in the old log: circuit and inputs are unchanged
+--- prepare merkle_16 (Merkle path d=16)
+    21:const u32 DEPTH = 16;
+        return-only variant: Number of constraints: 3921
+        discovered expected root: 16583262526602274908326067473715682454713032735441436283661755515998944202415
+    READY merkle_poseidon_16.zok
+    same value as in the old log: circuit and inputs are unchanged
+--- prepare merkle_32 (Merkle path d=32)
+    21:const u32 DEPTH = 32;
+        return-only variant: Number of constraints: 7841
+        discovered expected root: 20423030625995436285279479924046495790834672715859007564257505760766364087270
+    READY merkle_poseidon_32.zok
+    same value as in the old log: circuit and inputs are unchanged
+--- prepare poseidon_64 (Poseidon chain n=64)
+    18:const u32 ROUNDS = 64;
+        return-only variant: Number of constraints: 13633
+        discovered expected value: 12977603586150215176737170700933411671521376300841946324188299489382731017410
+    READY poseidon_chain_64.zok
+    same value as in the old log: circuit and inputs are unchanged
+--- prepare poseidon_256 (Poseidon chain n=256)
+    18:const u32 ROUNDS = 256;
+        return-only variant: Number of constraints: 54529
+        discovered expected value: 6625781724567783151019659453048597576755659058242974169987516206580194996227
+    READY poseidon_chain_256.zok
+    same value as in the old log: circuit and inputs are unchanged
+--- prepare poseidon_512 (Poseidon chain n=512)
+    18:const u32 ROUNDS = 512;
+        return-only variant: Number of constraints: 109057
+        discovered expected value: 5272706100675861572954429260300407996236585194829985617281545191578970831668
+    READY poseidon_chain_512.zok
+    same value as in the old log: circuit and inputs are unchanged
+--- prepare poseidon_1024 (Poseidon chain n=1024)
+    18:const u32 ROUNDS = 1024;
+        return-only variant: Number of constraints: 218113
+        discovered expected value: 12201746564020505244764431712123948954006357598207025395494458562047888457121
+    READY poseidon_chain_1024.zok
+    same value as in the old log: circuit and inputs are unchanged
+--- prepare rsa_256_1 (RSA accumulator b=256,r=1)
+    27:const u32 EXP_BITS = 256;
+    28:const u32 REPS = 1;
+    READY rsa_accumulator_256_1.zok
+--- prepare rsa_256_64 (RSA accumulator b=256,r=64)
+    27:const u32 EXP_BITS = 256;
+    28:const u32 REPS = 64;
+    READY rsa_accumulator_256_64.zok
+--- prepare rsa_1024_64 (RSA accumulator b=1024,r=64)
+    27:const u32 EXP_BITS = 1024;
+    28:const u32 REPS = 64;
+    READY rsa_accumulator_1024_64.zok
+--- prepare rsa1024real (RSA-1024 verify (real) e=65537 W=121 K=9)
+    READY rsa1024_verify.zok
+--- prepare rsa2048real (RSA-2048 verify (real) e=65537 W=121 K=17)
+    READY rsa2048_verify.zok
+--- prepare rsa3072real (RSA-3072 verify (real) e=65537 W=121 K=26)
+    READY rsa3072_verify.zok
+--- prepare rsa4096real (RSA-4096 verify (real) e=65537 W=121 K=34)
+    READY rsa4096_verify.zok
+--- prepare ecdsa_secp256k1 (ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir)
+    READY ecdsa_verify.zok
+--- prepare sha256_ecc (SHA-256 compression commitment circuit, ECC-derived input)
+    READY sha256_hash_circuit.zok
+--- prepare sha256_rsa (SHA-256 compression commitment circuit, RSA-derived input)
+    READY sha256_hash_circuit.zok
+--- prepare synth_full_100k (Synthetic full-width chain N=100000, x=x*x+1 chain)
+    READY synth_full_100k.zok
+--- prepare synth_bool_100k (Synthetic boolean chain N=50000, XOR/OR chain of bits)
+    READY synth_bool_100k.zok
+--- prepare synth_full_300k (Synthetic full-width chain N=300000, x=x*x+1 chain)
+    READY synth_full_300k.zok
+--- prepare synth_bool_300k (Synthetic boolean chain N=150000, XOR/OR chain of bits)
+    READY synth_bool_300k.zok
+--- prepare merkle_64c (Merkle path d=64)
+    21:const u32 DEPTH = 64;
+    READY merkle_poseidon_64.zok
+--- prepare rsa_256_8c (RSA accumulator b=256,r=8)
+    27:const u32 EXP_BITS = 256;
+    28:const u32 REPS = 8;
+    READY rsa_accumulator_256_8.zok
+--- prepare rsa_512_1c (RSA accumulator b=512,r=1)
+    27:const u32 EXP_BITS = 512;
+    28:const u32 REPS = 1;
+    READY rsa_accumulator_512_1.zok
+--- prepare rsa_512_8c (RSA accumulator b=512,r=8)
+    27:const u32 EXP_BITS = 512;
+    28:const u32 REPS = 8;
+    READY rsa_accumulator_512_8.zok
+--- prepare rsa_512_64c (RSA accumulator b=512,r=64)
+    27:const u32 EXP_BITS = 512;
+    28:const u32 REPS = 64;
+    READY rsa_accumulator_512_64.zok
+--- prepare rsa_1024_1c (RSA accumulator b=1024,r=1)
+    27:const u32 EXP_BITS = 1024;
+    28:const u32 REPS = 1;
+    READY rsa_accumulator_1024_1.zok
+--- prepare rsa_1024_8c (RSA accumulator b=1024,r=8)
+    27:const u32 EXP_BITS = 1024;
+    28:const u32 REPS = 8;
+    READY rsa_accumulator_1024_8.zok
+
+================ pass 0 of 5 (warm-up) [main] ================
+
+[main pass 0, circuit 1/28, elapsed 00:00:00] rsa4096real: RSA-4096 verify (real) e=65537 W=121 K=34
+    --- compile: host 102.568 s, inside 102.557 s, exit code 0
+        Compiling rsa4096_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 331848
+    --- setup: host 58.577 s, inside 58.565 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 4.901 s, inside 4.881 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 28.781 s, inside 28.769 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.025 s, inside 0.016 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa4096real replicate 0: constraints=331848 status=OK | host c/s/w/p/v = 102.568/58.577/4.901/28.781/0.025 | inside = 102.557/58.565/4.881/28.769/0.016
+
+[main pass 0, circuit 2/28, elapsed 00:03:15] rsa1024real: RSA-1024 verify (real) e=65537 W=121 K=9
+    --- compile: host 20.753 s, inside 20.742 s, exit code 0
+        Compiling rsa1024_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 76604
+    --- setup: host 15.718 s, inside 15.708 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.583 s, inside 0.572 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.831 s, inside 4.821 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa1024real replicate 0: constraints=76604 status=OK | host c/s/w/p/v = 20.753/15.718/0.583/4.831/0.023 | inside = 20.742/15.708/0.572/4.821/0.013
+
+[main pass 0, circuit 3/28, elapsed 00:03:57] rsa_1024_8c: RSA accumulator b=1024,r=8
+    --- compile: host 6.100 s, inside 6.088 s, exit code 0
+        Compiling rsa_accumulator_1024_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 38897
+>>> rsa_1024_8c replicate 0: constraints=38897 status=OK | host c/s/w/p/v = 6.100//// | inside = 6.088////
+
+[main pass 0, circuit 4/28, elapsed 00:04:03] poseidon_64: Poseidon chain n=64
+    --- compile: host 12.623 s, inside 12.609 s, exit code 0
+        Compiling poseidon_chain_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 13634
+    --- setup: host 4.067 s, inside 4.049 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.469 s, inside 0.452 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.445 s, inside 2.434 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_64 replicate 0: constraints=13634 status=OK | host c/s/w/p/v = 12.623/4.067/0.469/2.445/0.022 | inside = 12.609/4.049/0.452/2.434/0.012
+
+[main pass 0, circuit 5/28, elapsed 00:04:22] rsa_512_1c: RSA accumulator b=512,r=1
+    --- compile: host 0.306 s, inside 0.296 s, exit code 0
+        Compiling rsa_accumulator_512_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 5119
+>>> rsa_512_1c replicate 0: constraints=5119 status=OK | host c/s/w/p/v = 0.306//// | inside = 0.296////
+
+[main pass 0, circuit 6/28, elapsed 00:04:23] synth_bool_100k: Synthetic boolean chain N=50000, XOR/OR chain of bits
+    --- compile: host 9.233 s, inside 9.222 s, exit code 0
+        Compiling synth_bool_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100002
+    --- setup: host 19.163 s, inside 19.150 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.711 s, inside 1.697 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.680 s, inside 4.670 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.021 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_100k replicate 0: constraints=100002 status=OK | host c/s/w/p/v = 9.233/19.163/1.711/4.680/0.021 | inside = 9.222/19.150/1.697/4.670/0.011
+
+[main pass 0, circuit 7/28, elapsed 00:04:58] merkle_8: Merkle path d=8
+    --- compile: host 2.696 s, inside 2.684 s, exit code 0
+        Compiling merkle_poseidon_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 1962
+    --- setup: host 0.425 s, inside 0.415 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.052 s, inside 0.040 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.438 s, inside 0.428 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_8 replicate 0: constraints=1962 status=OK | host c/s/w/p/v = 2.696/0.425/0.052/0.438/0.022 | inside = 2.684/0.415/0.040/0.428/0.012
+
+[main pass 0, circuit 8/28, elapsed 00:05:02] rsa_512_8c: RSA accumulator b=512,r=8
+    --- compile: host 1.673 s, inside 1.660 s, exit code 0
+        Compiling rsa_accumulator_512_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 19441
+>>> rsa_512_8c replicate 0: constraints=19441 status=OK | host c/s/w/p/v = 1.673//// | inside = 1.660////
+
+[main pass 0, circuit 9/28, elapsed 00:05:03] merkle_32: Merkle path d=32
+    --- compile: host 9.849 s, inside 9.835 s, exit code 0
+        Compiling merkle_poseidon_32.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 7842
+    --- setup: host 1.646 s, inside 1.632 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.152 s, inside 0.140 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.386 s, inside 1.376 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_32 replicate 0: constraints=7842 status=OK | host c/s/w/p/v = 9.849/1.646/0.152/1.386/0.022 | inside = 9.835/1.632/0.140/1.376/0.012
+
+[main pass 0, circuit 10/28, elapsed 00:05:16] sha256_ecc: SHA-256 compression commitment circuit, ECC-derived input
+    --- compile: host 1.725 s, inside 1.714 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 5.405 s, inside 5.392 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.137 s, inside 1.123 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.023 s, inside 2.012 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_ecc replicate 0: constraints=27214 status=OK | host c/s/w/p/v = 1.725/5.405/1.137/2.023/0.022 | inside = 1.714/5.392/1.123/2.012/0.013
+
+[main pass 0, circuit 11/28, elapsed 00:05:27] merkle_16: Merkle path d=16
+    --- compile: host 4.219 s, inside 4.209 s, exit code 0
+        Compiling merkle_poseidon_16.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 3922
+    --- setup: host 0.776 s, inside 0.766 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.084 s, inside 0.073 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.802 s, inside 0.791 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.024 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_16 replicate 0: constraints=3922 status=OK | host c/s/w/p/v = 4.219/0.776/0.084/0.802/0.024 | inside = 4.209/0.766/0.073/0.791/0.013
+
+[main pass 0, circuit 12/28, elapsed 00:05:33] rsa_512_64c: RSA accumulator b=512,r=64
+    --- compile: host 14.032 s, inside 14.022 s, exit code 0
+        Compiling rsa_accumulator_512_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 134017
+>>> rsa_512_64c replicate 0: constraints=134017 status=OK | host c/s/w/p/v = 14.032//// | inside = 14.022////
+
+[main pass 0, circuit 13/28, elapsed 00:05:47] synth_bool_300k: Synthetic boolean chain N=150000, XOR/OR chain of bits
+    --- compile: host 31.721 s, inside 31.710 s, exit code 0
+        Compiling synth_bool_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300002
+    --- setup: host 53.555 s, inside 53.535 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 4.081 s, inside 4.057 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 20.483 s, inside 20.473 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.021 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_300k replicate 0: constraints=300002 status=OK | host c/s/w/p/v = 31.721/53.555/4.081/20.483/0.021 | inside = 31.710/53.535/4.057/20.473/0.012
+
+[main pass 0, circuit 14/28, elapsed 00:07:37] rsa_1024_1c: RSA accumulator b=1024,r=1
+    --- compile: host 0.849 s, inside 0.839 s, exit code 0
+        Compiling rsa_accumulator_1024_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 10239
+>>> rsa_1024_1c replicate 0: constraints=10239 status=OK | host c/s/w/p/v = 0.849//// | inside = 0.839////
+
+[main pass 0, circuit 15/28, elapsed 00:07:38] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 164.023 s, inside 164.006 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 129.010 s, inside 128.996 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 9.543 s, inside 9.500 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 45.724 s, inside 45.713 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.024 s, inside 0.014 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 0: constraints=842212 status=OK | host c/s/w/p/v = 164.023/129.010/9.543/45.724/0.024 | inside = 164.006/128.996/9.500/45.713/0.014
+
+[main pass 0, circuit 16/28, elapsed 00:13:26] rsa3072real: RSA-3072 verify (real) e=65537 W=121 K=26
+    --- compile: host 81.205 s, inside 81.192 s, exit code 0
+        Compiling rsa3072_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 244870
+    --- setup: host 41.464 s, inside 41.452 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.608 s, inside 2.594 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 17.242 s, inside 17.232 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.026 s, inside 0.016 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa3072real replicate 0: constraints=244870 status=OK | host c/s/w/p/v = 81.205/41.464/2.608/17.242/0.026 | inside = 81.192/41.452/2.594/17.232/0.016
+
+[main pass 0, circuit 17/28, elapsed 00:15:49] synth_full_100k: Synthetic full-width chain N=100000, x=x*x+1 chain
+    --- compile: host 5.968 s, inside 5.958 s, exit code 0
+        Compiling synth_full_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100001
+    --- setup: host 18.418 s, inside 18.407 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.713 s, inside 0.701 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 17.220 s, inside 17.210 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_100k replicate 0: constraints=100001 status=OK | host c/s/w/p/v = 5.968/18.418/0.713/17.220/0.022 | inside = 5.958/18.407/0.701/17.210/0.012
+
+[main pass 0, circuit 18/28, elapsed 00:16:31] poseidon_1024: Poseidon chain n=1024
+    --- compile: host 274.514 s, inside 274.504 s, exit code 0
+        Compiling poseidon_chain_1024.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 218114
+    --- setup: host 39.588 s, inside 39.578 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.892 s, inside 3.875 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 38.421 s, inside 38.411 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_1024 replicate 0: constraints=218114 status=OK | host c/s/w/p/v = 274.514/39.588/3.892/38.421/0.023 | inside = 274.504/39.578/3.875/38.411/0.012
+
+[main pass 0, circuit 19/28, elapsed 00:22:28] rsa_256_1: RSA accumulator b=256,r=1
+    --- compile: host 0.137 s, inside 0.126 s, exit code 0
+        Compiling rsa_accumulator_256_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 2559
+    --- setup: host 0.646 s, inside 0.633 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.070 s, inside 0.045 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.274 s, inside 0.260 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.032 s, inside 0.018 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_1 replicate 0: constraints=2559 status=OK | host c/s/w/p/v = 0.137/0.646/0.070/0.274/0.032 | inside = 0.126/0.633/0.045/0.260/0.018
+
+[main pass 0, circuit 20/28, elapsed 00:22:29] rsa_256_64: RSA accumulator b=256,r=64
+    --- compile: host 6.249 s, inside 6.230 s, exit code 0
+        Compiling rsa_accumulator_256_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 66945
+    --- setup: host 11.533 s, inside 11.522 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.764 s, inside 0.749 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.043 s, inside 5.031 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.021 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_64 replicate 0: constraints=66945 status=OK | host c/s/w/p/v = 6.249/11.533/0.764/5.043/0.021 | inside = 6.230/11.522/0.749/5.031/0.011
+
+[main pass 0, circuit 21/28, elapsed 00:22:53] sha256_rsa: SHA-256 compression commitment circuit, RSA-derived input
+    --- compile: host 1.706 s, inside 1.696 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 3.130 s, inside 3.117 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.659 s, inside 0.647 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.048 s, inside 2.038 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_rsa replicate 0: constraints=27214 status=OK | host c/s/w/p/v = 1.706/3.130/0.659/2.048/0.023 | inside = 1.696/3.117/0.647/2.038/0.013
+
+[main pass 0, circuit 22/28, elapsed 00:23:01] rsa_256_8c: RSA accumulator b=256,r=8
+    --- compile: host 0.606 s, inside 0.594 s, exit code 0
+        Compiling rsa_accumulator_256_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 9713
+>>> rsa_256_8c replicate 0: constraints=9713 status=OK | host c/s/w/p/v = 0.606//// | inside = 0.594////
+
+[main pass 0, circuit 23/28, elapsed 00:23:01] merkle_64c: Merkle path d=64
+    --- compile: host 17.836 s, inside 17.822 s, exit code 0
+        Compiling merkle_poseidon_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 15682
+>>> merkle_64c replicate 0: constraints=15682 status=OK | host c/s/w/p/v = 17.836//// | inside = 17.822////
+
+[main pass 0, circuit 24/28, elapsed 00:23:19] rsa2048real: RSA-2048 verify (real) e=65537 W=121 K=17
+    --- compile: host 45.360 s, inside 45.348 s, exit code 0
+        Compiling rsa2048_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 153484
+    --- setup: host 29.648 s, inside 29.636 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.954 s, inside 1.936 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 10.447 s, inside 10.435 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.035 s, inside 0.021 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa2048real replicate 0: constraints=153484 status=OK | host c/s/w/p/v = 45.360/29.648/1.954/10.447/0.035 | inside = 45.348/29.636/1.936/10.435/0.021
+
+[main pass 0, circuit 25/28, elapsed 00:24:47] rsa_1024_64: RSA accumulator b=1024,r=64
+    --- compile: host 35.736 s, inside 35.719 s, exit code 0
+        Compiling rsa_accumulator_1024_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 268161
+    --- setup: host 46.032 s, inside 46.018 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.707 s, inside 1.689 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 18.439 s, inside 18.429 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_1024_64 replicate 0: constraints=268161 status=OK | host c/s/w/p/v = 35.736/46.032/1.707/18.439/0.022 | inside = 35.719/46.018/1.689/18.429/0.012
+
+[main pass 0, circuit 26/28, elapsed 00:26:29] poseidon_512: Poseidon chain n=512
+    --- compile: host 116.233 s, inside 116.218 s, exit code 0
+        Compiling poseidon_chain_512.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 109058
+    --- setup: host 26.760 s, inside 26.745 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.911 s, inside 1.899 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 20.587 s, inside 20.577 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_512 replicate 0: constraints=109058 status=OK | host c/s/w/p/v = 116.233/26.760/1.911/20.587/0.022 | inside = 116.218/26.745/1.899/20.577/0.012
+
+[main pass 0, circuit 27/28, elapsed 00:29:15] synth_full_300k: Synthetic full-width chain N=300000, x=x*x+1 chain
+    --- compile: host 23.197 s, inside 23.186 s, exit code 0
+        Compiling synth_full_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300001
+    --- setup: host 51.351 s, inside 51.329 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.837 s, inside 3.819 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 49.482 s, inside 49.471 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_300k replicate 0: constraints=300001 status=OK | host c/s/w/p/v = 23.197/51.351/3.837/49.482/0.022 | inside = 23.186/51.329/3.819/49.471/0.012
+
+[main pass 0, circuit 28/28, elapsed 00:31:23] poseidon_256: Poseidon chain n=256
+    --- compile: host 53.174 s, inside 53.163 s, exit code 0
+        Compiling poseidon_chain_256.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 54530
+    --- setup: host 11.022 s, inside 11.010 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.941 s, inside 0.930 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 11.472 s, inside 11.454 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.051 s, inside 0.031 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_256 replicate 0: constraints=54530 status=OK | host c/s/w/p/v = 53.174/11.022/0.941/11.472/0.051 | inside = 53.163/11.010/0.930/11.454/0.031
+
+================ pass 1 of 5 [main] ================
+
+[main pass 1, circuit 1/28, elapsed 00:32:40] rsa_1024_64: RSA accumulator b=1024,r=64
+    --- compile: host 35.841 s, inside 35.828 s, exit code 0
+        Compiling rsa_accumulator_1024_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 268161
+    --- setup: host 44.911 s, inside 44.898 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.713 s, inside 1.702 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 18.233 s, inside 18.220 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.021 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_1024_64 replicate 1: constraints=268161 status=OK | host c/s/w/p/v = 35.841/44.911/1.713/18.233/0.021 | inside = 35.828/44.898/1.702/18.220/0.012
+
+[main pass 1, circuit 2/28, elapsed 00:34:21] synth_bool_100k: Synthetic boolean chain N=50000, XOR/OR chain of bits
+    --- compile: host 11.454 s, inside 11.444 s, exit code 0
+        Compiling synth_bool_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100002
+    --- setup: host 19.545 s, inside 19.535 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.144 s, inside 1.133 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.670 s, inside 4.660 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_100k replicate 1: constraints=100002 status=OK | host c/s/w/p/v = 11.454/19.545/1.144/4.670/0.022 | inside = 11.444/19.535/1.133/4.660/0.013
+
+[main pass 1, circuit 3/28, elapsed 00:34:57] rsa4096real: RSA-4096 verify (real) e=65537 W=121 K=34
+    --- compile: host 113.293 s, inside 113.283 s, exit code 0
+        Compiling rsa4096_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 331848
+    --- setup: host 58.423 s, inside 58.413 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 4.881 s, inside 4.867 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 29.500 s, inside 29.486 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.039 s, inside 0.025 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa4096real replicate 1: constraints=331848 status=OK | host c/s/w/p/v = 113.293/58.423/4.881/29.500/0.039 | inside = 113.283/58.413/4.867/29.486/0.025
+
+[main pass 1, circuit 4/28, elapsed 00:38:24] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 179.544 s, inside 179.531 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 129.145 s, inside 129.134 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 7.644 s, inside 7.610 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 46.193 s, inside 46.181 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 1: constraints=842212 status=OK | host c/s/w/p/v = 179.544/129.145/7.644/46.193/0.023 | inside = 179.531/129.134/7.610/46.181/0.013
+
+[main pass 1, circuit 5/28, elapsed 00:44:26] rsa_256_1: RSA accumulator b=256,r=1
+    --- compile: host 0.136 s, inside 0.126 s, exit code 0
+        Compiling rsa_accumulator_256_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 2559
+    --- setup: host 0.520 s, inside 0.510 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.035 s, inside 0.023 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.189 s, inside 0.180 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_1 replicate 1: constraints=2559 status=OK | host c/s/w/p/v = 0.136/0.520/0.035/0.189/0.022 | inside = 0.126/0.510/0.023/0.180/0.012
+
+[main pass 1, circuit 6/28, elapsed 00:44:27] poseidon_64: Poseidon chain n=64
+    --- compile: host 14.600 s, inside 14.590 s, exit code 0
+        Compiling poseidon_chain_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 13634
+    --- setup: host 2.414 s, inside 2.401 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.248 s, inside 0.236 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.343 s, inside 2.333 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_64 replicate 1: constraints=13634 status=OK | host c/s/w/p/v = 14.600/2.414/0.248/2.343/0.022 | inside = 14.590/2.401/0.236/2.333/0.012
+
+[main pass 1, circuit 7/28, elapsed 00:44:47] merkle_16: Merkle path d=16
+    --- compile: host 6.646 s, inside 6.634 s, exit code 0
+        Compiling merkle_poseidon_16.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 3922
+    --- setup: host 1.371 s, inside 1.357 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.158 s, inside 0.140 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.889 s, inside 0.876 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_16 replicate 1: constraints=3922 status=OK | host c/s/w/p/v = 6.646/1.371/0.158/0.889/0.022 | inside = 6.634/1.357/0.140/0.876/0.012
+
+[main pass 1, circuit 8/28, elapsed 00:44:56] poseidon_256: Poseidon chain n=256
+    --- compile: host 53.115 s, inside 53.100 s, exit code 0
+        Compiling poseidon_chain_256.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 54530
+    --- setup: host 8.626 s, inside 8.615 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.727 s, inside 1.713 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 10.878 s, inside 10.867 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_256 replicate 1: constraints=54530 status=OK | host c/s/w/p/v = 53.115/8.626/1.727/10.878/0.022 | inside = 53.100/8.615/1.713/10.867/0.012
+
+[main pass 1, circuit 9/28, elapsed 00:46:11] poseidon_512: Poseidon chain n=512
+    --- compile: host 115.899 s, inside 115.886 s, exit code 0
+        Compiling poseidon_chain_512.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 109058
+    --- setup: host 20.807 s, inside 20.795 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.912 s, inside 1.896 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 20.021 s, inside 20.011 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_512 replicate 1: constraints=109058 status=OK | host c/s/w/p/v = 115.899/20.807/1.912/20.021/0.022 | inside = 115.886/20.795/1.896/20.011/0.012
+
+[main pass 1, circuit 10/28, elapsed 00:48:50] merkle_32: Merkle path d=32
+    --- compile: host 19.150 s, inside 19.123 s, exit code 0
+        Compiling merkle_poseidon_32.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 7842
+    --- setup: host 2.939 s, inside 2.915 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.152 s, inside 0.140 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.402 s, inside 1.392 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.031 s, inside 0.017 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_32 replicate 1: constraints=7842 status=OK | host c/s/w/p/v = 19.150/2.939/0.152/1.402/0.031 | inside = 19.123/2.915/0.140/1.392/0.017
+
+[main pass 1, circuit 11/28, elapsed 00:49:14] rsa_512_1c: RSA accumulator b=512,r=1
+    --- compile: host 0.321 s, inside 0.312 s, exit code 0
+        Compiling rsa_accumulator_512_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 5119
+>>> rsa_512_1c replicate 1: constraints=5119 status=OK | host c/s/w/p/v = 0.321//// | inside = 0.312////
+
+[main pass 1, circuit 12/28, elapsed 00:49:14] merkle_64c: Merkle path d=64
+    --- compile: host 18.398 s, inside 18.388 s, exit code 0
+        Compiling merkle_poseidon_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 15682
+>>> merkle_64c replicate 1: constraints=15682 status=OK | host c/s/w/p/v = 18.398//// | inside = 18.388////
+
+[main pass 1, circuit 13/28, elapsed 00:49:32] rsa_256_8c: RSA accumulator b=256,r=8
+    --- compile: host 0.586 s, inside 0.575 s, exit code 0
+        Compiling rsa_accumulator_256_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 9713
+>>> rsa_256_8c replicate 1: constraints=9713 status=OK | host c/s/w/p/v = 0.586//// | inside = 0.575////
+
+[main pass 1, circuit 14/28, elapsed 00:49:33] synth_bool_300k: Synthetic boolean chain N=150000, XOR/OR chain of bits
+    --- compile: host 34.540 s, inside 34.530 s, exit code 0
+        Compiling synth_bool_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300002
+    --- setup: host 55.003 s, inside 54.993 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.464 s, inside 3.451 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 20.445 s, inside 20.435 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.021 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_300k replicate 1: constraints=300002 status=OK | host c/s/w/p/v = 34.540/55.003/3.464/20.445/0.021 | inside = 34.530/54.993/3.451/20.435/0.012
+
+[main pass 1, circuit 15/28, elapsed 00:51:27] rsa_256_64: RSA accumulator b=256,r=64
+    --- compile: host 4.491 s, inside 4.480 s, exit code 0
+        Compiling rsa_accumulator_256_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 66945
+    --- setup: host 12.610 s, inside 12.599 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.446 s, inside 0.433 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 3.737 s, inside 3.725 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.035 s, inside 0.021 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_64 replicate 1: constraints=66945 status=OK | host c/s/w/p/v = 4.491/12.610/0.446/3.737/0.035 | inside = 4.480/12.599/0.433/3.725/0.021
+
+[main pass 1, circuit 16/28, elapsed 00:51:48] rsa3072real: RSA-3072 verify (real) e=65537 W=121 K=26
+    --- compile: host 75.513 s, inside 75.499 s, exit code 0
+        Compiling rsa3072_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 244870
+    --- setup: host 41.059 s, inside 41.048 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.671 s, inside 2.658 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 17.199 s, inside 17.189 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.026 s, inside 0.017 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa3072real replicate 1: constraints=244870 status=OK | host c/s/w/p/v = 75.513/41.059/2.671/17.199/0.026 | inside = 75.499/41.048/2.658/17.189/0.017
+
+[main pass 1, circuit 17/28, elapsed 00:54:05] sha256_rsa: SHA-256 compression commitment circuit, RSA-derived input
+    --- compile: host 1.810 s, inside 1.800 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 3.131 s, inside 3.121 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.617 s, inside 0.604 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.716 s, inside 2.703 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.032 s, inside 0.019 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_rsa replicate 1: constraints=27214 status=OK | host c/s/w/p/v = 1.810/3.131/0.617/2.716/0.032 | inside = 1.800/3.121/0.604/2.703/0.019
+
+[main pass 1, circuit 18/28, elapsed 00:54:13] rsa_1024_1c: RSA accumulator b=1024,r=1
+    --- compile: host 1.472 s, inside 1.459 s, exit code 0
+        Compiling rsa_accumulator_1024_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 10239
+>>> rsa_1024_1c replicate 1: constraints=10239 status=OK | host c/s/w/p/v = 1.472//// | inside = 1.459////
+
+[main pass 1, circuit 19/28, elapsed 00:54:15] synth_full_300k: Synthetic full-width chain N=300000, x=x*x+1 chain
+    --- compile: host 22.822 s, inside 22.810 s, exit code 0
+        Compiling synth_full_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300001
+    --- setup: host 52.883 s, inside 52.871 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.290 s, inside 3.275 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 48.356 s, inside 48.346 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_300k replicate 1: constraints=300001 status=OK | host c/s/w/p/v = 22.822/52.883/3.290/48.356/0.022 | inside = 22.810/52.871/3.275/48.346/0.012
+
+[main pass 1, circuit 20/28, elapsed 00:56:22] merkle_8: Merkle path d=8
+    --- compile: host 4.185 s, inside 4.173 s, exit code 0
+        Compiling merkle_poseidon_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 1962
+    --- setup: host 0.774 s, inside 0.761 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.085 s, inside 0.070 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.807 s, inside 0.794 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.033 s, inside 0.020 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_8 replicate 1: constraints=1962 status=OK | host c/s/w/p/v = 4.185/0.774/0.085/0.807/0.033 | inside = 4.173/0.761/0.070/0.794/0.020
+
+[main pass 1, circuit 21/28, elapsed 00:56:28] rsa1024real: RSA-1024 verify (real) e=65537 W=121 K=9
+    --- compile: host 21.873 s, inside 21.861 s, exit code 0
+        Compiling rsa1024_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 76604
+    --- setup: host 15.920 s, inside 15.910 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.586 s, inside 0.573 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.321 s, inside 5.311 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa1024real replicate 1: constraints=76604 status=OK | host c/s/w/p/v = 21.873/15.920/0.586/5.321/0.023 | inside = 21.861/15.910/0.573/5.311/0.013
+
+[main pass 1, circuit 22/28, elapsed 00:57:12] rsa_512_8c: RSA accumulator b=512,r=8
+    --- compile: host 1.425 s, inside 1.415 s, exit code 0
+        Compiling rsa_accumulator_512_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 19441
+>>> rsa_512_8c replicate 1: constraints=19441 status=OK | host c/s/w/p/v = 1.425//// | inside = 1.415////
+
+[main pass 1, circuit 23/28, elapsed 00:57:13] synth_full_100k: Synthetic full-width chain N=100000, x=x*x+1 chain
+    --- compile: host 8.834 s, inside 8.822 s, exit code 0
+        Compiling synth_full_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100001
+    --- setup: host 18.027 s, inside 18.013 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.259 s, inside 1.242 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 15.825 s, inside 15.812 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.032 s, inside 0.019 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_100k replicate 1: constraints=100001 status=OK | host c/s/w/p/v = 8.834/18.027/1.259/15.825/0.032 | inside = 8.822/18.013/1.242/15.812/0.019
+
+[main pass 1, circuit 24/28, elapsed 00:57:58] rsa_512_64c: RSA accumulator b=512,r=64
+    --- compile: host 11.077 s, inside 11.065 s, exit code 0
+        Compiling rsa_accumulator_512_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 134017
+>>> rsa_512_64c replicate 1: constraints=134017 status=OK | host c/s/w/p/v = 11.077//// | inside = 11.065////
+
+[main pass 1, circuit 25/28, elapsed 00:58:09] rsa2048real: RSA-2048 verify (real) e=65537 W=121 K=17
+    --- compile: host 48.229 s, inside 48.214 s, exit code 0
+        Compiling rsa2048_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 153484
+    --- setup: host 42.175 s, inside 42.164 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.439 s, inside 1.427 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 14.936 s, inside 14.924 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.024 s, inside 0.014 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa2048real replicate 1: constraints=153484 status=OK | host c/s/w/p/v = 48.229/42.175/1.439/14.936/0.024 | inside = 48.214/42.164/1.427/14.924/0.014
+
+[main pass 1, circuit 26/28, elapsed 00:59:56] poseidon_1024: Poseidon chain n=1024
+    --- compile: host 270.639 s, inside 270.625 s, exit code 0
+        Compiling poseidon_chain_1024.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 218114
+    --- setup: host 42.342 s, inside 42.329 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.869 s, inside 3.853 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 38.556 s, inside 38.545 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_1024 replicate 1: constraints=218114 status=OK | host c/s/w/p/v = 270.639/42.342/3.869/38.556/0.023 | inside = 270.625/42.329/3.853/38.545/0.012
+
+[main pass 1, circuit 27/28, elapsed 01:05:51] sha256_ecc: SHA-256 compression commitment circuit, ECC-derived input
+    --- compile: host 1.821 s, inside 1.811 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 3.710 s, inside 3.700 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.655 s, inside 0.643 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 3.719 s, inside 3.706 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.035 s, inside 0.020 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_ecc replicate 1: constraints=27214 status=OK | host c/s/w/p/v = 1.821/3.710/0.655/3.719/0.035 | inside = 1.811/3.700/0.643/3.706/0.020
+
+[main pass 1, circuit 28/28, elapsed 01:06:01] rsa_1024_8c: RSA accumulator b=1024,r=8
+    --- compile: host 4.847 s, inside 4.834 s, exit code 0
+        Compiling rsa_accumulator_1024_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 38897
+>>> rsa_1024_8c replicate 1: constraints=38897 status=OK | host c/s/w/p/v = 4.847//// | inside = 4.834////
+
+================ pass 2 of 5 [main] ================
+
+[main pass 2, circuit 1/28, elapsed 01:06:06] sha256_rsa: SHA-256 compression commitment circuit, RSA-derived input
+    --- compile: host 1.812 s, inside 1.802 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 3.156 s, inside 3.144 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.617 s, inside 0.605 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.525 s, inside 2.511 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.032 s, inside 0.019 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_rsa replicate 2: constraints=27214 status=OK | host c/s/w/p/v = 1.812/3.156/0.617/2.525/0.032 | inside = 1.802/3.144/0.605/2.511/0.019
+
+[main pass 2, circuit 2/28, elapsed 01:06:15] merkle_64c: Merkle path d=64
+    --- compile: host 18.395 s, inside 18.381 s, exit code 0
+        Compiling merkle_poseidon_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 15682
+>>> merkle_64c replicate 2: constraints=15682 status=OK | host c/s/w/p/v = 18.395//// | inside = 18.381////
+
+[main pass 2, circuit 3/28, elapsed 01:06:33] rsa3072real: RSA-3072 verify (real) e=65537 W=121 K=26
+    --- compile: host 79.362 s, inside 79.350 s, exit code 0
+        Compiling rsa3072_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 244870
+    --- setup: host 41.496 s, inside 41.485 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.400 s, inside 3.384 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 15.216 s, inside 15.203 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.036 s, inside 0.022 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa3072real replicate 2: constraints=244870 status=OK | host c/s/w/p/v = 79.362/41.496/3.400/15.216/0.036 | inside = 79.350/41.485/3.384/15.203/0.022
+
+[main pass 2, circuit 4/28, elapsed 01:08:53] synth_full_100k: Synthetic full-width chain N=100000, x=x*x+1 chain
+    --- compile: host 7.855 s, inside 7.843 s, exit code 0
+        Compiling synth_full_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100001
+    --- setup: host 19.333 s, inside 19.323 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.711 s, inside 0.699 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 27.705 s, inside 27.693 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_100k replicate 2: constraints=100001 status=OK | host c/s/w/p/v = 7.855/19.333/0.711/27.705/0.022 | inside = 7.843/19.323/0.699/27.693/0.012
+
+[main pass 2, circuit 5/28, elapsed 01:09:48] rsa_512_1c: RSA accumulator b=512,r=1
+    --- compile: host 0.338 s, inside 0.328 s, exit code 0
+        Compiling rsa_accumulator_512_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 5119
+>>> rsa_512_1c replicate 2: constraints=5119 status=OK | host c/s/w/p/v = 0.338//// | inside = 0.328////
+
+[main pass 2, circuit 6/28, elapsed 01:09:49] sha256_ecc: SHA-256 compression commitment circuit, ECC-derived input
+    --- compile: host 2.019 s, inside 2.009 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 3.159 s, inside 3.148 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.615 s, inside 0.604 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.071 s, inside 2.061 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_ecc replicate 2: constraints=27214 status=OK | host c/s/w/p/v = 2.019/3.159/0.615/2.071/0.023 | inside = 2.009/3.148/0.604/2.061/0.013
+
+[main pass 2, circuit 7/28, elapsed 01:09:57] rsa4096real: RSA-4096 verify (real) e=65537 W=121 K=34
+    --- compile: host 112.001 s, inside 111.988 s, exit code 0
+        Compiling rsa4096_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 331848
+    --- setup: host 58.881 s, inside 58.869 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 4.375 s, inside 4.361 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 30.085 s, inside 30.073 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.037 s, inside 0.024 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa4096real replicate 2: constraints=331848 status=OK | host c/s/w/p/v = 112.001/58.881/4.375/30.085/0.037 | inside = 111.988/58.869/4.361/30.073/0.024
+
+[main pass 2, circuit 8/28, elapsed 01:13:22] rsa2048real: RSA-2048 verify (real) e=65537 W=121 K=17
+    --- compile: host 44.433 s, inside 44.421 s, exit code 0
+        Compiling rsa2048_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 153484
+    --- setup: host 30.496 s, inside 30.485 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.352 s, inside 1.339 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 12.663 s, inside 12.652 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.034 s, inside 0.021 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa2048real replicate 2: constraints=153484 status=OK | host c/s/w/p/v = 44.433/30.496/1.352/12.663/0.034 | inside = 44.421/30.485/1.339/12.652/0.021
+
+[main pass 2, circuit 9/28, elapsed 01:14:51] rsa_512_64c: RSA accumulator b=512,r=64
+    --- compile: host 11.419 s, inside 11.408 s, exit code 0
+        Compiling rsa_accumulator_512_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 134017
+>>> rsa_512_64c replicate 2: constraints=134017 status=OK | host c/s/w/p/v = 11.419//// | inside = 11.408////
+
+[main pass 2, circuit 10/28, elapsed 01:15:03] poseidon_512: Poseidon chain n=512
+    --- compile: host 116.236 s, inside 116.224 s, exit code 0
+        Compiling poseidon_chain_512.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 109058
+    --- setup: host 20.543 s, inside 20.530 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.673 s, inside 2.657 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 19.326 s, inside 19.316 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_512 replicate 2: constraints=109058 status=OK | host c/s/w/p/v = 116.236/20.543/2.673/19.326/0.022 | inside = 116.224/20.530/2.657/19.316/0.013
+
+[main pass 2, circuit 11/28, elapsed 01:17:42] rsa_1024_8c: RSA accumulator b=1024,r=8
+    --- compile: host 6.352 s, inside 6.341 s, exit code 0
+        Compiling rsa_accumulator_1024_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 38897
+>>> rsa_1024_8c replicate 2: constraints=38897 status=OK | host c/s/w/p/v = 6.352//// | inside = 6.341////
+
+[main pass 2, circuit 12/28, elapsed 01:17:48] merkle_32: Merkle path d=32
+    --- compile: host 8.916 s, inside 8.905 s, exit code 0
+        Compiling merkle_poseidon_32.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 7842
+    --- setup: host 1.445 s, inside 1.435 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.147 s, inside 0.135 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.547 s, inside 1.536 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.031 s, inside 0.018 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_32 replicate 2: constraints=7842 status=OK | host c/s/w/p/v = 8.916/1.445/0.147/1.547/0.031 | inside = 8.905/1.435/0.135/1.536/0.018
+
+[main pass 2, circuit 13/28, elapsed 01:18:00] rsa_256_1: RSA accumulator b=256,r=1
+    --- compile: host 0.238 s, inside 0.223 s, exit code 0
+        Compiling rsa_accumulator_256_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 2559
+    --- setup: host 0.985 s, inside 0.971 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.054 s, inside 0.038 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.304 s, inside 0.291 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.032 s, inside 0.019 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_1 replicate 2: constraints=2559 status=OK | host c/s/w/p/v = 0.238/0.985/0.054/0.304/0.032 | inside = 0.223/0.971/0.038/0.291/0.019
+
+[main pass 2, circuit 14/28, elapsed 01:18:02] rsa_512_8c: RSA accumulator b=512,r=8
+    --- compile: host 2.379 s, inside 2.365 s, exit code 0
+        Compiling rsa_accumulator_512_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 19441
+>>> rsa_512_8c replicate 2: constraints=19441 status=OK | host c/s/w/p/v = 2.379//// | inside = 2.365////
+
+[main pass 2, circuit 15/28, elapsed 01:18:05] synth_bool_300k: Synthetic boolean chain N=150000, XOR/OR chain of bits
+    --- compile: host 31.403 s, inside 31.388 s, exit code 0
+        Compiling synth_bool_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300002
+    --- setup: host 53.546 s, inside 53.532 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 5.738 s, inside 5.724 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 30.611 s, inside 30.593 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.032 s, inside 0.018 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_300k replicate 2: constraints=300002 status=OK | host c/s/w/p/v = 31.403/53.546/5.738/30.611/0.032 | inside = 31.388/53.532/5.724/30.593/0.018
+
+[main pass 2, circuit 16/28, elapsed 01:20:06] poseidon_1024: Poseidon chain n=1024
+    --- compile: host 275.364 s, inside 275.352 s, exit code 0
+        Compiling poseidon_chain_1024.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 218114
+    --- setup: host 40.305 s, inside 40.292 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.852 s, inside 3.839 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 38.679 s, inside 38.669 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_1024 replicate 2: constraints=218114 status=OK | host c/s/w/p/v = 275.364/40.305/3.852/38.679/0.022 | inside = 275.352/40.292/3.839/38.669/0.012
+
+[main pass 2, circuit 17/28, elapsed 01:26:05] merkle_16: Merkle path d=16
+    --- compile: host 4.825 s, inside 4.812 s, exit code 0
+        Compiling merkle_poseidon_16.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 3922
+    --- setup: host 1.577 s, inside 1.561 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.152 s, inside 0.135 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.447 s, inside 1.434 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.054 s, inside 0.031 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_16 replicate 2: constraints=3922 status=OK | host c/s/w/p/v = 4.825/1.577/0.152/1.447/0.054 | inside = 4.812/1.561/0.135/1.434/0.031
+
+[main pass 2, circuit 18/28, elapsed 01:26:13] rsa_1024_1c: RSA accumulator b=1024,r=1
+    --- compile: host 1.429 s, inside 1.415 s, exit code 0
+        Compiling rsa_accumulator_1024_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 10239
+>>> rsa_1024_1c replicate 2: constraints=10239 status=OK | host c/s/w/p/v = 1.429//// | inside = 1.415////
+
+[main pass 2, circuit 19/28, elapsed 01:26:14] rsa_256_8c: RSA accumulator b=256,r=8
+    --- compile: host 0.856 s, inside 0.845 s, exit code 0
+        Compiling rsa_accumulator_256_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 9713
+>>> rsa_256_8c replicate 2: constraints=9713 status=OK | host c/s/w/p/v = 0.856//// | inside = 0.845////
+
+[main pass 2, circuit 20/28, elapsed 01:26:15] synth_bool_100k: Synthetic boolean chain N=50000, XOR/OR chain of bits
+    --- compile: host 9.063 s, inside 9.053 s, exit code 0
+        Compiling synth_bool_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100002
+    --- setup: host 18.901 s, inside 18.891 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.427 s, inside 1.413 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 7.057 s, inside 7.045 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_100k replicate 2: constraints=100002 status=OK | host c/s/w/p/v = 9.063/18.901/1.427/7.057/0.023 | inside = 9.053/18.891/1.413/7.045/0.012
+
+[main pass 2, circuit 21/28, elapsed 01:26:52] poseidon_256: Poseidon chain n=256
+    --- compile: host 53.999 s, inside 53.989 s, exit code 0
+        Compiling poseidon_chain_256.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 54530
+    --- setup: host 10.260 s, inside 10.249 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.800 s, inside 1.786 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 8.670 s, inside 8.658 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.032 s, inside 0.018 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_256 replicate 2: constraints=54530 status=OK | host c/s/w/p/v = 53.999/10.260/1.800/8.670/0.032 | inside = 53.989/10.249/1.786/8.658/0.018
+
+[main pass 2, circuit 22/28, elapsed 01:28:07] synth_full_300k: Synthetic full-width chain N=300000, x=x*x+1 chain
+    --- compile: host 22.190 s, inside 22.178 s, exit code 0
+        Compiling synth_full_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300001
+    --- setup: host 51.445 s, inside 51.433 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.315 s, inside 3.300 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 61.004 s, inside 60.991 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.031 s, inside 0.018 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_300k replicate 2: constraints=300001 status=OK | host c/s/w/p/v = 22.190/51.445/3.315/61.004/0.031 | inside = 22.178/51.433/3.300/60.991/0.018
+
+[main pass 2, circuit 23/28, elapsed 01:30:25] rsa_256_64: RSA accumulator b=256,r=64
+    --- compile: host 5.208 s, inside 5.197 s, exit code 0
+        Compiling rsa_accumulator_256_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 66945
+    --- setup: host 13.296 s, inside 13.282 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.783 s, inside 0.762 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 3.788 s, inside 3.776 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_64 replicate 2: constraints=66945 status=OK | host c/s/w/p/v = 5.208/13.296/0.783/3.788/0.022 | inside = 5.197/13.282/0.762/3.776/0.012
+
+[main pass 2, circuit 24/28, elapsed 01:30:48] rsa_1024_64: RSA accumulator b=1024,r=64
+    --- compile: host 37.316 s, inside 37.306 s, exit code 0
+        Compiling rsa_accumulator_1024_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 268161
+    --- setup: host 47.382 s, inside 47.369 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.457 s, inside 2.439 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 19.352 s, inside 19.336 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.025 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_1024_64 replicate 2: constraints=268161 status=OK | host c/s/w/p/v = 37.316/47.382/2.457/19.352/0.025 | inside = 37.306/47.369/2.439/19.336/0.013
+
+[main pass 2, circuit 25/28, elapsed 01:32:35] poseidon_64: Poseidon chain n=64
+    --- compile: host 13.146 s, inside 13.132 s, exit code 0
+        Compiling poseidon_chain_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 13634
+    --- setup: host 3.005 s, inside 2.993 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.253 s, inside 0.239 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.370 s, inside 2.360 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_64 replicate 2: constraints=13634 status=OK | host c/s/w/p/v = 13.146/3.005/0.253/2.370/0.022 | inside = 13.132/2.993/0.239/2.360/0.012
+
+[main pass 2, circuit 26/28, elapsed 01:32:54] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 170.428 s, inside 170.417 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 132.863 s, inside 132.853 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 6.498 s, inside 6.467 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 48.635 s, inside 48.625 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 2: constraints=842212 status=OK | host c/s/w/p/v = 170.428/132.863/6.498/48.635/0.023 | inside = 170.417/132.853/6.467/48.625/0.013
+
+[main pass 2, circuit 27/28, elapsed 01:38:52] merkle_8: Merkle path d=8
+    --- compile: host 2.716 s, inside 2.706 s, exit code 0
+        Compiling merkle_poseidon_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 1962
+    --- setup: host 0.447 s, inside 0.436 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.052 s, inside 0.040 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.441 s, inside 0.431 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.024 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_8 replicate 2: constraints=1962 status=OK | host c/s/w/p/v = 2.716/0.447/0.052/0.441/0.024 | inside = 2.706/0.436/0.040/0.431/0.013
+
+[main pass 2, circuit 28/28, elapsed 01:38:56] rsa1024real: RSA-1024 verify (real) e=65537 W=121 K=9
+    --- compile: host 21.474 s, inside 21.463 s, exit code 0
+        Compiling rsa1024_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 76604
+    --- setup: host 15.058 s, inside 15.048 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.619 s, inside 0.607 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 6.315 s, inside 6.302 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.084 s, inside 0.065 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa1024real replicate 2: constraints=76604 status=OK | host c/s/w/p/v = 21.474/15.058/0.619/6.315/0.084 | inside = 21.463/15.048/0.607/6.302/0.065
+
+================ pass 3 of 5 [main] ================
+
+[main pass 3, circuit 1/28, elapsed 01:39:40] sha256_rsa: SHA-256 compression commitment circuit, RSA-derived input
+    --- compile: host 3.140 s, inside 3.123 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 3.648 s, inside 3.638 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.651 s, inside 0.640 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.057 s, inside 2.047 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_rsa replicate 3: constraints=27214 status=OK | host c/s/w/p/v = 3.140/3.648/0.651/2.057/0.022 | inside = 3.123/3.638/0.640/2.047/0.013
+
+[main pass 3, circuit 2/28, elapsed 01:39:49] rsa_512_8c: RSA accumulator b=512,r=8
+    --- compile: host 1.415 s, inside 1.405 s, exit code 0
+        Compiling rsa_accumulator_512_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 19441
+>>> rsa_512_8c replicate 3: constraints=19441 status=OK | host c/s/w/p/v = 1.415//// | inside = 1.405////
+
+[main pass 3, circuit 3/28, elapsed 01:39:51] rsa_256_8c: RSA accumulator b=256,r=8
+    --- compile: host 0.585 s, inside 0.575 s, exit code 0
+        Compiling rsa_accumulator_256_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 9713
+>>> rsa_256_8c replicate 3: constraints=9713 status=OK | host c/s/w/p/v = 0.585//// | inside = 0.575////
+
+[main pass 3, circuit 4/28, elapsed 01:39:52] rsa4096real: RSA-4096 verify (real) e=65537 W=121 K=34
+    --- compile: host 118.905 s, inside 118.894 s, exit code 0
+        Compiling rsa4096_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 331848
+    --- setup: host 58.239 s, inside 58.229 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 6.372 s, inside 6.354 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 27.400 s, inside 27.389 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.026 s, inside 0.016 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa4096real replicate 3: constraints=331848 status=OK | host c/s/w/p/v = 118.905/58.239/6.372/27.400/0.026 | inside = 118.894/58.229/6.354/27.389/0.016
+
+[main pass 3, circuit 5/28, elapsed 01:43:23] rsa_256_64: RSA accumulator b=256,r=64
+    --- compile: host 4.667 s, inside 4.656 s, exit code 0
+        Compiling rsa_accumulator_256_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 66945
+    --- setup: host 12.442 s, inside 12.427 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.453 s, inside 0.440 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.169 s, inside 4.157 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.030 s, inside 0.017 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_64 replicate 3: constraints=66945 status=OK | host c/s/w/p/v = 4.667/12.442/0.453/4.169/0.030 | inside = 4.656/12.427/0.440/4.157/0.017
+
+[main pass 3, circuit 6/28, elapsed 01:43:45] synth_bool_300k: Synthetic boolean chain N=150000, XOR/OR chain of bits
+    --- compile: host 32.344 s, inside 32.332 s, exit code 0
+        Compiling synth_bool_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300002
+    --- setup: host 54.649 s, inside 54.639 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 4.393 s, inside 4.375 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 21.490 s, inside 21.476 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.031 s, inside 0.017 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_300k replicate 3: constraints=300002 status=OK | host c/s/w/p/v = 32.344/54.649/4.393/21.490/0.031 | inside = 32.332/54.639/4.375/21.476/0.017
+
+[main pass 3, circuit 7/28, elapsed 01:45:38] rsa_1024_1c: RSA accumulator b=1024,r=1
+    --- compile: host 1.123 s, inside 1.111 s, exit code 0
+        Compiling rsa_accumulator_1024_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 10239
+>>> rsa_1024_1c replicate 3: constraints=10239 status=OK | host c/s/w/p/v = 1.123//// | inside = 1.111////
+
+[main pass 3, circuit 8/28, elapsed 01:45:39] synth_full_100k: Synthetic full-width chain N=100000, x=x*x+1 chain
+    --- compile: host 6.156 s, inside 6.143 s, exit code 0
+        Compiling synth_full_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100001
+    --- setup: host 18.942 s, inside 18.931 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.669 s, inside 0.655 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 17.420 s, inside 17.408 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.025 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_100k replicate 3: constraints=100001 status=OK | host c/s/w/p/v = 6.156/18.942/0.669/17.420/0.025 | inside = 6.143/18.931/0.655/17.408/0.013
+
+[main pass 3, circuit 9/28, elapsed 01:46:22] rsa2048real: RSA-2048 verify (real) e=65537 W=121 K=17
+    --- compile: host 44.402 s, inside 44.389 s, exit code 0
+        Compiling rsa2048_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 153484
+    --- setup: host 27.483 s, inside 27.470 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.341 s, inside 1.329 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 13.774 s, inside 13.764 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.024 s, inside 0.014 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa2048real replicate 3: constraints=153484 status=OK | host c/s/w/p/v = 44.402/27.483/1.341/13.774/0.024 | inside = 44.389/27.470/1.329/13.764/0.014
+
+[main pass 3, circuit 10/28, elapsed 01:47:49] rsa_512_1c: RSA accumulator b=512,r=1
+    --- compile: host 0.308 s, inside 0.298 s, exit code 0
+        Compiling rsa_accumulator_512_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 5119
+>>> rsa_512_1c replicate 3: constraints=5119 status=OK | host c/s/w/p/v = 0.308//// | inside = 0.298////
+
+[main pass 3, circuit 11/28, elapsed 01:47:50] rsa_512_64c: RSA accumulator b=512,r=64
+    --- compile: host 14.144 s, inside 14.133 s, exit code 0
+        Compiling rsa_accumulator_512_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 134017
+>>> rsa_512_64c replicate 3: constraints=134017 status=OK | host c/s/w/p/v = 14.144//// | inside = 14.133////
+
+[main pass 3, circuit 12/28, elapsed 01:48:04] rsa3072real: RSA-3072 verify (real) e=65537 W=121 K=26
+    --- compile: host 71.761 s, inside 71.749 s, exit code 0
+        Compiling rsa3072_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 244870
+    --- setup: host 41.525 s, inside 41.515 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.630 s, inside 2.617 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 16.882 s, inside 16.873 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.026 s, inside 0.015 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa3072real replicate 3: constraints=244870 status=OK | host c/s/w/p/v = 71.761/41.525/2.630/16.882/0.026 | inside = 71.749/41.515/2.617/16.873/0.015
+
+[main pass 3, circuit 13/28, elapsed 01:50:17] merkle_16: Merkle path d=16
+    --- compile: host 5.129 s, inside 5.118 s, exit code 0
+        Compiling merkle_poseidon_16.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 3922
+    --- setup: host 1.396 s, inside 1.383 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.145 s, inside 0.130 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.226 s, inside 1.213 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.034 s, inside 0.021 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_16 replicate 3: constraints=3922 status=OK | host c/s/w/p/v = 5.129/1.396/0.145/1.226/0.034 | inside = 5.118/1.383/0.130/1.213/0.021
+
+[main pass 3, circuit 14/28, elapsed 01:50:25] poseidon_512: Poseidon chain n=512
+    --- compile: host 129.183 s, inside 129.171 s, exit code 0
+        Compiling poseidon_chain_512.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 109058
+    --- setup: host 20.742 s, inside 20.732 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.897 s, inside 1.884 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 19.963 s, inside 19.953 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_512 replicate 3: constraints=109058 status=OK | host c/s/w/p/v = 129.183/20.742/1.897/19.963/0.022 | inside = 129.171/20.732/1.884/19.953/0.012
+
+[main pass 3, circuit 15/28, elapsed 01:53:17] rsa_256_1: RSA accumulator b=256,r=1
+    --- compile: host 0.136 s, inside 0.126 s, exit code 0
+        Compiling rsa_accumulator_256_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 2559
+    --- setup: host 0.537 s, inside 0.525 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.034 s, inside 0.022 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.173 s, inside 0.163 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_1 replicate 3: constraints=2559 status=OK | host c/s/w/p/v = 0.136/0.537/0.034/0.173/0.022 | inside = 0.126/0.525/0.022/0.163/0.012
+
+[main pass 3, circuit 16/28, elapsed 01:53:18] rsa_1024_8c: RSA accumulator b=1024,r=8
+    --- compile: host 3.897 s, inside 3.887 s, exit code 0
+        Compiling rsa_accumulator_1024_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 38897
+>>> rsa_1024_8c replicate 3: constraints=38897 status=OK | host c/s/w/p/v = 3.897//// | inside = 3.887////
+
+[main pass 3, circuit 17/28, elapsed 01:53:22] synth_bool_100k: Synthetic boolean chain N=50000, XOR/OR chain of bits
+    --- compile: host 11.493 s, inside 11.483 s, exit code 0
+        Compiling synth_bool_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100002
+    --- setup: host 19.126 s, inside 19.116 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.156 s, inside 1.144 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.698 s, inside 4.688 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_100k replicate 3: constraints=100002 status=OK | host c/s/w/p/v = 11.493/19.126/1.156/4.698/0.022 | inside = 11.483/19.116/1.144/4.688/0.012
+
+[main pass 3, circuit 18/28, elapsed 01:53:58] poseidon_64: Poseidon chain n=64
+    --- compile: host 14.017 s, inside 14.007 s, exit code 0
+        Compiling poseidon_chain_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 13634
+    --- setup: host 2.963 s, inside 2.953 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.272 s, inside 0.260 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.927 s, inside 2.916 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.045 s, inside 0.021 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_64 replicate 3: constraints=13634 status=OK | host c/s/w/p/v = 14.017/2.963/0.272/2.927/0.045 | inside = 14.007/2.953/0.260/2.916/0.021
+
+[main pass 3, circuit 19/28, elapsed 01:54:19] poseidon_1024: Poseidon chain n=1024
+    --- compile: host 265.129 s, inside 265.118 s, exit code 0
+        Compiling poseidon_chain_1024.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 218114
+    --- setup: host 39.664 s, inside 39.653 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.842 s, inside 3.830 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 37.917 s, inside 37.907 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_1024 replicate 3: constraints=218114 status=OK | host c/s/w/p/v = 265.129/39.664/3.842/37.917/0.022 | inside = 265.118/39.653/3.830/37.907/0.012
+
+[main pass 3, circuit 20/28, elapsed 02:00:05] synth_full_300k: Synthetic full-width chain N=300000, x=x*x+1 chain
+    --- compile: host 23.375 s, inside 23.362 s, exit code 0
+        Compiling synth_full_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300001
+    --- setup: host 62.251 s, inside 62.239 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.557 s, inside 3.545 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 49.769 s, inside 49.758 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_300k replicate 3: constraints=300001 status=OK | host c/s/w/p/v = 23.375/62.251/3.557/49.769/0.022 | inside = 23.362/62.239/3.545/49.758/0.012
+
+[main pass 3, circuit 21/28, elapsed 02:02:24] merkle_64c: Merkle path d=64
+    --- compile: host 17.663 s, inside 17.653 s, exit code 0
+        Compiling merkle_poseidon_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 15682
+>>> merkle_64c replicate 3: constraints=15682 status=OK | host c/s/w/p/v = 17.663//// | inside = 17.653////
+
+[main pass 3, circuit 22/28, elapsed 02:02:42] merkle_32: Merkle path d=32
+    --- compile: host 10.353 s, inside 10.343 s, exit code 0
+        Compiling merkle_poseidon_32.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 7842
+    --- setup: host 1.441 s, inside 1.431 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.149 s, inside 0.138 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.395 s, inside 1.385 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_32 replicate 3: constraints=7842 status=OK | host c/s/w/p/v = 10.353/1.441/0.149/1.395/0.022 | inside = 10.343/1.431/0.138/1.385/0.012
+
+[main pass 3, circuit 23/28, elapsed 02:02:56] merkle_8: Merkle path d=8
+    --- compile: host 2.697 s, inside 2.687 s, exit code 0
+        Compiling merkle_poseidon_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 1962
+    --- setup: host 0.445 s, inside 0.435 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.051 s, inside 0.039 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.443 s, inside 0.433 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_8 replicate 3: constraints=1962 status=OK | host c/s/w/p/v = 2.697/0.445/0.051/0.443/0.022 | inside = 2.687/0.435/0.039/0.433/0.012
+
+[main pass 3, circuit 24/28, elapsed 02:02:59] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 164.857 s, inside 164.847 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 127.486 s, inside 127.475 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 7.403 s, inside 7.357 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 45.994 s, inside 45.981 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.045 s, inside 0.030 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 3: constraints=842212 status=OK | host c/s/w/p/v = 164.857/127.486/7.403/45.994/0.045 | inside = 164.847/127.475/7.357/45.981/0.030
+
+[main pass 3, circuit 25/28, elapsed 02:08:45] rsa_1024_64: RSA accumulator b=1024,r=64
+    --- compile: host 36.925 s, inside 36.911 s, exit code 0
+        Compiling rsa_accumulator_1024_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 268161
+    --- setup: host 44.872 s, inside 44.860 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.721 s, inside 1.708 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 18.413 s, inside 18.403 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.021 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_1024_64 replicate 3: constraints=268161 status=OK | host c/s/w/p/v = 36.925/44.872/1.721/18.413/0.021 | inside = 36.911/44.860/1.708/18.403/0.012
+
+[main pass 3, circuit 26/28, elapsed 02:10:27] sha256_ecc: SHA-256 compression commitment circuit, ECC-derived input
+    --- compile: host 1.997 s, inside 1.986 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 5.491 s, inside 5.478 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.845 s, inside 0.831 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.030 s, inside 2.020 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_ecc replicate 3: constraints=27214 status=OK | host c/s/w/p/v = 1.997/5.491/0.845/2.030/0.022 | inside = 1.986/5.478/0.831/2.020/0.012
+
+[main pass 3, circuit 27/28, elapsed 02:10:38] rsa1024real: RSA-1024 verify (real) e=65537 W=121 K=9
+    --- compile: host 21.296 s, inside 21.286 s, exit code 0
+        Compiling rsa1024_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 76604
+    --- setup: host 26.668 s, inside 26.658 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.593 s, inside 0.580 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.020 s, inside 5.010 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa1024real replicate 3: constraints=76604 status=OK | host c/s/w/p/v = 21.296/26.668/0.593/5.020/0.023 | inside = 21.286/26.658/0.580/5.010/0.013
+
+[main pass 3, circuit 28/28, elapsed 02:11:32] poseidon_256: Poseidon chain n=256
+    --- compile: host 56.867 s, inside 56.856 s, exit code 0
+        Compiling poseidon_chain_256.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 54530
+    --- setup: host 9.607 s, inside 9.595 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.966 s, inside 0.955 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 12.607 s, inside 12.597 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_256 replicate 3: constraints=54530 status=OK | host c/s/w/p/v = 56.867/9.607/0.966/12.607/0.022 | inside = 56.856/9.595/0.955/12.597/0.012
+
+================ pass 4 of 5 [main] ================
+
+[main pass 4, circuit 1/28, elapsed 02:12:52] rsa1024real: RSA-1024 verify (real) e=65537 W=121 K=9
+    --- compile: host 21.139 s, inside 21.129 s, exit code 0
+        Compiling rsa1024_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 76604
+    --- setup: host 15.938 s, inside 15.928 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.596 s, inside 0.585 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.835 s, inside 4.825 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa1024real replicate 4: constraints=76604 status=OK | host c/s/w/p/v = 21.139/15.938/0.596/4.835/0.023 | inside = 21.129/15.928/0.585/4.825/0.013
+
+[main pass 4, circuit 2/28, elapsed 02:13:35] synth_full_300k: Synthetic full-width chain N=300000, x=x*x+1 chain
+    --- compile: host 23.090 s, inside 23.078 s, exit code 0
+        Compiling synth_full_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300001
+    --- setup: host 52.372 s, inside 52.359 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.712 s, inside 3.698 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 48.183 s, inside 48.170 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_300k replicate 4: constraints=300001 status=OK | host c/s/w/p/v = 23.090/52.372/3.712/48.183/0.023 | inside = 23.078/52.359/3.698/48.170/0.012
+
+[main pass 4, circuit 3/28, elapsed 02:15:42] poseidon_512: Poseidon chain n=512
+    --- compile: host 116.498 s, inside 116.486 s, exit code 0
+        Compiling poseidon_chain_512.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 109058
+    --- setup: host 20.127 s, inside 20.116 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.489 s, inside 2.478 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 19.295 s, inside 19.285 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_512 replicate 4: constraints=109058 status=OK | host c/s/w/p/v = 116.498/20.127/2.489/19.295/0.022 | inside = 116.486/20.116/2.478/19.285/0.012
+
+[main pass 4, circuit 4/28, elapsed 02:18:21] rsa_512_64c: RSA accumulator b=512,r=64
+    --- compile: host 14.533 s, inside 14.523 s, exit code 0
+        Compiling rsa_accumulator_512_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 134017
+>>> rsa_512_64c replicate 4: constraints=134017 status=OK | host c/s/w/p/v = 14.533//// | inside = 14.523////
+
+[main pass 4, circuit 5/28, elapsed 02:18:35] sha256_rsa: SHA-256 compression commitment circuit, RSA-derived input
+    --- compile: host 1.909 s, inside 1.899 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 4.018 s, inside 4.007 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.142 s, inside 1.126 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 3.355 s, inside 3.343 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_rsa replicate 4: constraints=27214 status=OK | host c/s/w/p/v = 1.909/4.018/1.142/3.355/0.022 | inside = 1.899/4.007/1.126/3.343/0.012
+
+[main pass 4, circuit 6/28, elapsed 02:18:46] synth_full_100k: Synthetic full-width chain N=100000, x=x*x+1 chain
+    --- compile: host 6.122 s, inside 6.111 s, exit code 0
+        Compiling synth_full_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100001
+    --- setup: host 18.558 s, inside 18.548 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.697 s, inside 0.685 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 17.297 s, inside 17.287 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_100k replicate 4: constraints=100001 status=OK | host c/s/w/p/v = 6.122/18.558/0.697/17.297/0.022 | inside = 6.111/18.548/0.685/17.287/0.012
+
+[main pass 4, circuit 7/28, elapsed 02:19:29] poseidon_1024: Poseidon chain n=1024
+    --- compile: host 268.174 s, inside 268.164 s, exit code 0
+        Compiling poseidon_chain_1024.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 218114
+    --- setup: host 40.027 s, inside 40.017 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.878 s, inside 3.866 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 38.122 s, inside 38.112 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_1024 replicate 4: constraints=218114 status=OK | host c/s/w/p/v = 268.174/40.027/3.878/38.122/0.022 | inside = 268.164/40.017/3.866/38.112/0.012
+
+[main pass 4, circuit 8/28, elapsed 02:25:19] poseidon_256: Poseidon chain n=256
+    --- compile: host 53.507 s, inside 53.497 s, exit code 0
+        Compiling poseidon_chain_256.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 54530
+    --- setup: host 12.863 s, inside 12.853 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.968 s, inside 0.957 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 9.931 s, inside 9.919 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.039 s, inside 0.026 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_256 replicate 4: constraints=54530 status=OK | host c/s/w/p/v = 53.507/12.863/0.968/9.931/0.039 | inside = 53.497/12.853/0.957/9.919/0.026
+
+[main pass 4, circuit 9/28, elapsed 02:26:36] synth_bool_100k: Synthetic boolean chain N=50000, XOR/OR chain of bits
+    --- compile: host 10.478 s, inside 10.466 s, exit code 0
+        Compiling synth_bool_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100002
+    --- setup: host 19.050 s, inside 19.039 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.149 s, inside 1.137 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 6.191 s, inside 6.180 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.029 s, inside 0.017 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_100k replicate 4: constraints=100002 status=OK | host c/s/w/p/v = 10.478/19.050/1.149/6.191/0.029 | inside = 10.466/19.039/1.137/6.180/0.017
+
+[main pass 4, circuit 10/28, elapsed 02:27:13] rsa4096real: RSA-4096 verify (real) e=65537 W=121 K=34
+    --- compile: host 107.112 s, inside 107.100 s, exit code 0
+        Compiling rsa4096_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 331848
+    --- setup: host 58.514 s, inside 58.504 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 4.356 s, inside 4.342 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 30.030 s, inside 30.020 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.027 s, inside 0.017 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa4096real replicate 4: constraints=331848 status=OK | host c/s/w/p/v = 107.112/58.514/4.356/30.030/0.027 | inside = 107.100/58.504/4.342/30.020/0.017
+
+[main pass 4, circuit 11/28, elapsed 02:30:34] rsa_512_8c: RSA accumulator b=512,r=8
+    --- compile: host 1.424 s, inside 1.414 s, exit code 0
+        Compiling rsa_accumulator_512_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 19441
+>>> rsa_512_8c replicate 4: constraints=19441 status=OK | host c/s/w/p/v = 1.424//// | inside = 1.414////
+
+[main pass 4, circuit 12/28, elapsed 02:30:35] rsa2048real: RSA-2048 verify (real) e=65537 W=121 K=17
+    --- compile: host 44.493 s, inside 44.482 s, exit code 0
+        Compiling rsa2048_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 153484
+    --- setup: host 38.309 s, inside 38.290 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.369 s, inside 1.348 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 14.659 s, inside 14.649 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.025 s, inside 0.015 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa2048real replicate 4: constraints=153484 status=OK | host c/s/w/p/v = 44.493/38.309/1.369/14.659/0.025 | inside = 44.482/38.290/1.348/14.649/0.015
+
+[main pass 4, circuit 13/28, elapsed 02:32:14] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 164.512 s, inside 164.500 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 127.978 s, inside 127.966 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 10.166 s, inside 10.133 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 44.831 s, inside 44.821 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 4: constraints=842212 status=OK | host c/s/w/p/v = 164.512/127.978/10.166/44.831/0.023 | inside = 164.500/127.966/10.133/44.821/0.013
+
+[main pass 4, circuit 14/28, elapsed 02:38:02] merkle_8: Merkle path d=8
+    --- compile: host 4.224 s, inside 4.213 s, exit code 0
+        Compiling merkle_poseidon_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 1962
+    --- setup: host 0.747 s, inside 0.734 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.088 s, inside 0.073 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.784 s, inside 0.769 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.033 s, inside 0.021 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_8 replicate 4: constraints=1962 status=OK | host c/s/w/p/v = 4.224/0.747/0.088/0.784/0.033 | inside = 4.213/0.734/0.073/0.769/0.021
+
+[main pass 4, circuit 15/28, elapsed 02:38:08] synth_bool_300k: Synthetic boolean chain N=150000, XOR/OR chain of bits
+    --- compile: host 32.706 s, inside 32.689 s, exit code 0
+        Compiling synth_bool_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300002
+    --- setup: host 53.808 s, inside 53.795 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 4.481 s, inside 4.465 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 20.436 s, inside 20.426 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.021 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_300k replicate 4: constraints=300002 status=OK | host c/s/w/p/v = 32.706/53.808/4.481/20.436/0.021 | inside = 32.689/53.795/4.465/20.426/0.012
+
+[main pass 4, circuit 16/28, elapsed 02:39:59] merkle_16: Merkle path d=16
+    --- compile: host 4.316 s, inside 4.306 s, exit code 0
+        Compiling merkle_poseidon_16.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 3922
+    --- setup: host 0.759 s, inside 0.749 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.083 s, inside 0.071 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.811 s, inside 0.801 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_16 replicate 4: constraints=3922 status=OK | host c/s/w/p/v = 4.316/0.759/0.083/0.811/0.022 | inside = 4.306/0.749/0.071/0.801/0.012
+
+[main pass 4, circuit 17/28, elapsed 02:40:05] rsa3072real: RSA-3072 verify (real) e=65537 W=121 K=26
+    --- compile: host 77.499 s, inside 77.488 s, exit code 0
+        Compiling rsa3072_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 244870
+    --- setup: host 55.776 s, inside 55.763 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.666 s, inside 2.651 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 17.283 s, inside 17.273 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.025 s, inside 0.015 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa3072real replicate 4: constraints=244870 status=OK | host c/s/w/p/v = 77.499/55.776/2.666/17.283/0.025 | inside = 77.488/55.763/2.651/17.273/0.015
+
+[main pass 4, circuit 18/28, elapsed 02:42:39] rsa_512_1c: RSA accumulator b=512,r=1
+    --- compile: host 0.323 s, inside 0.313 s, exit code 0
+        Compiling rsa_accumulator_512_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 5119
+>>> rsa_512_1c replicate 4: constraints=5119 status=OK | host c/s/w/p/v = 0.323//// | inside = 0.313////
+
+[main pass 4, circuit 19/28, elapsed 02:42:39] rsa_1024_8c: RSA accumulator b=1024,r=8
+    --- compile: host 6.186 s, inside 6.174 s, exit code 0
+        Compiling rsa_accumulator_1024_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 38897
+>>> rsa_1024_8c replicate 4: constraints=38897 status=OK | host c/s/w/p/v = 6.186//// | inside = 6.174////
+
+[main pass 4, circuit 20/28, elapsed 02:42:45] merkle_64c: Merkle path d=64
+    --- compile: host 17.568 s, inside 17.554 s, exit code 0
+        Compiling merkle_poseidon_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 15682
+>>> merkle_64c replicate 4: constraints=15682 status=OK | host c/s/w/p/v = 17.568//// | inside = 17.554////
+
+[main pass 4, circuit 21/28, elapsed 02:43:03] rsa_1024_64: RSA accumulator b=1024,r=64
+    --- compile: host 36.391 s, inside 36.374 s, exit code 0
+        Compiling rsa_accumulator_1024_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 268161
+    --- setup: host 45.751 s, inside 45.740 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.694 s, inside 1.683 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 18.452 s, inside 18.442 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_1024_64 replicate 4: constraints=268161 status=OK | host c/s/w/p/v = 36.391/45.751/1.694/18.452/0.022 | inside = 36.374/45.740/1.683/18.442/0.012
+
+[main pass 4, circuit 22/28, elapsed 02:44:45] merkle_32: Merkle path d=32
+    --- compile: host 10.437 s, inside 10.427 s, exit code 0
+        Compiling merkle_poseidon_32.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 7842
+    --- setup: host 1.447 s, inside 1.437 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.150 s, inside 0.137 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.419 s, inside 1.408 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_32 replicate 4: constraints=7842 status=OK | host c/s/w/p/v = 10.437/1.447/0.150/1.419/0.022 | inside = 10.427/1.437/0.137/1.408/0.012
+
+[main pass 4, circuit 23/28, elapsed 02:44:59] rsa_1024_1c: RSA accumulator b=1024,r=1
+    --- compile: host 0.859 s, inside 0.849 s, exit code 0
+        Compiling rsa_accumulator_1024_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 10239
+>>> rsa_1024_1c replicate 4: constraints=10239 status=OK | host c/s/w/p/v = 0.859//// | inside = 0.849////
+
+[main pass 4, circuit 24/28, elapsed 02:45:00] sha256_ecc: SHA-256 compression commitment circuit, ECC-derived input
+    --- compile: host 1.885 s, inside 1.873 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 3.368 s, inside 3.357 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.171 s, inside 1.156 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 3.655 s, inside 3.641 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.047 s, inside 0.025 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_ecc replicate 4: constraints=27214 status=OK | host c/s/w/p/v = 1.885/3.368/1.171/3.655/0.047 | inside = 1.873/3.357/1.156/3.641/0.025
+
+[main pass 4, circuit 25/28, elapsed 02:45:10] poseidon_64: Poseidon chain n=64
+    --- compile: host 12.534 s, inside 12.517 s, exit code 0
+        Compiling poseidon_chain_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 13634
+    --- setup: host 4.080 s, inside 4.066 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.474 s, inside 0.459 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.615 s, inside 2.602 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_64 replicate 4: constraints=13634 status=OK | host c/s/w/p/v = 12.534/4.080/0.474/2.615/0.022 | inside = 12.517/4.066/0.459/2.602/0.012
+
+[main pass 4, circuit 26/28, elapsed 02:45:30] rsa_256_1: RSA accumulator b=256,r=1
+    --- compile: host 0.138 s, inside 0.128 s, exit code 0
+        Compiling rsa_accumulator_256_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 2559
+    --- setup: host 0.516 s, inside 0.506 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.052 s, inside 0.037 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.173 s, inside 0.163 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_1 replicate 4: constraints=2559 status=OK | host c/s/w/p/v = 0.138/0.516/0.052/0.173/0.022 | inside = 0.128/0.506/0.037/0.163/0.012
+
+[main pass 4, circuit 27/28, elapsed 02:45:31] rsa_256_64: RSA accumulator b=256,r=64
+    --- compile: host 4.602 s, inside 4.592 s, exit code 0
+        Compiling rsa_accumulator_256_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 66945
+    --- setup: host 14.291 s, inside 14.279 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.441 s, inside 0.429 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 3.665 s, inside 3.655 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_64 replicate 4: constraints=66945 status=OK | host c/s/w/p/v = 4.602/14.291/0.441/3.665/0.022 | inside = 4.592/14.279/0.429/3.655/0.012
+
+[main pass 4, circuit 28/28, elapsed 02:45:54] rsa_256_8c: RSA accumulator b=256,r=8
+    --- compile: host 0.578 s, inside 0.568 s, exit code 0
+        Compiling rsa_accumulator_256_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 9713
+>>> rsa_256_8c replicate 4: constraints=9713 status=OK | host c/s/w/p/v = 0.578//// | inside = 0.568////
+
+================ pass 5 of 5 [main] ================
+
+[main pass 5, circuit 1/28, elapsed 02:45:55] rsa_1024_8c: RSA accumulator b=1024,r=8
+    --- compile: host 4.572 s, inside 4.561 s, exit code 0
+        Compiling rsa_accumulator_1024_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 38897
+>>> rsa_1024_8c replicate 5: constraints=38897 status=OK | host c/s/w/p/v = 4.572//// | inside = 4.561////
+
+[main pass 5, circuit 2/28, elapsed 02:46:00] synth_full_100k: Synthetic full-width chain N=100000, x=x*x+1 chain
+    --- compile: host 7.521 s, inside 7.509 s, exit code 0
+        Compiling synth_full_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100001
+    --- setup: host 18.749 s, inside 18.739 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.670 s, inside 0.658 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 17.156 s, inside 17.145 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_100k replicate 5: constraints=100001 status=OK | host c/s/w/p/v = 7.521/18.749/0.670/17.156/0.022 | inside = 7.509/18.739/0.658/17.145/0.012
+
+[main pass 5, circuit 3/28, elapsed 02:46:44] merkle_32: Merkle path d=32
+    --- compile: host 8.774 s, inside 8.762 s, exit code 0
+        Compiling merkle_poseidon_32.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 7842
+    --- setup: host 2.664 s, inside 2.649 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.268 s, inside 0.253 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.201 s, inside 2.188 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.034 s, inside 0.019 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_32 replicate 5: constraints=7842 status=OK | host c/s/w/p/v = 8.774/2.664/0.268/2.201/0.034 | inside = 8.762/2.649/0.253/2.188/0.019
+
+[main pass 5, circuit 4/28, elapsed 02:46:58] merkle_64c: Merkle path d=64
+    --- compile: host 17.107 s, inside 17.090 s, exit code 0
+        Compiling merkle_poseidon_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 15682
+>>> merkle_64c replicate 5: constraints=15682 status=OK | host c/s/w/p/v = 17.107//// | inside = 17.090////
+
+[main pass 5, circuit 5/28, elapsed 02:47:15] rsa3072real: RSA-3072 verify (real) e=65537 W=121 K=26
+    --- compile: host 72.493 s, inside 72.481 s, exit code 0
+        Compiling rsa3072_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 244870
+    --- setup: host 41.244 s, inside 41.233 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.650 s, inside 2.638 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 16.770 s, inside 16.759 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.025 s, inside 0.015 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa3072real replicate 5: constraints=244870 status=OK | host c/s/w/p/v = 72.493/41.244/2.650/16.770/0.025 | inside = 72.481/41.233/2.638/16.759/0.015
+
+[main pass 5, circuit 6/28, elapsed 02:49:28] synth_full_300k: Synthetic full-width chain N=300000, x=x*x+1 chain
+    --- compile: host 22.915 s, inside 22.903 s, exit code 0
+        Compiling synth_full_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300001
+    --- setup: host 51.098 s, inside 51.084 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.820 s, inside 3.805 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 49.099 s, inside 49.088 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_300k replicate 5: constraints=300001 status=OK | host c/s/w/p/v = 22.915/51.098/3.820/49.099/0.023 | inside = 22.903/51.084/3.805/49.088/0.013
+
+[main pass 5, circuit 7/28, elapsed 02:51:36] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 176.043 s, inside 176.033 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 128.637 s, inside 128.625 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 7.007 s, inside 6.958 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 49.028 s, inside 49.016 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.041 s, inside 0.024 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 5: constraints=842212 status=OK | host c/s/w/p/v = 176.043/128.637/7.007/49.028/0.041 | inside = 176.033/128.625/6.958/49.016/0.024
+
+[main pass 5, circuit 8/28, elapsed 02:57:36] rsa_1024_64: RSA accumulator b=1024,r=64
+    --- compile: host 39.958 s, inside 39.946 s, exit code 0
+        Compiling rsa_accumulator_1024_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 268161
+    --- setup: host 44.915 s, inside 44.905 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.821 s, inside 2.808 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 18.170 s, inside 18.156 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.030 s, inside 0.017 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_1024_64 replicate 5: constraints=268161 status=OK | host c/s/w/p/v = 39.958/44.915/2.821/18.170/0.030 | inside = 39.946/44.905/2.808/18.156/0.017
+
+[main pass 5, circuit 9/28, elapsed 02:59:23] rsa_256_1: RSA accumulator b=256,r=1
+    --- compile: host 0.235 s, inside 0.222 s, exit code 0
+        Compiling rsa_accumulator_256_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 2559
+    --- setup: host 0.948 s, inside 0.935 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.058 s, inside 0.044 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.285 s, inside 0.272 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.034 s, inside 0.018 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_1 replicate 5: constraints=2559 status=OK | host c/s/w/p/v = 0.235/0.948/0.058/0.285/0.034 | inside = 0.222/0.935/0.044/0.272/0.018
+
+[main pass 5, circuit 10/28, elapsed 02:59:24] poseidon_256: Poseidon chain n=256
+    --- compile: host 53.378 s, inside 53.362 s, exit code 0
+        Compiling poseidon_chain_256.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 54530
+    --- setup: host 8.996 s, inside 8.984 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.963 s, inside 0.952 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 12.014 s, inside 12.003 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_256 replicate 5: constraints=54530 status=OK | host c/s/w/p/v = 53.378/8.996/0.963/12.014/0.023 | inside = 53.362/8.984/0.952/12.003/0.013
+
+[main pass 5, circuit 11/28, elapsed 03:00:40] sha256_rsa: SHA-256 compression commitment circuit, RSA-derived input
+    --- compile: host 2.271 s, inside 2.260 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 3.118 s, inside 3.108 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.636 s, inside 0.624 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.695 s, inside 2.681 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.032 s, inside 0.019 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_rsa replicate 5: constraints=27214 status=OK | host c/s/w/p/v = 2.271/3.118/0.636/2.695/0.032 | inside = 2.260/3.108/0.624/2.681/0.019
+
+[main pass 5, circuit 12/28, elapsed 03:00:49] merkle_16: Merkle path d=16
+    --- compile: host 6.075 s, inside 6.063 s, exit code 0
+        Compiling merkle_poseidon_16.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 3922
+    --- setup: host 0.780 s, inside 0.770 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.087 s, inside 0.074 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.790 s, inside 0.779 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_16 replicate 5: constraints=3922 status=OK | host c/s/w/p/v = 6.075/0.780/0.087/0.790/0.023 | inside = 6.063/0.770/0.074/0.779/0.012
+
+[main pass 5, circuit 13/28, elapsed 03:00:56] rsa_512_64c: RSA accumulator b=512,r=64
+    --- compile: host 14.297 s, inside 14.286 s, exit code 0
+        Compiling rsa_accumulator_512_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 134017
+>>> rsa_512_64c replicate 5: constraints=134017 status=OK | host c/s/w/p/v = 14.297//// | inside = 14.286////
+
+[main pass 5, circuit 14/28, elapsed 03:01:11] rsa1024real: RSA-1024 verify (real) e=65537 W=121 K=9
+    --- compile: host 21.533 s, inside 21.517 s, exit code 0
+        Compiling rsa1024_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 76604
+    --- setup: host 15.816 s, inside 15.806 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.621 s, inside 0.609 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.813 s, inside 4.802 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa1024real replicate 5: constraints=76604 status=OK | host c/s/w/p/v = 21.533/15.816/0.621/4.813/0.023 | inside = 21.517/15.806/0.609/4.802/0.013
+
+[main pass 5, circuit 15/28, elapsed 03:01:54] rsa_1024_1c: RSA accumulator b=1024,r=1
+    --- compile: host 0.854 s, inside 0.844 s, exit code 0
+        Compiling rsa_accumulator_1024_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 10239
+>>> rsa_1024_1c replicate 5: constraints=10239 status=OK | host c/s/w/p/v = 0.854//// | inside = 0.844////
+
+[main pass 5, circuit 16/28, elapsed 03:01:55] merkle_8: Merkle path d=8
+    --- compile: host 2.688 s, inside 2.678 s, exit code 0
+        Compiling merkle_poseidon_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 1962
+    --- setup: host 0.423 s, inside 0.414 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.061 s, inside 0.046 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.754 s, inside 0.739 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.033 s, inside 0.019 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_8 replicate 5: constraints=1962 status=OK | host c/s/w/p/v = 2.688/0.423/0.061/0.754/0.033 | inside = 2.678/0.414/0.046/0.739/0.019
+
+[main pass 5, circuit 17/28, elapsed 03:01:59] synth_bool_300k: Synthetic boolean chain N=150000, XOR/OR chain of bits
+    --- compile: host 46.602 s, inside 46.585 s, exit code 0
+        Compiling synth_bool_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300002
+    --- setup: host 55.863 s, inside 55.850 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.609 s, inside 3.598 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 20.566 s, inside 20.556 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.024 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_300k replicate 5: constraints=300002 status=OK | host c/s/w/p/v = 46.602/55.863/3.609/20.566/0.024 | inside = 46.585/55.850/3.598/20.556/0.013
+
+[main pass 5, circuit 18/28, elapsed 03:04:06] synth_bool_100k: Synthetic boolean chain N=50000, XOR/OR chain of bits
+    --- compile: host 11.715 s, inside 11.705 s, exit code 0
+        Compiling synth_bool_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100002
+    --- setup: host 19.004 s, inside 18.994 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.160 s, inside 1.147 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.680 s, inside 4.670 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_100k replicate 5: constraints=100002 status=OK | host c/s/w/p/v = 11.715/19.004/1.160/4.680/0.022 | inside = 11.705/18.994/1.147/4.670/0.012
+
+[main pass 5, circuit 19/28, elapsed 03:04:42] rsa_512_1c: RSA accumulator b=512,r=1
+    --- compile: host 0.415 s, inside 0.404 s, exit code 0
+        Compiling rsa_accumulator_512_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 5119
+>>> rsa_512_1c replicate 5: constraints=5119 status=OK | host c/s/w/p/v = 0.415//// | inside = 0.404////
+
+[main pass 5, circuit 20/28, elapsed 03:04:43] rsa2048real: RSA-2048 verify (real) e=65537 W=121 K=17
+    --- compile: host 47.924 s, inside 47.910 s, exit code 0
+        Compiling rsa2048_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 153484
+    --- setup: host 30.296 s, inside 30.283 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.570 s, inside 1.550 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 10.851 s, inside 10.840 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.035 s, inside 0.021 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa2048real replicate 5: constraints=153484 status=OK | host c/s/w/p/v = 47.924/30.296/1.570/10.851/0.035 | inside = 47.910/30.283/1.550/10.840/0.021
+
+[main pass 5, circuit 21/28, elapsed 03:06:14] rsa_256_8c: RSA accumulator b=256,r=8
+    --- compile: host 0.974 s, inside 0.960 s, exit code 0
+        Compiling rsa_accumulator_256_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 9713
+>>> rsa_256_8c replicate 5: constraints=9713 status=OK | host c/s/w/p/v = 0.974//// | inside = 0.960////
+
+[main pass 5, circuit 22/28, elapsed 03:06:15] rsa4096real: RSA-4096 verify (real) e=65537 W=121 K=34
+    --- compile: host 110.682 s, inside 110.670 s, exit code 0
+        Compiling rsa4096_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 331848
+    --- setup: host 58.540 s, inside 58.530 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 4.556 s, inside 4.539 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 29.193 s, inside 29.183 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.026 s, inside 0.016 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa4096real replicate 5: constraints=331848 status=OK | host c/s/w/p/v = 110.682/58.540/4.556/29.193/0.026 | inside = 110.670/58.530/4.539/29.183/0.016
+
+[main pass 5, circuit 23/28, elapsed 03:09:38] poseidon_64: Poseidon chain n=64
+    --- compile: host 13.996 s, inside 13.986 s, exit code 0
+        Compiling poseidon_chain_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 13634
+    --- setup: host 2.447 s, inside 2.437 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.247 s, inside 0.235 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.359 s, inside 2.349 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_64 replicate 5: constraints=13634 status=OK | host c/s/w/p/v = 13.996/2.447/0.247/2.359/0.023 | inside = 13.986/2.437/0.235/2.349/0.012
+
+[main pass 5, circuit 24/28, elapsed 03:09:57] rsa_256_64: RSA accumulator b=256,r=64
+    --- compile: host 4.746 s, inside 4.731 s, exit code 0
+        Compiling rsa_accumulator_256_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 66945
+    --- setup: host 12.987 s, inside 12.969 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.428 s, inside 0.417 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 3.775 s, inside 3.763 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.033 s, inside 0.019 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_64 replicate 5: constraints=66945 status=OK | host c/s/w/p/v = 4.746/12.987/0.428/3.775/0.033 | inside = 4.731/12.969/0.417/3.763/0.019
+
+[main pass 5, circuit 25/28, elapsed 03:10:19] rsa_512_8c: RSA accumulator b=512,r=8
+    --- compile: host 2.396 s, inside 2.383 s, exit code 0
+        Compiling rsa_accumulator_512_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 19441
+>>> rsa_512_8c replicate 5: constraints=19441 status=OK | host c/s/w/p/v = 2.396//// | inside = 2.383////
+
+[main pass 5, circuit 26/28, elapsed 03:10:21] sha256_ecc: SHA-256 compression commitment circuit, ECC-derived input
+    --- compile: host 3.016 s, inside 3.002 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 3.169 s, inside 3.159 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.618 s, inside 0.606 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.049 s, inside 2.039 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_ecc replicate 5: constraints=27214 status=OK | host c/s/w/p/v = 3.016/3.169/0.618/2.049/0.023 | inside = 3.002/3.159/0.606/2.039/0.013
+
+[main pass 5, circuit 27/28, elapsed 03:10:30] poseidon_1024: Poseidon chain n=1024
+    --- compile: host 296.085 s, inside 296.073 s, exit code 0
+        Compiling poseidon_chain_1024.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 218114
+    --- setup: host 41.107 s, inside 41.086 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.958 s, inside 3.945 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 38.646 s, inside 38.636 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.023 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_1024 replicate 5: constraints=218114 status=OK | host c/s/w/p/v = 296.085/41.107/3.958/38.646/0.023 | inside = 296.073/41.086/3.945/38.636/0.012
+
+[main pass 5, circuit 28/28, elapsed 03:16:50] poseidon_512: Poseidon chain n=512
+    --- compile: host 118.305 s, inside 118.294 s, exit code 0
+        Compiling poseidon_chain_512.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 109058
+    --- setup: host 20.311 s, inside 20.301 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.946 s, inside 1.933 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 21.090 s, inside 21.078 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.022 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_512 replicate 5: constraints=109058 status=OK | host c/s/w/p/v = 118.305/20.311/1.946/21.090/0.022 | inside = 118.294/20.301/1.933/21.078/0.012
+
+================ finished 2026-11-13T11:07:20Z ================
+results_20261113_074010/results.csv: 168 rows OK, 0 rows with a problem
+Results are in results_20261113_074010 (results.csv, results_bind_control.csv if the control ran, env.txt, order.txt, pass_log.txt, raw_run.log); bash pack_results_linux.sh packs them.

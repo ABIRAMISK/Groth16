@@ -1,0 +1,14 @@
+// Synthetic circuit, boolean witness: (b, d) -> (b != d, b || d), N steps.
+// Two constraints per step (2N+2 in all); every intermediate value is 0 or 1.
+const u32 N = 150000;
+def main(private bool b0, private bool d0) -> bool {
+    bool mut b = b0;
+    bool mut d = d0;
+    for u32 i in 0..N {
+        bool nb = b != d;
+        bool nd = b || d;
+        b = nb;
+        d = nd;
+    }
+    return b;
+}

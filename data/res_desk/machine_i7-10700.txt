@@ -1,0 +1,51 @@
+label: i7-10700
+# captured 2026-11-13T04:35:24Z (host clock)
+# host
+MINGW64_NT-10.0-19045 DESKTOP-6SIN1JT 3.6.10-5a1665c8.x86_64 2026-09-28 10:40 UTC x86_64 Msys
+os: Microsoft Windows 10 Pro version 10.0.19045
+cpu: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz  (8 cores, 16 threads)   clock_mhz=2904
+system: Gigabyte Technology Co., Ltd. B560M DS3H; RAM 15.9 GiB; PCSystemType=1 (1 desktop, 2 laptop)
+Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)battery_status(2=AC,1=battery,empty=no battery)=
+power_mode_overlay_guid plugged_in=  on_battery=   (Best performance = ded574b5-45a0-4f42-8737-46345c09c238)
+# wsl
+WSL version: 3.0.3.0
+Kernel version: 6.18.54.1-1
+WSLg version: 1.0.79
+MSRDC version: 1.2.7391
+Direct3D version: 1.611.1-81528511
+DXCore version: 10.0.26100.1-240331-1435.ge-release
+Windows version: 10.0.19045.6466
+# docker
+Docker version 29.9.3, build 5457199
+ Server Version: 29.9.3
+ Kernel Version: 6.18.54.1-microsoft-standard-WSL2
+ Operating System: Docker Desktop
+ CPUs: 16
+ Total Memory: 7.689GiB
+# disks
+
+DriveLetter FileSystem DriveType SizeGB FreeGB
+----------- ---------- --------- ------ ------
+          C NTFS       Fixed        100   23.9
+          D NTFS       Fixed        195  140.3
+          E NTFS       Fixed        181    108
+
+
+
+
+DriveLetter DiskNumber
+----------- ----------
+          C          0
+          D          0
+          E          0
+
+
+
+
+DeviceId FriendlyName    MediaType BusType SizeGB
+-------- ------------    --------- ------- ------
+0        ADATA SX6000LNP SSD       NVMe       477
+
+
+
+docker data folder:   [empty = default place on C:]  free-space drive: /d  free_gb=140.3

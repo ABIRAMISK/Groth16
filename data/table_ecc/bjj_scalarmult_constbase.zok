@@ -1,0 +1,8 @@
+import "ecc/edwardsScalarMult" as mul;
+import "ecc/babyjubjubParams" as params;
+from "ecc/babyjubjubParams" import BabyJubJubParams;
+def main(private bool[256] k) -> field[2] {
+    BabyJubJubParams ctx = params();
+    field[2] G = [ctx.Gu, ctx.Gv];
+    return mul(k, G, ctx);
+}

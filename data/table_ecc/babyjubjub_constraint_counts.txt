@@ -1,0 +1,52 @@
+# ZoKrates compile-only constraint counts, 2026-10-31T00:22:16Z
+# ZoKrates 0.8.7; curve bn128 (default); stdlib shipped with the 0.8.7 release
+
+$ zokrates compile -i bjj_add.zok   [file sha256 c2d6deed5892adfd]
+Compiling bjj_add.zok
+Compiled code written to '<work dir>/o'
+Number of constraints: 22
+
+$ zokrates compile -i bjj_scalarmult.zok   [file sha256 56598b8740e116d0]
+Compiling bjj_scalarmult.zok
+Compiled code written to '<work dir>/o'
+Number of constraints: 11492
+
+$ zokrates compile -i bjj_scalarmult_constbase.zok   [file sha256 7cba88ca0e2deef0]
+Compiling bjj_scalarmult_constbase.zok
+Compiled code written to '<work dir>/o'
+Number of constraints: 3322
+
+$ zokrates compile -i bjj_eddsa_verify.zok   [file sha256 5997ac9f1ca1705b]
+Compiling bjj_eddsa_verify.zok
+Compiled code written to '<work dir>/o'
+Number of constraints: 94181
+
+$ zokrates compile -i eddsa_poseidon_variant.zok   [file sha256 184830274a4305cc]
+Compiling eddsa_poseidon_variant.zok
+Compiled code written to '<work dir>/o'
+Number of constraints: 15211
+
+$ zokrates compile -i poseidon6.zok   [file sha256 ed29c1b74bbbafae]
+Compiling poseidon6.zok
+Compiled code written to '<work dir>/o'
+Number of constraints: 355
+
+$ zokrates compile -i two_outputs.zok   [file sha256 3b9dec060a56b425]
+Compiling two_outputs.zok
+Compiled code written to '<work dir>/o'
+Number of constraints: 2
+
+$ zokrates compile -i stdlib/hashes/sha256/512bit.zok
+Compiling <zokrates release>/stdlib/hashes/sha256/512bit.zok
+Compiled code written to '<work dir>/o'
+Number of constraints: 27470
+
+$ zokrates compile -i stdlib/hashes/sha256/512bitPadded.zok
+Compiling <zokrates release>/stdlib/hashes/sha256/512bitPadded.zok
+Compiled code written to '<work dir>/o'
+Number of constraints: 48904
+
+$ zokrates compile -i stdlib/hashes/sha256/1024bitPadded.zok
+Compiling <zokrates release>/stdlib/hashes/sha256/1024bitPadded.zok
+Compiled code written to '<work dir>/o'
+Number of constraints: 79575

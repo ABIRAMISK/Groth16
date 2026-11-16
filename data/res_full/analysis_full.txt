@@ -1,0 +1,115 @@
+== 1. NEW run, inside the container, replicates 1-5: mean (SD) seconds   [rows OK: 114, circuits 19]
+circuit                         constr | compile          setup          witness        proof          verify
+RSA surr b=512,r=64             134017 | 6.896 (0.119)    -              -              -              -
+RSA surr b=1024,r=64            268161 | 20.084 (0.442)   10.012 (0.039) 1.094 (0.017)  5.348 (0.093)  0.010 (0.001)
+RSA surr b=1024,r=8              38897 | 2.611 (0.018)    -              -              -              -
+RSA surr b=512,r=1                5119 | 0.227 (0.008)    -              -              -              -
+RSA surr b=1024,r=1              10239 | 0.597 (0.007)    -              -              -              -
+Poseidon n=256                   54530 | 29.343 (1.074)   2.900 (0.283)  0.719 (0.019)  2.811 (0.061)  0.009 (0.001)
+RSA surr b=256,r=1                2559 | 0.096 (0.005)    0.141 (0.006)  0.019 (0.002)  0.112 (0.013)  0.011 (0.002)
+RSA-2048 real e=65537 W=121 K=  153484 | 24.481 (0.329)   6.541 (0.068)  0.923 (0.007)  3.619 (0.094)  0.010 (0.000)
+Merkle d=8                        1962 | 2.026 (0.107)    0.135 (0.019)  0.034 (0.004)  0.193 (0.028)  0.011 (0.002)
+Merkle d=32                       7842 | 5.191 (0.184)    0.400 (0.006)  0.113 (0.004)  0.451 (0.007)  0.010 (0.001)
+RSA surr b=512,r=8               19441 | 0.962 (0.042)    -              -              -              -
+ECDSA secp256k1 verify (real)   842212 | 89.885 (0.492)   31.120 (0.280) 4.581 (0.104)  15.429 (0.302) 0.010 (0.001)
+Merkle d=64                      15682 | 9.586 (0.170)    -              -              -              -
+RSA surr b=256,r=64              66945 | 2.795 (0.069)    2.593 (0.028)  0.307 (0.015)  1.395 (0.043)  0.010 (0.001)
+Poseidon n=512                  109058 | 63.579 (0.486)   5.655 (0.256)  1.400 (0.042)  5.308 (0.194)  0.010 (0.001)
+Poseidon n=64                    13634 | 7.385 (0.116)    0.675 (0.007)  0.181 (0.004)  0.670 (0.024)  0.010 (0.003)
+Merkle d=16                       3922 | 3.059 (0.100)    0.229 (0.030)  0.058 (0.000)  0.296 (0.011)  0.010 (0.000)
+RSA surr b=256,r=8                9713 | 0.382 (0.024)    -              -              -              -
+Poseidon n=1024                 218114 | 159.071 (2.589)  12.248 (0.583) 2.850 (0.150)  10.653 (0.324) 0.010 (0.001)
+
+== 2. per-constraint inner cost, ms per constraint (mean over replicates 1-5)
+circuit                          compile     setup   witness     proof
+RSA surr b=512,r=64               0.0515       nan       nan         -
+RSA surr b=1024,r=64              0.0749    0.0373    0.0041    0.0199
+RSA surr b=1024,r=8               0.0671       nan       nan         -
+RSA surr b=512,r=1                0.0443       nan       nan         -
+RSA surr b=1024,r=1               0.0583       nan       nan         -
+Poseidon n=256                    0.5381    0.0532    0.0132    0.0515
+RSA surr b=256,r=1                0.0375    0.0551    0.0073    0.0437
+RSA-2048 real e=65537 W=121 K=    0.1595    0.0426    0.0060    0.0236
+Merkle d=8                        1.0325    0.0688    0.0171    0.0984
+Merkle d=32                       0.6619    0.0510    0.0144    0.0575
+RSA surr b=512,r=8                0.0495       nan       nan         -
+ECDSA secp256k1 verify (real)     0.1067    0.0370    0.0054    0.0183
+Merkle d=64                       0.6113       nan       nan         -
+RSA surr b=256,r=64               0.0417    0.0387    0.0046    0.0208
+Poseidon n=512                    0.5830    0.0518    0.0128    0.0487
+Poseidon n=64                     0.5416    0.0495    0.0133    0.0491
+Merkle d=16                       0.7799    0.0583    0.0148    0.0756
+RSA surr b=256,r=8                0.0393       nan       nan         -
+Poseidon n=1024                   0.7293    0.0562    0.0131    0.0488
+
+== 3. OLD rows vs NEW rows, same method (host-timed): new/old ratio of means (replicates 1-5)
+circuit                         compile    setup  witness    proof   verify   old-proof new-proof(host) new-proof(inner)
+RSA surr b=1024,r=64               0.63     0.68     0.25     0.44     0.87     13.13    5.73    5.35
+Poseidon n=256                     0.35     0.26     0.11     0.23     0.42     14.14    3.19    2.81
+RSA surr b=256,r=1                 0.83     1.04     1.03     1.12     1.28      0.49    0.55    0.11
+Merkle d=8                         0.49     0.39     0.33     0.39     0.46      1.50    0.58    0.19
+Merkle d=32                        0.45     0.31     0.24     0.28     0.45      2.87    0.82    0.45
+RSA surr b=256,r=64                0.66     0.89     0.52     0.59     1.06      2.94    1.75    1.39
+Poseidon n=512                     0.35     0.26     0.10     0.21     0.49     26.43    5.68    5.31
+Poseidon n=64                      0.38     0.27     0.18     0.27     0.47      4.43    1.18    0.67
+Merkle d=16                        0.46     0.34     0.28     0.34     0.43      1.96    0.66    0.30
+Poseidon n=1024                    0.47     0.43     0.18     0.36     0.72     30.28   11.01   10.65
+
+== 4. docker-exec overhead (host minus inside), all 402 timed calls: median 0.368 s, IQR 0.354-0.392, min 0.277, max 3.391
+   compile  median 0.357  IQR 0.339-0.380  n=114
+   setup    median 0.370  IQR 0.359-0.393  n=72
+   witness  median 0.377  IQR 0.360-0.390  n=72
+   proof    median 0.368  IQR 0.357-0.387  n=72
+   verify   median 0.372  IQR 0.362-0.393  n=72
+
+== 5. straight-line fits over replicate-level points (replicates 1-5): slope ms/constraint +- 95%% CI, intercept s, R2
+ -- proof
+   Merkle d<=32                             | old host: 0.2327+-0.0367 int 1.05 R2 0.935 | new host: 0.0400+-0.0077 int 0.50 R2 0.907 | new inside: 0.0432+-0.0044 int 0.12 R2 0.973
+   Poseidon n<=512                          | old host: 0.2303+-0.0215 int 1.40 R2 0.976 | new host: 0.0471+-0.0017 int 0.56 R2 0.996 | new inside: 0.0485+-0.0020 int 0.07 R2 0.995
+   Poseidon incl 1024                       | old host: 0.1222+-0.0463 int 6.74 R2 0.631 | new host: 0.0480+-0.0012 int 0.52 R2 0.998 | new inside: 0.0485+-0.0012 int 0.06 R2 0.998
+   ZK-native pooled (Merkle+Poseidon<=512)  | old host: 0.2333+-0.0100 int 1.13 R2 0.988 | new host: 0.0479+-0.0009 int 0.49 R2 0.998 | new inside: 0.0482+-0.0009 int 0.09 R2 0.998
+   surrogate (3 pipeline configs)           | old host: 0.0483+-0.0052 int 0.08 R2 0.969 | new host: 0.0196+-0.0003 int 0.47 R2 0.999 | new inside: 0.0197+-0.0003 int 0.07 R2 0.999
+ -- compile
+   Merkle d<=32                             | old host: 1.3017+-0.0703 int 2.44 R2 0.992 | new host: 0.5403+-0.0581 int 1.40 R2 0.969 | new inside: 0.5391+-0.0299 int 0.96 R2 0.992
+   Poseidon n<=512                          | old host: 1.7188+-0.1457 int -5.28 R2 0.980 | new host: 0.5918+-0.0185 int -1.12 R2 0.997 | new inside: 0.5910+-0.0179 int -1.48 R2 0.997
+   Poseidon incl 1024                       | old host: 1.5789+-0.4265 int 1.64 R2 0.771 | new host: 0.7510+-0.0400 int -9.00 R2 0.989 | new inside: 0.7512+-0.0403 int -9.40 R2 0.988
+   ZK-native pooled (Merkle+Poseidon<=512)  | old host: 1.6656+-0.0704 int -0.68 R2 0.988 | new host: 0.5711+-0.0119 int 0.68 R2 0.997 | new inside: 0.5711+-0.0114 int 0.26 R2 0.997
+   surrogate (3 pipeline configs)           | old host: 0.1242+-0.0123 int -1.36 R2 0.974 | new host: 0.0780+-0.0052 int -0.73 R2 0.988 | new inside: 0.0778+-0.0053 int -1.10 R2 0.987
+ -- setup
+   Merkle d<=32                             | old host: 0.2033+-0.0269 int 0.91 R2 0.954 | new host: 0.0436+-0.0070 int 0.42 R2 0.933 | new inside: 0.0449+-0.0046 int 0.05 R2 0.972
+   Poseidon n<=512                          | old host: 0.2011+-0.0155 int 1.25 R2 0.984 | new host: 0.0523+-0.0031 int 0.37 R2 0.990 | new inside: 0.0521+-0.0031 int -0.00 R2 0.990
+   Poseidon incl 1024                       | old host: 0.1216+-0.0326 int 5.19 R2 0.773 | new host: 0.0567+-0.0023 int 0.15 R2 0.993 | new inside: 0.0566+-0.0023 int -0.22 R2 0.993
+   ZK-native pooled (Merkle+Poseidon<=512)  | old host: 0.2041+-0.0073 int 0.99 R2 0.992 | new host: 0.0522+-0.0015 int 0.38 R2 0.995 | new inside: 0.0519+-0.0014 int 0.01 R2 0.995
+   surrogate (3 pipeline configs)           | old host: 0.0568+-0.0052 int -0.01 R2 0.977 | new host: 0.0371+-0.0002 int 0.44 R2 1.000 | new inside: 0.0371+-0.0002 int 0.07 R2 1.000
+ -- compile, surrogate, all 9 configs incl. compile-only (new inside): slope 0.0722+-0.0038 ms/constraint, intercept -0.60 s, R2 0.971
+
+== 6. matched-size contrasts (proof time)
+   Poseidon n=256 (54530) / RSA surr b=256,r=64 (66945): inside mean 2.02 median 2.01 | host mean 1.82 median 1.84
+   Poseidon n=1024 (218114) / RSA surr b=1024,r=64 (268161): inside mean 1.99 median 2.03 | host mean 1.92 median 1.96
+   Poseidon n=256 (54530) / RSA-2048 real e=65537 W=121 K= (153484): inside mean 0.78 median 0.77 | host mean 0.80 median 0.80
+   RSA-2048 real e=65537 W=121 K= (153484) / RSA surr b=1024,r=64 (268161): inside mean 0.68 median 0.68 | host mean 0.70 median 0.70
+
+== 7. Poseidon n=1024 and n=512 replicate series inside the container (rep 0 = warm-up), seconds
+   n=512      compile  65.87  64.22  63.90  63.49  63.02  63.25
+   n=512      setup    5.83  5.88  5.76  5.87  5.41  5.35
+   n=512      witness  1.48  1.47  1.41  1.38  1.35  1.39
+   n=512      proof    5.47  5.25  5.31  5.64  5.16  5.18
+   n=1024     compile  163.37  162.87  160.27  156.25  157.45  158.51
+   n=1024     setup    12.56  13.21  11.73  12.08  11.89  12.33
+   n=1024     witness  3.25  2.76  2.73  2.80  3.10  2.85
+   n=1024     proof    10.88  10.89  10.86  10.90  10.22  10.39
+
+== 8. warm-up pass (replicate 0) vs mean of replicates 1-5, inner total of the pipeline steps
+   median ratio 1.043, min 1.002 (Merkle d=32), max 1.096 (RSA surr b=256,r=1)
+   replicate-to-replicate CV of the inner pipeline total: median 1.7%, max 6.1% (Merkle d=8)
+   mean relative deviation from the circuit's own mean, by pass: pass 0: +4.8%  pass 1: +1.8%  pass 2: -0.8%  pass 3: -0.0%  pass 4: -0.1%  pass 5: -0.8%
+   main pass durations (min): 10.78  10.50  10.38  10.37  10.32  10.28
+
+== 9. verify, inside the container (all full-pipeline visits): mean 0.0101 s, range 0.0080-0.0150 s; host-timed mean 0.395 s
+
+== 10. CONTROL: Windows bind mount (old storage) vs container storage; replicates 1-5; ratio bind/local of means, Welch p
+   Poseidon n=256             inner comp 36.277/29.343=1.24x p=0.000 | setu 5.032/2.900=1.74x p=0.000 | witn 2.855/0.719=3.97x p=0.000 | proo 5.800/2.811=2.06x p=0.001 | veri 0.018/0.009=1.96x p=0.000
+   Poseidon n=256             host  comp 36.598/29.713=1.23x p=0.000 | setu 5.410/3.277=1.65x p=0.000 | witn 3.239/1.109=2.92x p=0.000 | proo 6.197/3.186=1.94x p=0.001 | veri 0.417/0.381=1.10x p=0.052
+   RSA surr b=1024,r=64       inner comp 27.170/20.084=1.35x p=0.000 | setu 13.099/10.012=1.31x p=0.000 | witn 4.450/1.094=4.07x p=0.000 | proo 11.056/5.348=2.07x p=0.000 | veri 0.017/0.010=1.81x p=0.000
+   RSA surr b=1024,r=64       host  comp 27.586/20.509=1.35x p=0.000 | setu 13.469/10.371=1.30x p=0.000 | witn 4.832/1.451=3.33x p=0.000 | proo 11.417/5.731=1.99x p=0.000 | veri 0.381/0.374=1.02x p=0.528
+   (scipy available: True)

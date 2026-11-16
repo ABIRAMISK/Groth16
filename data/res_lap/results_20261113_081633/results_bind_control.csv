@@ -1,0 +1,13 @@
+family,parameter,constraints,replicate,compile_s,setup_s,witness_s,proof_s,verify_s,verify_passed,source_log,compile_inner_s,setup_inner_s,witness_inner_s,proof_inner_s,verify_inner_s,storage,visit_position,timestamp_utc,status
+"Poseidon chain","n=256",54530,0,38.130,5.523,3.514,6.129,0.388,True,raw_run.log,37.819,5.169,3.170,5.783,0.020,bindmount,1,2026-11-13T04:37:35Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,0,28.490,13.921,5.242,12.000,0.389,True,raw_run.log,28.149,13.564,4.885,11.646,0.018,bindmount,2,2026-11-13T04:38:38Z,"OK"
+"Poseidon chain","n=256",54530,1,38.333,5.514,3.533,6.121,0.365,True,raw_run.log,38.040,5.156,3.153,5.768,0.020,bindmount,1,2026-11-13T04:39:40Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,1,28.762,14.115,5.128,11.783,0.376,True,raw_run.log,28.423,13.756,4.783,11.432,0.021,bindmount,2,2026-11-13T04:40:43Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,2,30.005,14.390,5.698,12.289,0.438,True,raw_run.log,29.677,14.032,5.336,11.954,0.022,bindmount,1,2026-11-13T04:41:54Z,"OK"
+"Poseidon chain","n=256",54530,2,41.414,11.382,5.262,9.695,0.577,True,raw_run.log,41.081,10.946,4.779,9.276,0.035,bindmount,2,2026-11-13T04:43:06Z,"OK"
+"Poseidon chain","n=256",54530,3,44.340,6.910,4.314,7.061,0.399,True,raw_run.log,43.959,6.501,3.915,6.663,0.021,bindmount,1,2026-11-13T04:44:18Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,3,34.640,16.105,6.109,13.967,0.436,True,raw_run.log,34.256,15.726,5.731,13.594,0.022,bindmount,2,2026-11-13T04:45:33Z,"OK"
+"Poseidon chain","n=256",54530,4,45.568,6.875,4.063,7.157,0.394,True,raw_run.log,45.186,6.479,3.675,6.772,0.021,bindmount,1,2026-11-13T04:46:45Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,4,33.033,16.214,6.190,13.774,0.410,True,raw_run.log,32.673,15.837,5.804,13.403,0.022,bindmount,2,2026-11-13T04:47:58Z,"OK"
+"Poseidon chain","n=256",54530,5,47.708,6.338,3.963,6.934,0.397,True,raw_run.log,47.307,5.953,3.579,6.552,0.020,bindmount,1,2026-11-13T04:49:12Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,5,34.060,18.468,7.524,17.670,0.487,True,raw_run.log,33.679,17.944,7.040,17.081,0.027,bindmount,2,2026-11-13T04:50:34Z,"OK"

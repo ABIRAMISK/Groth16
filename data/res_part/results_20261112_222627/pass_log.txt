@@ -1,0 +1,9 @@
+pass 0 (main) start 2026-11-12T17:02:47Z  battery_status(2=AC)=2  cpu_clock_mhz=1910
+pass 0 (main) end   2026-11-12T17:19:17Z  battery_status(2=AC)=2  cpu_clock_mhz=1910
+pass 1 (main) start 2026-11-12T17:19:20Z  battery_status(2=AC)=2  cpu_clock_mhz=1910
+pass 1 (main) end   2026-11-12T17:34:54Z  battery_status(2=AC)=2  cpu_clock_mhz=1910
+pass 2 (main) start 2026-11-12T17:34:57Z  battery_status(2=AC)=2  cpu_clock_mhz=1910
+pass 2 (main) end   2026-11-12T17:50:43Z  battery_status(2=AC)=2  cpu_clock_mhz=1910
+pass 3 (main) start 2026-11-12T17:50:45Z  battery_status(2=AC)=2  cpu_clock_mhz=1910
+pass 3 (main) end   2026-11-12T18:06:59Z  battery_status(2=AC)=2  cpu_clock_mhz=1910
+pass 4 (main) start 2026-11-12T18:07:02Z  battery_status(2=AC)=2  cpu_clock_mhz=1910

@@ -1,0 +1,66 @@
+[
+ [
+  "key d=1",
+  "accepted"
+ ],
+ [
+  "key d=2",
+  "accepted"
+ ],
+ [
+  "key d=3",
+  "accepted"
+ ],
+ [
+  "key d=0xffffffffff",
+  "accepted"
+ ],
+ [
+  "key d=0xffffffffff",
+  "accepted"
+ ],
+ [
+  "key d=0x1000000000",
+  "accepted"
+ ],
+ [
+  "key d=0x8000000000",
+  "accepted"
+ ],
+ [
+  "message hash z=0",
+  "accepted"
+ ],
+ [
+  "message hash z=1",
+  "accepted"
+ ],
+ [
+  "message hash z=0xffffffffff",
+  "accepted"
+ ],
+ [
+  "message hash z=0xffffffffff",
+  "accepted"
+ ],
+ [
+  "message hash z=0xffffffffff",
+  "accepted"
+ ],
+ [
+  "message hash z=0x8000000000",
+  "accepted"
+ ],
+ [
+  "nonce k=1",
+  "accepted"
+ ],
+ [
+  "nonce k=2",
+  "accepted"
+ ],
+ [
+  "nonce k=n-1",
+  "accepted"
+ ]
+]

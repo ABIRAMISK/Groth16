@@ -1,0 +1,77 @@
+[
+ [
+  "identity bounds hold for extreme 256-bit inputs (add/double, incl. non-canonical)",
+  true,
+  "2642 additions, 2584 doublings, no bound violated"
+ ],
+ [
+  "mod-n identities hold for extreme 256-bit inputs",
+  true,
+  "1500 cases"
+ ],
+ [
+  "forgery with P1 == P2 and arbitrary slope is REJECTED by the circuit with the x1 != x2 check",
+  true,
+  "2086 constraints"
+ ],
+ [
+  "same forgery is ACCEPTED when the check is removed (so the check is what blocks it)",
+  true,
+  "2080 constraints, forged x3 != 2P.x: True"
+ ],
+ [
+  "P1 == -P2: the slope identity has no solution (honest witness impossible)",
+  true,
+  ""
+ ],
+ [
+  "non-canonical alias x2 = x1 + p slips past the limb check (so inputs must be canonical: enforced in the full circuit)",
+  true,
+  "precondition of padd"
+ ],
+ [
+  "canon accepts x < 2^256 - 2^60",
+  true,
+  ""
+ ],
+ [
+  "canon rejects x >= 2^256 - 2^60 (all values >= p)",
+  true,
+  ""
+ ],
+ [
+  "rng_n accepts 1 <= v <= n-1",
+  true,
+  ""
+ ],
+ [
+  "rng_n rejects 0, n, n+1, 2^256-1",
+  true,
+  ""
+ ],
+ [
+  "final_cmp: x == r (b=0) or x == r + n (b=1), nothing else",
+  true,
+  "9 cases"
+ ],
+ [
+  "oncurve accepts a point on secp256k1",
+  true,
+  ""
+ ],
+ [
+  "oncurve rejects (x, y+1) with the honest-for-(x,y) witness",
+  true,
+  ""
+ ],
+ [
+  "oncurve is mod p (accepts y + p when it fits in 256 bits)",
+  true,
+  "y non-canonical is harmless: same point"
+ ],
+ [
+  "oncurve rejects an off-curve point even when the square s is changed",
+  true,
+  ""
+ ]
+]

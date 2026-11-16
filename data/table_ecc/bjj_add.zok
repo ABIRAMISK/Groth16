@@ -1,0 +1,7 @@
+import "ecc/edwardsAdd" as add;
+import "ecc/babyjubjubParams" as params;
+from "ecc/babyjubjubParams" import BabyJubJubParams;
+def main(private field[2] p, private field[2] q) -> field[2] {
+    BabyJubJubParams ctx = params();
+    return add(p, q, ctx);
+}

@@ -1,0 +1,13 @@
+family,parameter,constraints,replicate,compile_s,setup_s,witness_s,proof_s,verify_s,verify_passed,source_log,compile_inner_s,setup_inner_s,witness_inner_s,proof_inner_s,verify_inner_s,storage,visit_position,timestamp_utc,status
+"Poseidon chain","n=256",54530,0,36.899,5.360,3.365,5.552,0.395,True,raw_run.log,36.602,4.971,2.967,5.128,0.017,bindmount,1,2026-11-11T10:28:54Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,0,27.386,13.294,4.809,11.208,0.378,True,raw_run.log,26.760,12.927,4.434,10.859,0.017,bindmount,2,2026-11-11T10:29:54Z,"OK"
+"Poseidon chain","n=256",54530,1,36.494,5.252,3.328,5.709,0.396,True,raw_run.log,36.180,4.865,2.957,5.340,0.016,bindmount,1,2026-11-11T10:30:52Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,1,26.991,13.310,4.824,11.238,0.377,True,raw_run.log,26.347,12.927,4.449,10.881,0.017,bindmount,2,2026-11-11T10:31:51Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,2,26.652,13.226,4.744,11.246,0.369,True,raw_run.log,26.360,12.869,4.349,10.879,0.015,bindmount,1,2026-11-11T10:32:54Z,"OK"
+"Poseidon chain","n=256",54530,2,36.698,5.436,3.153,5.759,0.414,True,raw_run.log,36.330,5.050,2.772,5.370,0.018,bindmount,2,2026-11-11T10:33:48Z,"OK"
+"Poseidon chain","n=256",54530,3,35.862,5.395,3.243,7.717,0.469,True,raw_run.log,35.568,5.028,2.854,7.268,0.021,bindmount,1,2026-11-11T10:34:48Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,3,28.427,13.569,4.946,11.644,0.406,True,raw_run.log,28.023,13.193,4.572,11.278,0.018,bindmount,2,2026-11-11T10:35:50Z,"OK"
+"Poseidon chain","n=256",54530,4,36.794,5.436,3.226,5.806,0.396,True,raw_run.log,36.482,5.070,2.842,5.409,0.018,bindmount,1,2026-11-11T10:36:48Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,4,27.507,13.659,4.891,11.530,0.374,True,raw_run.log,27.140,13.291,4.501,11.171,0.018,bindmount,2,2026-11-11T10:37:48Z,"OK"
+"Poseidon chain","n=256",54530,5,37.140,5.530,3.245,5.993,0.411,True,raw_run.log,36.826,5.149,2.850,5.613,0.019,bindmount,1,2026-11-11T10:38:48Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,5,28.352,13.583,4.757,11.428,0.378,True,raw_run.log,27.981,13.215,4.377,11.069,0.019,bindmount,2,2026-11-11T10:39:48Z,"OK"

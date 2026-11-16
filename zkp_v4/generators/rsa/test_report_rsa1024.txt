@@ -1,0 +1,24 @@
+full circuit: 76604 constraints
+PASS  [full] valid signature, key A                                     expected accept, got accept
+PASS  [full] valid signature, key B                                     expected accept, got accept
+PASS  [full] digest with one bit flipped                                expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] signature + 1                                              expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] wrong modulus (n + 2)                                      expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] s + n, d = 0 (non-canonical signature)                     expected reject, got reject  (Execution failed: Assertion failed at <work dir>)
+PASS  [full] s + n, d = two's complement                                expected reject, got reject  (Execution failed: Assertion failed at <work dir>)
+PASS  [full] quotient limb out of range (value unchanged)               expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] remainder limb out of range (value unchanged)              expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] quotient off by one                                        expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] forgery: s = 1, quotients correct only mod p               expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] top-coefficient forgery (identity off by 2^(W(2K-2)))      expected reject, got reject  (Execution failed: Assertion failed at <work dir>)
+PASS  [mutant:noadder] valid signature, key A                                     expected accept, got accept
+PASS  [mutant:noadder] s + n, d = 0 (non-canonical signature)                     expected accept, got accept
+PASS  [mutant:norange] valid signature, key A                                     expected accept, got accept
+PASS  [mutant:norange] quotient limb out of range (value unchanged)               expected accept, got accept
+PASS  [mutant:norange] remainder limb out of range (value unchanged)              expected accept, got accept
+PASS  [mutant:nocarry] valid signature, key A                                     expected accept, got accept
+PASS  [mutant:nocarry] forgery: s = 1, quotients correct only mod p               expected accept, got accept
+PASS  [mutant:nofinal] valid signature, key A                                     expected accept, got accept
+PASS  [mutant:nofinal] top-coefficient forgery (identity off by 2^(W(2K-2)))      expected accept, got accept
+
+failures: 0

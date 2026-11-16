@@ -1,0 +1,155 @@
+Run folder: results_20261111_132242_ecdsa   mode=ecdsa REPS=5 WARMUP=1 CONTROL=0 ONLY='ecdsa_secp256k1'
+battery status now (2 = on AC power, 1 = on battery): 2
+Windows Power mode setting (overlay GUID; Best performance = ded574b5-45a0-4f42-8737-46345c09c238): plugged in = ded574b5-45a0-4f42-8737-46345c09c238   on battery = 961cc777-2547-4f9d-8174-7d86181b8a7a
+Before this starts: plug in the charger, set Settings > System > Power > Power mode to Best performance, set sleep to Never
+while plugged in, close other programs, and leave the laptop alone. Starting in 15 s (Ctrl-C to cancel).
+--- prepare ecdsa_secp256k1 (ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir)
+    READY ecdsa_verify.zok
+
+================ pass 0 of 5 (warm-up) [main] ================
+
+[main pass 0, circuit 1/1, elapsed 00:00:02] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 87.897 s, inside 87.604 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 25.408 s, inside 25.096 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 5.189 s, inside 4.830 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 14.635 s, inside 14.352 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.366 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 0: constraints=842212 status=OK | host c/s/w/p/v = 87.897/25.408/5.189/14.635/0.366 | inside = 87.604/25.096/4.830/14.352/0.010
+
+================ pass 1 of 5 [main] ================
+
+[main pass 1, circuit 1/1, elapsed 00:02:22] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 89.545 s, inside 89.200 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 35.566 s, inside 35.253 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 5.659 s, inside 5.284 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 18.217 s, inside 17.825 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.554 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 1: constraints=842212 status=OK | host c/s/w/p/v = 89.545/35.566/5.659/18.217/0.554 | inside = 89.200/35.253/5.284/17.825/0.010
+
+================ pass 2 of 5 [main] ================
+
+[main pass 2, circuit 1/1, elapsed 00:04:58] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 92.584 s, inside 92.281 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 32.298 s, inside 31.908 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 5.271 s, inside 4.878 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 16.777 s, inside 16.390 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.434 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 2: constraints=842212 status=OK | host c/s/w/p/v = 92.584/32.298/5.271/16.777/0.434 | inside = 92.281/31.908/4.878/16.390/0.012
+
+================ pass 3 of 5 [main] ================
+
+[main pass 3, circuit 1/1, elapsed 00:07:34] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 91.178 s, inside 90.886 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 31.745 s, inside 31.292 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 5.175 s, inside 4.791 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 16.375 s, inside 16.018 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.408 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 3: constraints=842212 status=OK | host c/s/w/p/v = 91.178/31.745/5.175/16.375/0.408 | inside = 90.886/31.292/4.791/16.018/0.012
+
+================ pass 4 of 5 [main] ================
+
+[main pass 4, circuit 1/1, elapsed 00:10:06] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 93.686 s, inside 93.378 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 31.987 s, inside 31.509 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 5.346 s, inside 4.899 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 16.503 s, inside 16.138 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.404 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 4: constraints=842212 status=OK | host c/s/w/p/v = 93.686/31.987/5.346/16.503/0.404 | inside = 93.378/31.509/4.899/16.138/0.011
+
+================ pass 5 of 5 [main] ================
+
+[main pass 5, circuit 1/1, elapsed 00:12:41] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 90.617 s, inside 90.304 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 32.253 s, inside 31.844 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 5.225 s, inside 4.822 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 16.022 s, inside 15.664 s, exit code 0
+        Generating proof...
+        Proof written to 'proof.json'
+    --- verify: host 0.383 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 5: constraints=842212 status=OK | host c/s/w/p/v = 90.617/32.253/5.225/16.022/0.383 | inside = 90.304/31.844/4.822/15.664/0.011
+
+================ finished 2026-11-11T08:08:18Z ================
+results_20261111_132242_ecdsa/results.csv: 6 rows OK, 0 rows with a problem
+Send back the whole folder results_20261111_132242_ecdsa (right-click it > Compress to ZIP file, then attach the zip): results.csv, results_bind_control.csv, env.txt, order.txt, pass_log.txt, raw_run.log

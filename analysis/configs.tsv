@@ -1,0 +1,28 @@
+merkle_8	Merkle path	d=8	merkle	1962	8	
+rsa_256_1	RSA accumulator	b=256,r=1	rsa	2559	256	1
+merkle_16	Merkle path	d=16	merkle	3922	16	
+rsa_512_1c	RSA accumulator	b=512,r=1	rsa_c	5119	512	1
+merkle_32	Merkle path	d=32	merkle	7842	32	
+rsa_256_8c	RSA accumulator	b=256,r=8	rsa_c	9713	256	8
+rsa_1024_1c	RSA accumulator	b=1024,r=1	rsa_c	10239	1024	1
+poseidon_64	Poseidon chain	n=64	poseidon	13634	64	
+merkle_64c	Merkle path	d=64	merkle_c	15682	64	
+rsa_512_8c	RSA accumulator	b=512,r=8	rsa_c	19441	512	8
+sha256_ecc	SHA-256 compression	commitment circuit, ECC-derived input	sha	27214	ecc	
+sha256_rsa	SHA-256 compression	commitment circuit, RSA-derived input	sha	27214	rsa	
+rsa_1024_8c	RSA accumulator	b=1024,r=8	rsa_c	38897	1024	8
+poseidon_256	Poseidon chain	n=256	poseidon	54530	256	
+rsa_256_64	RSA accumulator	b=256,r=64	rsa	66945	256	64
+rsa1024real	RSA-1024 verify (real)	e=65537 W=121 K=9	rsareal	76604	1024	
+synth_full_100k	Synthetic full-width chain	N=100000, x=x*x+1 chain	synth	100001	full	100k
+synth_bool_100k	Synthetic boolean chain	N=50000, XOR/OR chain of bits	synth	100002	bool	100k
+poseidon_512	Poseidon chain	n=512	poseidon	109058	512	
+rsa_512_64c	RSA accumulator	b=512,r=64	rsa_c	134017	512	64
+rsa2048real	RSA-2048 verify (real)	e=65537 W=121 K=17	rsa2048	153484		
+poseidon_1024	Poseidon chain	n=1024	poseidon	218114	1024	
+rsa3072real	RSA-3072 verify (real)	e=65537 W=121 K=26	rsareal	244870	3072	
+rsa_1024_64	RSA accumulator	b=1024,r=64	rsa	268161	1024	64
+synth_full_300k	Synthetic full-width chain	N=300000, x=x*x+1 chain	synth	300001	full	300k
+synth_bool_300k	Synthetic boolean chain	N=150000, XOR/OR chain of bits	synth	300002	bool	300k
+rsa4096real	RSA-4096 verify (real)	e=65537 W=121 K=34	rsareal	331848	4096	
+ecdsa_secp256k1	ECDSA secp256k1 verify (real)	5 limbs of 60 bits, 2-bit Strauss-Shamir	ecdsa	842212		

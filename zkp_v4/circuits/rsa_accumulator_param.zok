@@ -1,0 +1,90 @@
+// Parametric RSA accumulator circuit for benchmarking
+// This is a SURROGATE circuit for benchmarking purposes only - NOT FOR PRODUCTION USE
+//
+// WARNING: This circuit uses simplified field arithmetic to demonstrate 
+// ZKP constraint scaling. It does not implement secure RSA operations.
+//
+// Parameters:
+//   EXP_BITS: Bit length of exponents (256/512/1024/2048)
+//   REPS: Number of repeated exponentiation operations (1/8/64)
+//
+// Inputs:
+//   element: Private field element
+//   witness: Private field element used as base for exponentiation
+//   accumulator: Public field element representing the accumulator value
+//   modulus: Public field element representing the modulus
+//   generator: Public field element representing the generator
+//
+// Logic:
+//   For each repetition j in 0..REPS:
+//     Compute left_j = witness^element mod modulus using exp_mod
+//   Fold all left_j values via field multiplication into agg_left
+//   Compute rhs = generator * accumulator^{-1}
+//   Assert agg_left == rhs
+
+from "EMBED" import unpack;
+
+const u32 EXP_BITS = 256;
+const u32 REPS = 1;
+
+// Modular exponentiation using square-and-multiply
+// Simplified for benchmarking - uses field operations
+def exp_mod(field base, field exponent, field modulus) -> field {
+    field mut result = 1;
+    field mut b = base;
+    bool[EXP_BITS] exp_bits = unpack(exponent);
+    
+    for u32 i in 0..EXP_BITS {
+        // If bit is set, multiply result by base
+        result = if exp_bits[i] {
+            result * b
+        } else {
+            result
+        };
+        
+        // Square the base for the next bit
+        b = b * b;
+    }
+    
+    return result;
+}
+
+// Simplified modular inverse approximation for benchmarking
+// WARNING: This is a benchmarking surrogate only
+def modinv_surrogate(field a, field m) -> field {
+    // Simplified: use field inverse (1/a) for benchmarking
+    // In production RSA, would need proper modular inverse
+    field exp = m - 2;
+    return exp_mod(a, exp, m);
+}
+
+def main(
+    private field element,
+    private field witness,
+    public field accumulator,
+    public field modulus,
+    public field generator
+) -> field {
+    // Compute repeated exponentiations
+    field mut agg_left = 1;
+    
+    for u32 j in 0..REPS {
+        // Compute left_j = witness^element (simplified for benchmarking)
+        field left_j = exp_mod(witness, element, modulus);
+        
+        // Fold into aggregate via field multiplication
+        agg_left = agg_left * left_j;
+    }
+    
+    // Compute accumulator inverse (surrogate method for benchmarking)
+    field acc_inv = modinv_surrogate(accumulator, modulus);
+    
+    // Compute right-hand side: rhs = generator * accumulator^{-1}
+    field rhs = generator * acc_inv;
+    
+    // Assert equality (this creates the constraint)
+    assert(agg_left == rhs);
+    
+    return agg_left;
+}
+

@@ -1,0 +1,10 @@
+{
+ "public_key_x": "0x94c5a4124dc4e26409c95b9eb03c0186afa43013acc41b1b90085a352c295aa4",
+ "public_key_y": "0x2dcca7b842a5e645aff8da1c7ceefa328f3773887391cf1b2f0580c2329240b6",
+ "message_hash_z": "0x2ba0fea98d94a603c946fdefe80e0021d5ea3802267c6ef0f38bed11627ab755",
+ "r": "0xc9f3058434a79bdd96c110f1591e983561a855996132f22590878b80540049bc",
+ "s": "0x2fb43aef0699afbcd4f1864fc1557670fd000c9b32daa5c05e5b5c9232dc9b5c",
+ "message": "Empirical Profiling of Classical Cryptography and R1CS Costs in ZK-Native and Non-Native Circuits",
+ "limbs": "5 limbs of 60,60,60,60,16 bits, least significant first",
+ "arguments": "qx(5) qy(5) z(5) r(5) s(5) then 13113 private witness values"
+}

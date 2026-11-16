@@ -1,0 +1,171 @@
+Run folder: memory_20261113_102041
+
+=== merkle_8: Merkle path d=8
+    compile: wall/peakMiB/cpu_s/cores = 2.966,102.4,2.93,0.99  polls=132 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 0.265,29.2,1.07,4.04  polls=10 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 0.070,14.5,0.01,0.14  polls=2 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 0.268,30.9,0.88,3.28  polls=11 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.026,0.6,0.00,0.00  polls=1 rc=0
+
+=== merkle_16: Merkle path d=16
+    compile: wall/peakMiB/cpu_s/cores = 4.767,163.8,4.73,0.99  polls=211 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 0.282,37.7,1.20,4.26  polls=12 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 0.092,15.3,0.06,0.65  polls=4 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 0.489,39.7,1.98,4.05  polls=18 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.027,0.3,0.00,0.00  polls=1 rc=0
+
+=== merkle_32: Merkle path d=32
+    compile: wall/peakMiB/cpu_s/cores = 9.574,253.5,9.54,1.00  polls=416 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 0.574,52.4,2.60,4.53  polls=23 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 0.134,15.9,0.10,0.75  polls=6 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 0.663,58.5,3.00,4.52  polls=26 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.024,0.4,0.00,0.00  polls=1 rc=0
+
+=== poseidon_64: Poseidon chain n=64
+    compile: wall/peakMiB/cpu_s/cores = 8.964,322.1,8.90,0.99  polls=407 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 0.920,81.7,4.13,4.49  polls=38 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 0.226,15.3,0.19,0.84  polls=10 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 0.860,92.0,3.86,4.49  polls=36 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.026,0.3,0.00,0.00  polls=1 rc=0
+
+=== poseidon_256: Poseidon chain n=256
+    compile: wall/peakMiB/cpu_s/cores = 36.749,1156.9,36.69,1.00  polls=1672 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 3.193,277.4,15.40,4.82  polls=130 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 0.812,21.1,0.77,0.95  polls=37 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 3.520,304.7,14.79,4.20  polls=145 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.024,0.3,0.00,0.00  polls=1 rc=0
+
+=== poseidon_512: Poseidon chain n=512
+    compile: wall/peakMiB/cpu_s/cores = 81.337,2274.4,81.23,1.00  polls=3692 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 6.929,537.5,33.50,4.83  polls=273 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 1.618,24.6,1.59,0.98  polls=74 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 6.576,590.5,27.89,4.24  polls=273 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.026,0.5,0.00,0.00  polls=1 rc=0
+
+=== poseidon_1024: Poseidon chain n=1024
+    compile: wall/peakMiB/cpu_s/cores = 205.920,4509.2,205.69,1.00  polls=9333 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 14.270,1059.7,67.32,4.72  polls=551 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 3.119,33.5,3.08,0.99  polls=143 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 12.117,1159.7,51.65,4.26  polls=502 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.024,0.3,0.00,0.00  polls=1 rc=0
+
+=== rsa_256_1: RSA accumulator b=256,r=1
+    compile: wall/peakMiB/cpu_s/cores = 0.160,40.9,0.10,0.62  polls=6 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 0.170,25.0,0.82,4.82  polls=7 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 0.047,0.3,0.00,0.00  polls=1 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 0.246,26.3,0.71,2.89  polls=9 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.024,0.3,0.00,0.00  polls=1 rc=0
+
+=== rsa_256_64: RSA accumulator b=256,r=64
+    compile: wall/peakMiB/cpu_s/cores = 3.769,203.0,3.73,0.99  polls=170 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 3.076,145.9,18.73,6.09  polls=120 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 0.376,21.6,0.34,0.90  polls=17 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 1.598,179.4,5.80,3.63  polls=69 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.026,0.5,0.00,0.00  polls=1 rc=0
+
+=== rsa_1024_64: RSA accumulator b=1024,r=64
+    compile: wall/peakMiB/cpu_s/cores = 22.964,631.5,22.90,1.00  polls=1051 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 11.391,531.9,70.09,6.15  polls=456 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 1.288,37.8,1.25,0.97  polls=59 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 6.405,665.8,24.39,3.81  polls=270 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.024,0.5,0.00,0.00  polls=1 rc=0
+
+=== rsa1024real: RSA-1024 verify (real) e=65537 W=121 K=9
+    compile: wall/peakMiB/cpu_s/cores = 13.489,964.4,13.41,0.99  polls=617 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 3.752,215.4,22.80,6.08  polls=144 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 0.484,22.1,0.45,0.93  polls=22 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 2.337,225.1,10.36,4.43  polls=93 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.025,0.3,0.00,0.00  polls=1 rc=0
+
+=== rsa2048real: RSA-2048 verify (real) e=65537 W=121 K=17
+    compile: wall/peakMiB/cpu_s/cores = 28.591,1904.9,28.48,1.00  polls=1308 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 7.906,390.7,47.31,5.98  polls=303 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 1.095,29.1,1.06,0.97  polls=50 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 4.069,452.4,16.21,3.98  polls=172 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.024,0.5,0.00,0.00  polls=1 rc=0
+
+=== rsa3072real: RSA-3072 verify (real) e=65537 W=121 K=26
+    compile: wall/peakMiB/cpu_s/cores = 46.804,2904.8,46.68,1.00  polls=2141 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 12.090,640.3,70.18,5.80  polls=461 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 2.056,35.2,2.01,0.98  polls=94 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 6.316,750.7,20.49,3.24  polls=272 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.025,0.5,0.00,0.00  polls=1 rc=0
+
+=== rsa4096real: RSA-4096 verify (real) e=65537 W=121 K=34
+    compile: wall/peakMiB/cpu_s/cores = 68.714,4266.0,68.50,1.00  polls=3119 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 17.898,963.0,96.43,5.39  polls=706 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 3.465,42.1,3.43,0.99  polls=157 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 10.799,1128.9,39.87,3.69  polls=449 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.025,0.3,0.00,0.00  polls=1 rc=0
+
+=== ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    compile: wall/peakMiB/cpu_s/cores = 106.542,4312.0,106.38,1.00  polls=4867 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 37.899,1780.9,215.47,5.69  polls=1463 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 6.648,84.0,6.61,0.99  polls=295 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 17.812,2158.9,58.27,3.27  polls=766 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.025,0.5,0.00,0.00  polls=1 rc=0
+
+=== sha256_ecc: SHA-256 compression commitment circuit, ECC-derived input
+    compile: wall/peakMiB/cpu_s/cores = 1.454,192.5,1.40,0.96  polls=65 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 1.335,91.5,5.15,3.86  polls=56 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 0.626,19.6,0.60,0.96  polls=28 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 0.963,105.8,2.76,2.87  polls=42 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.024,0.3,0.00,0.00  polls=1 rc=0
+
+=== sha256_rsa: SHA-256 compression commitment circuit, RSA-derived input
+    compile: wall/peakMiB/cpu_s/cores = 1.551,192.3,1.49,0.96  polls=69 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 1.215,91.8,4.83,3.98  polls=51 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 0.551,19.7,0.52,0.94  polls=25 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 0.977,106.5,2.80,2.87  polls=43 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.024,0.5,0.00,0.00  polls=1 rc=0
+
+=== synth_full_100k: Synthetic full-width chain N=100000, x=x*x+1 chain
+    compile: wall/peakMiB/cpu_s/cores = 4.343,416.1,4.28,0.99  polls=198 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 4.469,203.8,27.17,6.08  polls=179 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 0.550,22.8,0.52,0.95  polls=25 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 4.715,250.7,26.75,5.67  polls=182 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.024,0.3,0.00,0.00  polls=1 rc=0
+
+=== synth_bool_100k: Synthetic boolean chain N=50000, XOR/OR chain of bits
+    compile: wall/peakMiB/cpu_s/cores = 6.389,580.7,6.33,0.99  polls=292 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 4.744,217.9,27.27,5.75  polls=192 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 0.921,24.3,0.88,0.96  polls=42 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 2.548,250.8,6.98,2.74  polls=112 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.025,0.3,0.00,0.00  polls=1 rc=0
+
+=== synth_full_300k: Synthetic full-width chain N=300000, x=x*x+1 chain
+    compile: wall/peakMiB/cpu_s/cores = 13.653,1205.2,13.59,1.00  polls=625 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 13.148,589.4,79.66,6.06  polls=526 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 1.532,39.1,1.50,0.98  polls=70 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 13.585,743.2,73.34,5.40  polls=548 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.023,0.3,0.00,0.00  polls=1 rc=0
+
+=== synth_bool_300k: Synthetic boolean chain N=150000, XOR/OR chain of bits
+    compile: wall/peakMiB/cpu_s/cores = 20.939,1709.4,20.86,1.00  polls=954 rc=0
+    setup: wall/peakMiB/cpu_s/cores = 14.714,589.0,84.45,5.74  polls=581 rc=0
+    witness: wall/peakMiB/cpu_s/cores = 2.666,38.8,2.63,0.99  polls=122 rc=0
+    proof: wall/peakMiB/cpu_s/cores = 8.078,744.2,24.76,3.07  polls=350 rc=0
+    verify: wall/peakMiB/cpu_s/cores = 0.024,0.5,0.00,0.00  polls=1 rc=0
+
+=== merkle_64c: Merkle path d=64
+    compile: wall/peakMiB/cpu_s/cores = 11.151,460.1,11.10,1.00  polls=509 rc=0
+
+=== rsa_256_8c: RSA accumulator b=256,r=8
+    compile: wall/peakMiB/cpu_s/cores = 0.439,61.0,0.40,0.91  polls=20 rc=0
+
+=== rsa_512_1c: RSA accumulator b=512,r=1
+    compile: wall/peakMiB/cpu_s/cores = 0.265,48.2,0.23,0.87  polls=12 rc=0
+
+=== rsa_512_8c: RSA accumulator b=512,r=8
+    compile: wall/peakMiB/cpu_s/cores = 1.139,89.3,1.10,0.97  polls=52 rc=0
+
+=== rsa_512_64c: RSA accumulator b=512,r=64
+    compile: wall/peakMiB/cpu_s/cores = 8.102,346.8,8.05,0.99  polls=369 rc=0
+
+=== rsa_1024_1c: RSA accumulator b=1024,r=1
+    compile: wall/peakMiB/cpu_s/cores = 0.678,59.5,0.64,0.94  polls=31 rc=0
+
+=== rsa_1024_8c: RSA accumulator b=1024,r=8
+    compile: wall/peakMiB/cpu_s/cores = 3.026,140.8,2.99,0.99  polls=138 rc=0
+
+================ finished 2026-11-13T05:15:51Z: memory_20261113_102041/memory_profile.csv ================

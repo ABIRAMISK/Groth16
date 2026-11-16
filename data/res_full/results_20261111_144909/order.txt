@@ -1,0 +1,12 @@
+pass 0 (main): rsa_512_64c rsa_1024_64 rsa_1024_8c rsa_512_1c rsa_1024_1c poseidon_256 rsa_256_1 rsa2048real merkle_8 merkle_32 rsa_512_8c ecdsa_secp256k1 merkle_64c rsa_256_64 poseidon_512 poseidon_64 merkle_16 rsa_256_8c poseidon_1024
+pass 1 (main): merkle_32 rsa_512_8c poseidon_64 merkle_64c rsa_1024_64 poseidon_256 rsa_512_64c poseidon_1024 merkle_8 poseidon_512 rsa_256_8c rsa2048real rsa_1024_1c rsa_1024_8c rsa_256_1 ecdsa_secp256k1 merkle_16 rsa_256_64 rsa_512_1c
+pass 2 (main): poseidon_1024 rsa_512_8c rsa_512_64c poseidon_64 rsa_1024_1c merkle_16 rsa_512_1c merkle_8 rsa_1024_64 poseidon_256 ecdsa_secp256k1 rsa2048real poseidon_512 merkle_32 rsa_1024_8c rsa_256_1 merkle_64c rsa_256_8c rsa_256_64
+pass 3 (main): poseidon_512 rsa_256_64 ecdsa_secp256k1 merkle_32 rsa_512_8c rsa_1024_1c merkle_8 merkle_64c poseidon_1024 poseidon_64 merkle_16 rsa_256_8c rsa_512_1c rsa_1024_64 rsa2048real rsa_256_1 rsa_512_64c rsa_1024_8c poseidon_256
+pass 4 (main): merkle_8 rsa_512_64c rsa_1024_8c rsa_512_8c merkle_32 poseidon_256 ecdsa_secp256k1 rsa_256_64 merkle_64c poseidon_1024 poseidon_512 merkle_16 rsa_256_1 rsa2048real rsa_1024_64 rsa_256_8c rsa_1024_1c rsa_512_1c poseidon_64
+pass 5 (main): rsa_512_64c poseidon_64 rsa_256_1 rsa_256_8c merkle_8 rsa_256_64 poseidon_1024 rsa_1024_8c rsa_1024_1c rsa_512_8c rsa_512_1c merkle_64c merkle_32 poseidon_256 ecdsa_secp256k1 merkle_16 rsa_1024_64 poseidon_512 rsa2048real
+pass 0 (control): poseidon_256 rsa_1024_64
+pass 1 (control): poseidon_256 rsa_1024_64
+pass 2 (control): rsa_1024_64 poseidon_256
+pass 3 (control): poseidon_256 rsa_1024_64
+pass 4 (control): poseidon_256 rsa_1024_64
+pass 5 (control): poseidon_256 rsa_1024_64

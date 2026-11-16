@@ -1,0 +1,48 @@
+// Merkle membership verification with Poseidon hash
+// This circuit proves knowledge of a leaf and its authentication path in a Merkle tree
+// using Poseidon hash function for ZK-friendly hashing
+//
+// Parameters:
+//   DEPTH: Height of the Merkle tree (e.g., 16/32/64)
+//
+// Inputs:
+//   leaf: Private field element representing the leaf value
+//   path_elements: Private array of sibling hashes along the path
+//   path_directions: Private boolean array indicating path direction (false=left, true=right)
+//   expected_root: Public field element representing the expected root hash
+//
+// Logic:
+//   Starting from the leaf, iteratively compute parent hashes by hashing
+//   the current hash with its sibling according to path_directions.
+//   Assert that the final computed root matches the expected_root.
+
+import "hashes/poseidon/poseidon" as poseidon;
+
+const u32 DEPTH = 16;
+
+def main(
+    private field leaf,
+    private field[DEPTH] path_elements,
+    private bool[DEPTH] path_directions,
+    public field expected_root
+) -> field {
+    // Initialize computed hash with the leaf value
+    field mut computed_hash = leaf;
+    
+    // Iteratively compute parent hashes up the tree
+    for u32 i in 0..DEPTH {
+        // Determine left and right inputs based on path direction
+        // If path_directions[i] is false, computed_hash is on the left
+        // If path_directions[i] is true, computed_hash is on the right
+        field left = if path_directions[i] { path_elements[i] } else { computed_hash };
+        field right = if path_directions[i] { computed_hash } else { path_elements[i] };
+        
+        // Hash the pair using Poseidon
+        computed_hash = poseidon([left, right]);
+    }
+    
+    // Assert that computed root matches expected root
+    assert(computed_hash == expected_root);
+    
+    return computed_hash;
+}

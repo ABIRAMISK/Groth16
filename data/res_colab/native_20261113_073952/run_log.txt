@@ -1,0 +1,32 @@
+Output folder: native_20261113_073952   suite: baseline   iterations per configuration: 1000
+AC line status now (1 = mains power, 0 = battery, None = not Windows): None, battery None %
+{
+ "started_utc": "2026-11-13T07:39:52Z",
+ "python": "3.13.18 (main, Oct 26 2026, 15:28:15) [GCC 13.3.0]",
+ "python_executable": "/usr/bin/python3",
+ "cryptography": "50.0.2",
+ "openssl": "OpenSSL 4.0.3 29 Sep 2026",
+ "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+ "os_version": "#1 SMP Thu Oct 22 03:07:54 UTC 2026",
+ "machine": "x86_64",
+ "cpu_name": "Intel(R) Xeon(R) CPU @ 2.20GHz",
+ "cpu_mhz_registry": null,
+ "logical_cpus": 2,
+ "ram_gib": 12.67,
+ "ac_line_status(1=mains,0=battery)": null,
+ "battery_percent": null
+}
+block order (seed 20261113): sig_RSA_3072 ops_ECC_SECP256K1 sig_RSA_4096 ops_ECC_SECP256R1 sig_RSA_1024 sig_RSA_2048
+[1/6, elapsed 0.0 min] sig_RSA_3072  start 07:39:52 UTC  ac=None
+    done in 4.8 s; mean of first timed column 0.000087 s over 1000 iterations
+[2/6, elapsed 0.1 min] ops_ECC_SECP256K1  start 07:39:56 UTC  ac=None
+    done in 1.4 s; mean of first timed column 0.000654 s over 1000 iterations
+[3/6, elapsed 0.1 min] sig_RSA_4096  start 07:39:58 UTC  ac=None
+    done in 10.5 s; mean of first timed column 0.000197 s over 1000 iterations
+[4/6, elapsed 0.3 min] ops_ECC_SECP256R1  start 07:40:08 UTC  ac=None
+    done in 0.3 s; mean of first timed column 0.000212 s over 1000 iterations
+[5/6, elapsed 0.3 min] sig_RSA_1024  start 07:40:09 UTC  ac=None
+    done in 0.4 s; mean of first timed column 0.000043 s over 1000 iterations
+[6/6, elapsed 0.3 min] sig_RSA_2048  start 07:40:09 UTC  ac=None
+    done in 1.2 s; mean of first timed column 0.000045 s over 1000 iterations
+finished 2026-11-13T07:40:10Z UTC, ac=None

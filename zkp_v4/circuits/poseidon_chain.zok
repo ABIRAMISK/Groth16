@@ -1,0 +1,36 @@
+// Poseidon hash chain circuit
+// This circuit computes a chain of Poseidon hashes and verifies the final result
+//
+// Parameters:
+//   ROUNDS: Number of hash iterations to perform (e.g., 64/256/1024)
+//
+// Inputs:
+//   seed: Private field element as the initial value
+//   expected: Public field element representing the expected final hash
+//
+// Logic:
+//   Starting from seed, iteratively apply Poseidon hash ROUNDS times.
+//   Each iteration: value = poseidon([value])
+//   Assert that the final value matches the expected result.
+
+import "hashes/poseidon/poseidon" as poseidon;
+
+const u32 ROUNDS = 64;
+
+def main(
+    private field seed,
+    public field expected
+) -> field {
+    // Initialize value with the seed
+    field mut value = seed;
+    
+    // Apply Poseidon hash ROUNDS times
+    for u32 i in 0..ROUNDS {
+        value = poseidon([value]);
+    }
+    
+    // Assert that final value matches expected result
+    assert(value == expected);
+    
+    return value;
+}

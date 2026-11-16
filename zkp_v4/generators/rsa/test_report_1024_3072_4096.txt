@@ -1,0 +1,90 @@
+=================== RSA-1024  15:54:03
+full circuit: 76604 constraints
+PASS  [full] valid signature, key A                                     expected accept, got accept
+PASS  [full] valid signature, key B                                     expected accept, got accept
+PASS  [full] digest with one bit flipped                                expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] signature + 1                                              expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] wrong modulus (n + 2)                                      expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] s + n, d = 0 (non-canonical signature)                     expected reject, got reject  (Execution failed: Assertion failed at <work dir>)
+PASS  [full] s + n, d = two's complement                                expected reject, got reject  (Execution failed: Assertion failed at <work dir>)
+PASS  [full] quotient limb out of range (value unchanged)               expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] remainder limb out of range (value unchanged)              expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] quotient off by one                                        expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] forgery: s = 1, quotients correct only mod p               expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] top-coefficient forgery (identity off by 2^(W(2K-2)))      expected reject, got reject  (Execution failed: Assertion failed at <work dir>)
+-- mutant noadder: 76594 constraints (12s compile)
+PASS  [mutant:noadder] valid signature, key A                                     expected accept, got accept
+PASS  [mutant:noadder] s + n, d = 0 (non-canonical signature)                     expected accept, got accept
+-- mutant norange: 41180 constraints (6s compile)
+PASS  [mutant:norange] valid signature, key A                                     expected accept, got accept
+PASS  [mutant:norange] quotient limb out of range (value unchanged)               expected accept, got accept
+PASS  [mutant:norange] remainder limb out of range (value unchanged)              expected accept, got accept
+-- mutant nocarry: 41788 constraints (6s compile)
+PASS  [mutant:nocarry] valid signature, key A                                     expected accept, got accept
+PASS  [mutant:nocarry] forgery: s = 1, quotients correct only mod p               expected accept, got accept
+-- mutant nofinal: 76553 constraints (12s compile)
+PASS  [mutant:nofinal] valid signature, key A                                     expected accept, got accept
+PASS  [mutant:nofinal] top-coefficient forgery (identity off by 2^(W(2K-2)))      expected accept, got accept
+failures: 0
+key 1/20: accepted; largest carry 2^122.. (limit 2^125)
+key 2/20: accepted; largest carry 2^122.. (limit 2^125)
+key 3/20: accepted; largest carry 2^121.. (limit 2^125)
+key 4/20: accepted; largest carry 2^122.. (limit 2^125)
+key 5/20: accepted; largest carry 2^122.. (limit 2^125)
+key 6/20: accepted; largest carry 2^122.. (limit 2^125)
+key 7/20: accepted; largest carry 2^122.. (limit 2^125)
+key 8/20: accepted; largest carry 2^122.. (limit 2^125)
+key 9/20: accepted; largest carry 2^122.. (limit 2^125)
+key 10/20: accepted; largest carry 2^122.. (limit 2^125)
+key 11/20: accepted; largest carry 2^122.. (limit 2^125)
+key 12/20: accepted; largest carry 2^122.. (limit 2^125)
+key 13/20: accepted; largest carry 2^122.. (limit 2^125)
+key 14/20: accepted; largest carry 2^122.. (limit 2^125)
+key 15/20: accepted; largest carry 2^121.. (limit 2^125)
+key 16/20: accepted; largest carry 2^122.. (limit 2^125)
+key 17/20: accepted; largest carry 2^122.. (limit 2^125)
+key 18/20: accepted; largest carry 2^121.. (limit 2^125)
+key 19/20: accepted; largest carry 2^122.. (limit 2^125)
+key 20/20: accepted; largest carry 2^122.. (limit 2^125)
+RSA-1024: 20/20 random valid signatures accepted; largest honest |carry| = 2^122.88; limit 2^125; analytic bound K*2^W+2 = 2^124.17
+=================== RSA-3072  15:54:58
+full circuit: 244870 constraints
+PASS  [full] valid signature, key A                                     expected accept, got accept
+PASS  [full] valid signature, key B                                     expected accept, got accept
+PASS  [full] digest with one bit flipped                                expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] signature + 1                                              expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] wrong modulus (n + 2)                                      expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] s + n, d = 0 (non-canonical signature)                     expected reject, got reject  (Execution failed: Assertion failed at <work dir>)
+PASS  [full] s + n, d = two's complement                                expected reject, got reject  (Execution failed: Assertion failed at <work dir>)
+PASS  [full] quotient limb out of range (value unchanged)               expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] remainder limb out of range (value unchanged)              expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] quotient off by one                                        expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] forgery: s = 1, quotients correct only mod p               expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] top-coefficient forgery (identity off by 2^(W(2K-2)))      expected reject, got reject  (Execution failed: Assertion failed at <work dir>)
+failures: 0
+key 1/4: accepted; largest carry 2^123.. (limit 2^126)
+key 2/4: accepted; largest carry 2^123.. (limit 2^126)
+key 3/4: accepted; largest carry 2^123.. (limit 2^126)
+key 4/4: accepted; largest carry 2^122.. (limit 2^126)
+RSA-3072: 4/4 random valid signatures accepted; largest honest |carry| = 2^123.52; limit 2^126; analytic bound K*2^W+2 = 2^125.70
+=================== RSA-4096  15:55:53
+full circuit: 331848 constraints
+PASS  [full] valid signature, key A                                     expected accept, got accept
+PASS  [full] valid signature, key B                                     expected accept, got accept
+PASS  [full] digest with one bit flipped                                expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] signature + 1                                              expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] wrong modulus (n + 2)                                      expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] s + n, d = 0 (non-canonical signature)                     expected reject, got reject  (Execution failed: Assertion failed at <work dir>)
+PASS  [full] s + n, d = two's complement                                expected reject, got reject  (Execution failed: Assertion failed at <work dir>)
+PASS  [full] quotient limb out of range (value unchanged)               expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] remainder limb out of range (value unchanged)              expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] quotient off by one                                        expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] forgery: s = 1, quotients correct only mod p               expected reject, got reject  (The default ZoKrates interpreter should not yield this error. Please open an issue.)
+PASS  [full] top-coefficient forgery (identity off by 2^(W(2K-2)))      expected reject, got reject  (Execution failed: Assertion failed at <work dir>)
+failures: 0
+key 1/4: accepted; largest carry 2^123.. (limit 2^127)
+key 2/4: accepted; largest carry 2^123.. (limit 2^127)
+key 3/4: accepted; largest carry 2^123.. (limit 2^127)
+key 4/4: accepted; largest carry 2^123.. (limit 2^127)
+RSA-4096: 4/4 random valid signatures accepted; largest honest |carry| = 2^123.48; limit 2^127; analytic bound K*2^W+2 = 2^126.09
+=================== ALL DONE 15:57:18

@@ -1,0 +1,10 @@
+// Synthetic circuit, full-width witness: x_(i+1) = x_i * x_i + 1, N steps.
+// One multiplication constraint per step (N+1 constraints in all); every intermediate value is a pseudo-random 254-bit field element.
+const u32 N = 100000;
+def main(private field x0) -> field {
+    field mut x = x0;
+    for u32 i in 0..N {
+        x = x * x + 1;
+    }
+    return x;
+}

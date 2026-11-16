@@ -1,0 +1,13 @@
+family,parameter,constraints,replicate,compile_s,setup_s,witness_s,proof_s,verify_s,verify_passed,source_log,compile_inner_s,setup_inner_s,witness_inner_s,proof_inner_s,verify_inner_s,storage,visit_position,timestamp_utc,status
+"Poseidon chain","n=256",54530,0,25.706,2.496,1.772,2.859,0.213,True,raw_run.log,25.527,2.291,1.591,2.651,0.010,bindmount,1,2026-11-13T04:15:20Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,0,18.783,5.418,2.660,6.177,0.193,True,raw_run.log,18.604,5.237,2.479,5.995,0.011,bindmount,2,2026-11-13T04:15:54Z,"OK"
+"Poseidon chain","n=256",54530,1,25.860,2.457,1.771,2.885,0.189,True,raw_run.log,25.680,2.279,1.592,2.682,0.010,bindmount,1,2026-11-13T04:16:32Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,1,19.961,5.377,2.656,6.128,0.191,True,raw_run.log,19.781,5.196,2.473,5.948,0.011,bindmount,2,2026-11-13T04:17:08Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,2,19.226,5.402,2.665,6.152,0.192,True,raw_run.log,19.047,5.221,2.484,5.947,0.011,bindmount,1,2026-11-13T04:17:46Z,"OK"
+"Poseidon chain","n=256",54530,2,25.791,2.455,1.768,2.862,0.188,True,raw_run.log,25.609,2.277,1.585,2.682,0.011,bindmount,2,2026-11-13T04:18:21Z,"OK"
+"Poseidon chain","n=256",54530,3,25.891,2.460,1.781,2.897,0.189,True,raw_run.log,25.712,2.281,1.601,2.685,0.010,bindmount,1,2026-11-13T04:18:59Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,3,19.117,5.358,2.652,6.174,0.190,True,raw_run.log,18.939,5.177,2.470,5.994,0.010,bindmount,2,2026-11-13T04:19:34Z,"OK"
+"Poseidon chain","n=256",54530,4,25.992,2.464,1.772,2.861,0.189,True,raw_run.log,25.787,2.285,1.594,2.684,0.011,bindmount,1,2026-11-13T04:20:12Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,4,18.844,5.355,2.662,6.117,0.191,True,raw_run.log,18.667,5.177,2.477,5.938,0.010,bindmount,2,2026-11-13T04:20:46Z,"OK"
+"Poseidon chain","n=256",54530,5,25.343,2.456,1.765,2.845,0.189,True,raw_run.log,25.162,2.278,1.585,2.665,0.011,bindmount,1,2026-11-13T04:21:24Z,"OK"
+"RSA accumulator","b=1024,r=64",268161,5,18.957,5.361,2.646,6.094,0.202,True,raw_run.log,18.777,5.182,2.467,5.917,0.010,bindmount,2,2026-11-13T04:21:58Z,"OK"
