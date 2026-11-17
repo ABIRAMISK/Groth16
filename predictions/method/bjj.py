@@ -1,0 +1,16 @@
+# BabyJubJub (twisted Edwards a=168700, d=168696 over the BN254 scalar field), parameters of the ZoKrates 0.8.7 standard library
+p=21888242871839275222246405745257275088548364400416034343698204186575808495617
+a,d=168700,168696
+G=(16540640123574156134436876038791482806971768689494387082833631921987005038935,20819045374670962167435360035096875258406992893633759881276124905556507972311)
+ORDER=21888242871839275222246405745257275088614511777268538073601725287587578984328   # curve order (8 * l)
+L=ORDER//8
+def add(P,Q):
+    x1,y1=P; x2,y2=Q; t=d*x1*x2*y1*y2%p
+    return ((x1*y2+y1*x2)*pow(1+t,-1,p)%p, (y1*y2-a*x1*x2)*pow(1-t,-1,p)%p)
+def mul(k,P):
+    R=(0,1)
+    while k:
+        if k&1: R=add(R,P)
+        P=add(P,P); k>>=1
+    return R
+def on_curve(P): x,y=P; return (a*x*x+y*y-1-d*x*x*y*y)%p==0
