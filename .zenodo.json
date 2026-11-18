@@ -1,0 +1,11 @@
+{
+  "title": "Groth16 proving-cost study: circuits, measurement harness, prover timers, cached-matrix prover and data",
+  "upload_type": "software",
+  "description": "Artifact of the paper 'Proving Cost of Native and Non-Native Circuits in Groth16: Constraint Count, Matrix Density and Witness Values'. Circuits and generators (including RSA PKCS#1 v1.5 and ECDSA secp256k1 verifiers), the ZoKrates 0.8.7 measurement harness, the structure extractor, timer patches for the arkworks and bellman back ends, the cached-matrix prover, the Circom/snarkjs kit, the frozen predictions with checksums, statistics scripts and replicate-level results. Three files that contain ZoKrates standard-library code keep its LGPL-3.0 licence.",
+  "creators": [
+    {"name": "S.K., Abirami", "affiliation": "PSG College of Technology, Coimbatore, India"},
+    {"name": "G.R., Karpagam", "affiliation": "PSG College of Technology, Coimbatore, India"}
+  ],
+  "license": "MIT",
+  "keywords": ["zero-knowledge proofs", "Groth16", "R1CS", "ZoKrates", "snarkjs", "prover cost model", "benchmarking"]
+}

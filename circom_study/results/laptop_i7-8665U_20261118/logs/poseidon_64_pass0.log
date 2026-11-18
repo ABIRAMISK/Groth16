@@ -1,0 +1,209 @@
+644.8	[36;22m[DEBUG] [39;1msnarkJS[0m: Reading Wtns
+645.5	[36;22m[DEBUG] [39;1msnarkJS[0m: Reading Coeffs
+645.6	[36;22m[DEBUG] [39;1msnarkJS[0m: Building ABC
+645.8	[36;22m[DEBUG] [39;1msnarkJS[0m: QAP AB: 0/27650
+705.1	[36;22m[DEBUG] [39;1msnarkJS[0m: QAP C: 0/32768
+738.1	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix start: 0/8
+738.4	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix start: 1/8
+738.8	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix start: 2/8
+739.0	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix start: 3/8
+739.9	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix start: 4/8
+740.0	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix start: 5/8
+740.1	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix start: 6/8
+740.5	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix start: 7/8
+753.7	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix end: 1/8
+754.0	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix end: 0/8
+754.1	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix end: 3/8
+754.3	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix end: 4/8
+754.5	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix end: 2/8
+754.7	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix end: 5/8
+755.0	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix end: 7/8
+755.5	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 mix end: 6/8
+755.5	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft  15  join: 13/15
+758.8	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 join  13/15  1/4 0/1
+759.2	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 join  13/15  2/4 0/1
+759.3	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 join  13/15  3/4 0/1
+759.4	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 join  13/15  4/4 0/1
+759.4	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft  15  join: 14/15
+762.0	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 join  14/15  1/2 0/2
+762.7	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 join  14/15  2/2 1/2
+763.2	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 join  14/15  2/2 0/2
+763.3	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 join  14/15  1/2 1/2
+763.3	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft  15  join: 15/15
+767.8	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 join  15/15  1/1 1/4
+768.2	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 join  15/15  1/1 2/4
+768.3	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 join  15/15  1/1 0/4
+769.0	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_A: fft 15 join  15/15  1/1 3/4
+778.0	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix start: 0/8
+778.2	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix start: 1/8
+778.5	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix start: 2/8
+778.6	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix start: 3/8
+778.9	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix start: 4/8
+779.1	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix start: 5/8
+779.5	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix start: 6/8
+779.6	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix start: 7/8
+790.7	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix end: 0/8
+791.0	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix end: 1/8
+791.2	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix end: 2/8
+791.4	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix end: 4/8
+792.5	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix end: 5/8
+792.5	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix end: 7/8
+792.5	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix end: 6/8
+792.7	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 mix end: 3/8
+792.8	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft  15  join: 13/15
+795.8	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 join  13/15  1/4 0/1
+796.4	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 join  13/15  3/4 0/1
+796.7	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 join  13/15  2/4 0/1
+796.8	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 join  13/15  4/4 0/1
+796.9	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft  15  join: 14/15
+799.3	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 join  14/15  1/2 0/2
+799.6	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 join  14/15  1/2 1/2
+800.2	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 join  14/15  2/2 0/2
+800.4	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 join  14/15  2/2 1/2
+800.4	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft  15  join: 15/15
+802.8	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 join  15/15  1/1 0/4
+803.0	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 join  15/15  1/1 1/4
+803.6	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 join  15/15  1/1 2/4
+803.7	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_A: fft 15 join  15/15  1/1 3/4
+807.8	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix start: 0/8
+807.9	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix start: 1/8
+808.2	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix start: 2/8
+808.4	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix start: 3/8
+808.7	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix start: 4/8
+808.9	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix start: 5/8
+809.2	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix start: 6/8
+809.6	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix start: 7/8
+819.5	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix end: 0/8
+820.6	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix end: 2/8
+820.9	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix end: 1/8
+821.2	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix end: 3/8
+821.4	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix end: 4/8
+821.5	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix end: 5/8
+821.6	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix end: 6/8
+821.9	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 mix end: 7/8
+821.9	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft  15  join: 13/15
+824.6	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 join  13/15  2/4 0/1
+824.8	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 join  13/15  1/4 0/1
+825.1	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 join  13/15  3/4 0/1
+825.5	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 join  13/15  4/4 0/1
+825.5	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft  15  join: 14/15
+827.8	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 join  14/15  1/2 0/2
+828.3	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 join  14/15  1/2 1/2
+828.6	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 join  14/15  2/2 0/2
+828.7	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 join  14/15  2/2 1/2
+828.7	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft  15  join: 15/15
+832.5	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 join  15/15  1/1 0/4
+833.1	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 join  15/15  1/1 3/4
+833.8	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 join  15/15  1/1 1/4
+833.9	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_B: fft 15 join  15/15  1/1 2/4
+842.4	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix start: 0/8
+842.7	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix start: 1/8
+843.0	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix start: 2/8
+843.2	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix start: 3/8
+843.7	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix start: 4/8
+843.9	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix start: 5/8
+844.3	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix start: 6/8
+844.5	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix start: 7/8
+855.2	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix end: 1/8
+855.6	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix end: 2/8
+856.0	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix end: 4/8
+859.2	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix end: 0/8
+859.4	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix end: 3/8
+860.1	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix end: 6/8
+860.7	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix end: 5/8
+862.5	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 mix end: 7/8
+862.5	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft  15  join: 13/15
+865.0	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 join  13/15  1/4 0/1
+865.0	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 join  13/15  2/4 0/1
+865.7	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 join  13/15  3/4 0/1
+865.9	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 join  13/15  4/4 0/1
+865.9	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft  15  join: 14/15
+868.1	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 join  14/15  1/2 0/2
+868.4	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 join  14/15  1/2 1/2
+869.0	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 join  14/15  2/2 0/2
+869.2	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 join  14/15  2/2 1/2
+869.3	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft  15  join: 15/15
+871.8	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 join  15/15  1/1 0/4
+872.1	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 join  15/15  1/1 1/4
+872.3	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 join  15/15  1/1 2/4
+872.4	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_B: fft 15 join  15/15  1/1 3/4
+877.6	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix start: 0/8
+877.8	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix start: 1/8
+878.0	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix start: 2/8
+878.1	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix start: 3/8
+878.5	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix start: 4/8
+878.8	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix start: 5/8
+879.0	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix start: 6/8
+879.2	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix start: 7/8
+890.2	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix end: 2/8
+890.3	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix end: 1/8
+890.4	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix end: 0/8
+890.7	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix end: 3/8
+891.0	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix end: 4/8
+891.2	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix end: 5/8
+891.3	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix end: 6/8
+892.0	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 mix end: 7/8
+892.0	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft  15  join: 13/15
+894.3	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 join  13/15  1/4 0/1
+894.7	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 join  13/15  2/4 0/1
+895.5	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 join  13/15  3/4 0/1
+895.6	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 join  13/15  4/4 0/1
+895.6	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft  15  join: 14/15
+897.9	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 join  14/15  1/2 0/2
+898.2	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 join  14/15  1/2 1/2
+899.1	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 join  14/15  2/2 0/2
+899.3	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 join  14/15  2/2 1/2
+899.3	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft  15  join: 15/15
+903.0	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 join  15/15  1/1 0/4
+903.2	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 join  15/15  1/1 1/4
+904.5	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 join  15/15  1/1 2/4
+904.7	[36;22m[DEBUG] [39;1msnarkJS[0m: IFFT_C: fft 15 join  15/15  1/1 3/4
+913.2	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix start: 0/8
+913.4	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix start: 1/8
+913.6	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix start: 2/8
+913.8	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix start: 3/8
+914.0	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix start: 4/8
+914.4	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix start: 5/8
+914.7	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix start: 6/8
+914.9	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix start: 7/8
+926.1	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix end: 0/8
+926.3	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix end: 1/8
+926.6	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix end: 2/8
+926.9	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix end: 3/8
+927.1	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix end: 4/8
+927.3	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix end: 5/8
+928.0	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix end: 7/8
+929.2	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 mix end: 6/8
+929.3	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft  15  join: 13/15
+932.2	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 join  13/15  1/4 0/1
+932.5	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 join  13/15  2/4 0/1
+932.6	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 join  13/15  3/4 0/1
+932.7	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 join  13/15  4/4 0/1
+932.8	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft  15  join: 14/15
+935.2	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 join  14/15  1/2 0/2
+935.5	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 join  14/15  1/2 1/2
+936.4	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 join  14/15  2/2 1/2
+936.5	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 join  14/15  2/2 0/2
+936.5	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft  15  join: 15/15
+939.2	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 join  15/15  1/1 0/4
+939.4	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 join  15/15  1/1 1/4
+939.8	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 join  15/15  1/1 2/4
+939.9	[36;22m[DEBUG] [39;1msnarkJS[0m: FFT_C: fft 15 join  15/15  1/1 3/4
+940.3	[36;22m[DEBUG] [39;1msnarkJS[0m: Join ABC
+940.6	[36;22m[DEBUG] [39;1msnarkJS[0m: JoinABC: 0/32768
+958.2	[36;22m[DEBUG] [39;1msnarkJS[0m: Reading A Points
+959.0	[36;22m[DEBUG] [39;1msnarkJS[0m: Multiexp start: multiexp A: 0/26562
+1148.3	[36;22m[DEBUG] [39;1msnarkJS[0m: Multiexp end: multiexp A: 0/26562
+1148.4	[36;22m[DEBUG] [39;1msnarkJS[0m: Reading B1 Points
+1149.2	[36;22m[DEBUG] [39;1msnarkJS[0m: Multiexp start: multiexp B1: 0/26562
+1300.5	[36;22m[DEBUG] [39;1msnarkJS[0m: Multiexp end: multiexp B1: 0/26562
+1300.6	[36;22m[DEBUG] [39;1msnarkJS[0m: Reading B2 Points
+1302.0	[36;22m[DEBUG] [39;1msnarkJS[0m: Multiexp start: multiexp B2: 0/26562
+1818.5	[36;22m[DEBUG] [39;1msnarkJS[0m: Multiexp end: multiexp B2: 0/26562
+1818.7	[36;22m[DEBUG] [39;1msnarkJS[0m: Reading C Points
+1819.7	[36;22m[DEBUG] [39;1msnarkJS[0m: Multiexp start: multiexp C: 0/26560
+2168.9	[36;22m[DEBUG] [39;1msnarkJS[0m: Multiexp end: multiexp C: 0/26560
+2169.1	[36;22m[DEBUG] [39;1msnarkJS[0m: Reading H Points
+2170.2	[36;22m[DEBUG] [39;1msnarkJS[0m: Multiexp start: multiexp H: 0/32768
+2585.9	[36;22m[DEBUG] [39;1msnarkJS[0m: Multiexp end: multiexp H: 0/32768
+2749.9	EXIT 0

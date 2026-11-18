@@ -1,0 +1,11 @@
+circuit,phase,seconds,constraints
+poseidon_chain_64,compile,1.270,26560
+poseidon_chain_64,setup,10.258,26560
+poseidon_chain_256,compile,2.300,106240
+poseidon_chain_256,setup,14.842,106240
+poseidon_chain_1024,compile,6.542,424960
+poseidon_chain_1024,setup,41.314,424960
+square_chain_100000,compile,6.262,100000
+square_chain_100000,setup,18.999,100000
+square_chain_300000,compile,35.367,300000
+square_chain_300000,setup,36.132,300000

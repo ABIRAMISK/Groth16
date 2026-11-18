@@ -1,0 +1,362 @@
+diff -ruN g16-orig/src/fast.rs ark-groth16-fast/src/fast.rs
+--- ark-groth16-0.3.0.orig/src/fast.rs	1970-01-01 00:00:00.000000000 +0000
++++ ark-groth16-fast/src/fast.rs	2026-11-17 17:16:54.413037238 +0000
+@@ -0,0 +1,184 @@
++//! Prover path that starts from constraint matrices stored once (after setup) instead of synthesizing the
++//! constraint system on every proof. The arithmetic after the witness map is the same code as `create_proof`.
++use crate::{prover::calculate_coeff, Proof, ProvingKey};
++use ark_ec::{msm::VariableBaseMSM, AffineCurve, PairingEngine, ProjectiveCurve};
++use ark_ff::{One, PrimeField, Zero};
++use ark_poly::{EvaluationDomain, GeneralEvaluationDomain};
++use ark_relations::r1cs::ConstraintMatrices;
++use ark_serialize::{CanonicalDeserialize, CanonicalSerialize};
++use ark_std::{cfg_into_iter, cfg_iter, cfg_iter_mut, vec, vec::Vec};
++#[cfg(feature = "parallel")]
++use rayon::prelude::*;
++use std::collections::HashMap;
++use std::io::{Read, Write};
++
++/// One matrix in compressed sparse row form; each entry is (column, coefficient id).
++pub struct Csr {
++    pub row_ptr: Vec<u32>,
++    pub entries: Vec<(u32, u32)>,
++}
++
++/// The three constraint matrices with a table of distinct coefficients (id 0 is always the field element one).
++pub struct FlatR1cs<F: PrimeField> {
++    pub num_instance: usize,
++    pub num_witness: usize,
++    pub num_constraints: usize,
++    pub coeffs: Vec<F>,
++    pub a: Csr,
++    pub b: Csr,
++    pub c: Csr,
++}
++
++impl<F: PrimeField> FlatR1cs<F> {
++    pub fn from_matrices(m: &ConstraintMatrices<F>) -> Self {
++        let mut coeffs = vec![F::one()];
++        let mut ids: HashMap<F, u32> = HashMap::new();
++        ids.insert(F::one(), 0);
++        let mut conv = |mat: &Vec<Vec<(F, usize)>>| {
++            let mut row_ptr = Vec::with_capacity(mat.len() + 1);
++            let mut entries = Vec::new();
++            row_ptr.push(0u32);
++            for row in mat {
++                for (c, col) in row {
++                    let id = *ids.entry(*c).or_insert_with(|| {
++                        coeffs.push(*c);
++                        (coeffs.len() - 1) as u32
++                    });
++                    entries.push((*col as u32, id));
++                }
++                row_ptr.push(entries.len() as u32);
++            }
++            Csr { row_ptr, entries }
++        };
++        let (a, b, c) = (conv(&m.a), conv(&m.b), conv(&m.c));
++        FlatR1cs { num_instance: m.num_instance_variables, num_witness: m.num_witness_variables, num_constraints: m.num_constraints, coeffs, a, b, c }
++    }
++
++    pub fn write<W: Write>(&self, mut w: W) -> std::io::Result<()> {
++        for v in [self.num_instance, self.num_witness, self.num_constraints, self.coeffs.len()] {
++            w.write_all(&(v as u64).to_le_bytes())?;
++        }
++        self.coeffs.serialize_unchecked(&mut w).map_err(|e| std::io::Error::new(std::io::ErrorKind::Other, e.to_string()))?;
++        for m in [&self.a, &self.b, &self.c] {
++            w.write_all(&(m.row_ptr.len() as u64).to_le_bytes())?;
++            w.write_all(&(m.entries.len() as u64).to_le_bytes())?;
++            let mut buf = Vec::with_capacity(4 * m.row_ptr.len() + 8 * m.entries.len());
++            for x in &m.row_ptr { buf.extend_from_slice(&x.to_le_bytes()); }
++            for (x, y) in &m.entries { buf.extend_from_slice(&x.to_le_bytes()); buf.extend_from_slice(&y.to_le_bytes()); }
++            w.write_all(&buf)?;
++        }
++        Ok(())
++    }
++
++    pub fn read<R: Read>(mut r: R) -> std::io::Result<Self> {
++        let mut u = || -> std::io::Result<u64> { let mut b = [0u8; 8]; r.read_exact(&mut b)?; Ok(u64::from_le_bytes(b)) };
++        let (ni, nw, nc, _ncoef) = (u()? as usize, u()? as usize, u()? as usize, u()? as usize);
++        let coeffs = Vec::<F>::deserialize_unchecked(&mut r).map_err(|e| std::io::Error::new(std::io::ErrorKind::Other, e.to_string()))?;
++        let mut mats = Vec::new();
++        for _ in 0..3 {
++            let mut b8 = [0u8; 8];
++            r.read_exact(&mut b8)?; let nr = u64::from_le_bytes(b8) as usize;
++            r.read_exact(&mut b8)?; let ne = u64::from_le_bytes(b8) as usize;
++            let mut buf = vec![0u8; 4 * nr + 8 * ne];
++            r.read_exact(&mut buf)?;
++            let word = |i: usize| u32::from_le_bytes([buf[4 * i], buf[4 * i + 1], buf[4 * i + 2], buf[4 * i + 3]]);
++            let row_ptr = (0..nr).map(word).collect::<Vec<_>>();
++            let entries = (0..ne).map(|k| (word(nr + 2 * k), word(nr + 2 * k + 1))).collect::<Vec<_>>();
++            mats.push(Csr { row_ptr, entries });
++        }
++        let c = mats.pop().unwrap(); let b = mats.pop().unwrap(); let a = mats.pop().unwrap();
++        Ok(FlatR1cs { num_instance: ni, num_witness: nw, num_constraints: nc, coeffs, a, b, c })
++    }
++}
++
++#[inline]
++fn eval_row<F: PrimeField>(m: &Csr, coeffs: &[F], i: usize, z: &[F]) -> F {
++    let mut acc = F::zero();
++    for &(col, cid) in &m.entries[m.row_ptr[i] as usize..m.row_ptr[i + 1] as usize] {
++        let v = z[col as usize];
++        if cid == 0 { acc += v } else { acc += v * coeffs[cid as usize] }
++    }
++    acc
++}
++
++/// Same computation as `R1CStoQAP::witness_map`, from stored matrices and a full assignment z = (instance, witness).
++pub fn witness_map_flat<F: PrimeField>(r: &FlatR1cs<F>, z: &[F]) -> Vec<F> {
++    type D<F> = GeneralEvaluationDomain<F>;
++    let (n, ni) = (r.num_constraints, r.num_instance);
++    let domain = D::<F>::new(n + ni).unwrap();
++    let ds = domain.size();
++    let zero = F::zero();
++    let zt = std::time::Instant::now();
++    let mut a = vec![zero; ds];
++    let mut b = vec![zero; ds];
++    cfg_iter_mut!(a[..n]).zip(cfg_iter_mut!(b[..n])).enumerate().for_each(|(i, (a, b))| {
++        *a = eval_row(&r.a, &r.coeffs, i, z);
++        *b = eval_row(&r.b, &r.coeffs, i, z);
++    });
++    a[n..n + ni].clone_from_slice(&z[..ni]);
++    crate::zkt("wm.eval_ab", zt); let zt = std::time::Instant::now();
++    domain.ifft_in_place(&mut a);
++    domain.ifft_in_place(&mut b);
++    domain.coset_fft_in_place(&mut a);
++    domain.coset_fft_in_place(&mut b);
++    let mut ab = domain.mul_polynomials_in_evaluation_domain(&a, &b);
++    drop(a);
++    drop(b);
++    crate::zkt("wm.fft_ab", zt); let zt = std::time::Instant::now();
++    let mut c = vec![zero; ds];
++    cfg_iter_mut!(c[..n]).enumerate().for_each(|(i, c)| *c = eval_row(&r.c, &r.coeffs, i, z));
++    crate::zkt("wm.eval_c", zt); let zt = std::time::Instant::now();
++    domain.ifft_in_place(&mut c);
++    domain.coset_fft_in_place(&mut c);
++    cfg_iter_mut!(ab).zip(c).for_each(|(ab_i, c_i)| *ab_i -= &c_i);
++    domain.divide_by_vanishing_poly_on_coset_in_place(&mut ab);
++    domain.coset_ifft_in_place(&mut ab);
++    crate::zkt("wm.fft_c_and_h", zt);
++    ab
++}
++
++/// Same as `create_proof` after constraint synthesis; `z` is the full assignment (z[0] = 1).
++pub fn create_proof_flat<E: PairingEngine>(pk: &ProvingKey<E>, r1cs: &FlatR1cs<E::Fr>, z: &[E::Fr], r: E::Fr, s: E::Fr) -> Proof<E> {
++    let ni = r1cs.num_instance;
++    assert!(z[0].is_one() && z.len() == ni + r1cs.num_witness);
++    let zt_all = std::time::Instant::now();
++    let h = witness_map_flat(r1cs, z);
++    let zt = std::time::Instant::now();
++    let h_assignment = cfg_into_iter!(h).map(|s| s.into()).collect::<Vec<_>>();
++    crate::zkt("g16.h_to_repr", zt); let zt = std::time::Instant::now();
++    let h_acc = VariableBaseMSM::multi_scalar_mul(&pk.h_query, &h_assignment);
++    drop(h_assignment);
++    crate::zkt("g16.msm_h", zt); let zt = std::time::Instant::now();
++    let aux_assignment = cfg_iter!(z[ni..]).map(|s| s.into_repr()).collect::<Vec<_>>();
++    crate::zkt("g16.aux_to_repr", zt); let zt = std::time::Instant::now();
++    let l_aux_acc = VariableBaseMSM::multi_scalar_mul(&pk.l_query, &aux_assignment);
++    crate::zkt("g16.msm_l", zt); let zt = std::time::Instant::now();
++    let r_s_delta_g1 = pk.delta_g1.into_projective().mul(&r.into_repr()).mul(&s.into_repr());
++    let input_assignment = z[1..ni].iter().map(|s| s.into_repr()).collect::<Vec<_>>();
++    let assignment = [&input_assignment[..], &aux_assignment[..]].concat();
++    drop(aux_assignment);
++    crate::zkt("g16.misc_before_a", zt); let zt = std::time::Instant::now();
++    let r_g1 = pk.delta_g1.mul(r);
++    let g_a = calculate_coeff(r_g1, &pk.a_query, pk.vk.alpha_g1, &assignment);
++    let s_g_a = g_a.mul(&s.into_repr());
++    crate::zkt("g16.msm_a", zt); let zt = std::time::Instant::now();
++    let g1_b = if !r.is_zero() {
++        let s_g1 = pk.delta_g1.mul(s);
++        calculate_coeff(s_g1, &pk.b_g1_query, pk.beta_g1, &assignment)
++    } else {
++        E::G1Projective::zero()
++    };
++    crate::zkt("g16.msm_b_g1", zt); let zt = std::time::Instant::now();
++    let s_g2 = pk.vk.delta_g2.mul(s);
++    let g2_b = calculate_coeff(s_g2, &pk.b_g2_query, pk.vk.beta_g2, &assignment);
++    let r_g1_b = g1_b.mul(&r.into_repr());
++    drop(assignment);
++    crate::zkt("g16.msm_b_g2", zt);
++    let mut g_c = s_g_a;
++    g_c += &r_g1_b;
++    g_c -= &r_s_delta_g1;
++    g_c += &l_aux_acc;
++    g_c += &h_acc;
++    crate::zkt("g16.create_proof_total", zt_all);
++    Proof { a: g_a.into_affine(), b: g2_b.into_affine(), c: g_c.into_affine() }
++}
+diff -ruN g16-orig/src/lib.rs ark-groth16-fast/src/lib.rs
+--- ark-groth16-0.3.0.orig/src/lib.rs	2026-11-16 12:31:05.200181520 +0000
++++ ark-groth16-fast/src/lib.rs	2026-11-17 17:17:15.972280640 +0000
+@@ -1,7 +1,7 @@
+ //! An implementation of the [`Groth16`] zkSNARK.
+ //!
+ //! [`Groth16`]: https://eprint.iacr.org/2016/260.pdf
+-#![cfg_attr(not(feature = "std"), no_std)]
++
+ #![warn(
+     unused,
+     future_incompatible,
+@@ -12,6 +12,9 @@
+ #![allow(clippy::many_single_char_names, clippy::op_ref)]
+ #![forbid(unsafe_code)]
+ 
++extern crate std;
++/// instrumentation: print elapsed seconds of a phase to stderr
++pub fn zkt(label: &str, t: std::time::Instant) { std::eprintln!("ZKT {} {:.6}", label, t.elapsed().as_secs_f64()); }
+ #[macro_use]
+ extern crate ark_std;
+ 
+@@ -30,6 +33,7 @@
+ 
+ /// Create proofs for the Groth16 zkSNARK construction.
+ pub mod prover;
++pub mod fast;
+ 
+ /// Verify proofs for the Groth16 zkSNARK construction.
+ pub mod verifier;
+diff -ruN g16-orig/src/prover.rs ark-groth16-fast/src/prover.rs
+--- ark-groth16-0.3.0.orig/src/prover.rs	2026-11-16 12:31:05.200189707 +0000
++++ ark-groth16-fast/src/prover.rs	2026-11-17 17:16:54.411571592 +0000
+@@ -61,30 +61,38 @@
+     cs.set_optimization_goal(OptimizationGoal::Constraints);
+ 
+     // Synthesize the circuit.
++    let zt_all = std::time::Instant::now(); let zt = std::time::Instant::now();
+     let synthesis_time = start_timer!(|| "Constraint synthesis");
+     circuit.generate_constraints(cs.clone())?;
+     debug_assert!(cs.is_satisfied().unwrap());
+     end_timer!(synthesis_time);
++    crate::zkt("g16.synthesis", zt); let zt = std::time::Instant::now();
+ 
+     let lc_time = start_timer!(|| "Inlining LCs");
+     cs.finalize();
+     end_timer!(lc_time);
++    crate::zkt("g16.finalize", zt); let zt = std::time::Instant::now();
+ 
+     let witness_map_time = start_timer!(|| "R1CS to QAP witness map");
+     let h = R1CStoQAP::witness_map::<E::Fr, D<E::Fr>>(cs.clone())?;
+     end_timer!(witness_map_time);
++    crate::zkt("g16.witness_map_total", zt); let zt = std::time::Instant::now();
+     let h_assignment = cfg_into_iter!(h).map(|s| s.into()).collect::<Vec<_>>();
++    crate::zkt("g16.h_to_repr", zt); let zt = std::time::Instant::now();
+     let c_acc_time = start_timer!(|| "Compute C");
+ 
+     let h_acc = VariableBaseMSM::multi_scalar_mul(&pk.h_query, &h_assignment);
+     drop(h_assignment);
++    crate::zkt("g16.msm_h", zt); let zt = std::time::Instant::now();
+     // Compute C
+     let prover = cs.borrow().unwrap();
+     let aux_assignment = cfg_iter!(prover.witness_assignment)
+         .map(|s| s.into_repr())
+         .collect::<Vec<_>>();
+ 
++    crate::zkt("g16.aux_to_repr", zt); let zt = std::time::Instant::now();
+     let l_aux_acc = VariableBaseMSM::multi_scalar_mul(&pk.l_query, &aux_assignment);
++    crate::zkt("g16.msm_l", zt); let zt = std::time::Instant::now();
+ 
+     let r_s_delta_g1 = pk
+         .delta_g1
+@@ -106,6 +114,7 @@
+     drop(aux_assignment);
+ 
+     // Compute A
++    crate::zkt("g16.misc_before_a", zt); let zt = std::time::Instant::now();
+     let a_acc_time = start_timer!(|| "Compute A");
+     let r_g1 = pk.delta_g1.mul(r);
+ 
+@@ -113,6 +122,7 @@
+ 
+     let s_g_a = g_a.mul(&s.into_repr());
+     end_timer!(a_acc_time);
++    crate::zkt("g16.msm_a", zt); let zt = std::time::Instant::now();
+ 
+     // Compute B in G1 if needed
+     let g1_b = if !r.is_zero() {
+@@ -128,6 +138,7 @@
+     };
+ 
+     // Compute B in G2
++    crate::zkt("g16.msm_b_g1", zt); let zt = std::time::Instant::now();
+     let b_g2_acc_time = start_timer!(|| "Compute B in G2");
+     let s_g2 = pk.vk.delta_g2.mul(s);
+     let g2_b = calculate_coeff(s_g2, &pk.b_g2_query, pk.vk.beta_g2, &assignment);
+@@ -135,6 +146,7 @@
+     drop(assignment);
+ 
+     end_timer!(b_g2_acc_time);
++    crate::zkt("g16.msm_b_g2", zt);
+ 
+     let c_time = start_timer!(|| "Finish C");
+     let mut g_c = s_g_a;
+@@ -145,6 +157,7 @@
+     end_timer!(c_time);
+ 
+     end_timer!(prover_time);
++    crate::zkt("g16.create_proof_total", zt_all);
+ 
+     Ok(Proof {
+         a: g_a.into_affine(),
+@@ -186,7 +199,7 @@
+     }
+ }
+ 
+-fn calculate_coeff<G: AffineCurve>(
++pub(crate) fn calculate_coeff<G: AffineCurve>(
+     initial: G::Projective,
+     query: &[G],
+     vk_param: G,
+diff -ruN g16-orig/src/r1cs_to_qap.rs ark-groth16-fast/src/r1cs_to_qap.rs
+--- ark-groth16-0.3.0.orig/src/r1cs_to_qap.rs	2026-11-16 12:31:05.200201871 +0000
++++ ark-groth16-fast/src/r1cs_to_qap.rs	2026-11-17 17:16:54.410092551 +0000
+@@ -94,7 +94,9 @@
+     pub(crate) fn witness_map<F: PrimeField, D: EvaluationDomain<F>>(
+         prover: ConstraintSystemRef<F>,
+     ) -> R1CSResult<Vec<F>> {
++        let zt = std::time::Instant::now();
+         let matrices = prover.to_matrices().unwrap();
++        crate::zkt("wm.to_matrices", zt); let zt = std::time::Instant::now();
+         let zero = F::zero();
+         let num_inputs = prover.num_instance_variables();
+         let num_constraints = prover.num_constraints();
+@@ -113,6 +115,7 @@
+ 
+         let mut a = vec![zero; domain_size];
+         let mut b = vec![zero; domain_size];
++        crate::zkt("wm.alloc_assignment", zt); let zt = std::time::Instant::now();
+ 
+         cfg_iter_mut!(a[..num_constraints])
+             .zip(cfg_iter_mut!(b[..num_constraints]))
+@@ -129,6 +132,7 @@
+             a[start..end].clone_from_slice(&full_assignment[..num_inputs]);
+         }
+ 
++        crate::zkt("wm.eval_ab", zt); let zt = std::time::Instant::now();
+         domain.ifft_in_place(&mut a);
+         domain.ifft_in_place(&mut b);
+ 
+@@ -139,6 +143,7 @@
+         drop(a);
+         drop(b);
+ 
++        crate::zkt("wm.fft_ab", zt); let zt = std::time::Instant::now();
+         let mut c = vec![zero; domain_size];
+         cfg_iter_mut!(c[..prover.num_constraints])
+             .enumerate()
+@@ -146,6 +151,7 @@
+                 *c = evaluate_constraint(&matrices.c[i], &full_assignment);
+             });
+ 
++        crate::zkt("wm.eval_c", zt); let zt = std::time::Instant::now();
+         domain.ifft_in_place(&mut c);
+         domain.coset_fft_in_place(&mut c);
+ 
+@@ -155,6 +161,7 @@
+ 
+         domain.divide_by_vanishing_poly_on_coset_in_place(&mut ab);
+         domain.coset_ifft_in_place(&mut ab);
++        crate::zkt("wm.fft_c_and_h", zt);
+ 
+         Ok(ab)
+     }
