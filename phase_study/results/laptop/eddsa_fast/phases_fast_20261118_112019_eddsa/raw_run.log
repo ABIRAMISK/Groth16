@@ -1,0 +1,546 @@
+Run folder: phases_fast_20261118_112019_eddsa   mode=eddsa REPS=5 WARMUP=1 CONTROL=0 ONLY='eddsa_sha256 eddsa_poseidon'
+battery status now (2 = on AC power, 1 = on battery): 2
+Windows Power mode setting (overlay GUID; Best performance = ded574b5-45a0-4f42-8737-46345c09c238): plugged in = ded574b5-45a0-4f42-8737-46345c09c238   on battery = 961cc777-2547-4f9d-8174-7d86181b8a7a
+Before this starts: plug in the charger, set Settings > System > Power > Power mode to Best performance, set sleep to Never
+while plugged in, close other programs, and leave the laptop alone. Starting in 15 s (Ctrl-C to cancel).
+ZoKrates 0.8.7
+--- prepare eddsa_sha256 (BabyJubJub EdDSA verify SHA-256 challenge (standard library))
+    READY eddsa_sha256_verify.zok
+--- prepare eddsa_poseidon (BabyJubJub EdDSA verify Poseidon challenge (variant))
+    READY eddsa_poseidon_verify.zok
+
+================ pass 0 of 5 (warm-up) [main] ================
+
+[main pass 0, circuit 1/2, elapsed 00:00:02] eddsa_sha256: BabyJubJub EdDSA verify SHA-256 challenge (standard library)
+    --- compile: host 6.373 s, inside 5.982 s, exit code 0
+        Compiling eddsa_sha256_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 94181
+    --- setup: host 7.782 s, inside 7.406 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+        ZKT setup.prep_synthesis 2.836943
+        ZKT setup.prep_write 0.025314
+    --- witness: host 2.730 s, inside 2.366 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.881 s, inside 1.431 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.013117
+        ZKT zok.public_inputs 0.000814
+        ZKT zok.pk_deserialize 0.069799
+        ZKT fast.load_matrices 0.052433
+        ZKT fast.assignment 0.009188
+        ZKT wm.eval_ab 0.006015
+        ZKT wm.fft_ab 0.160847
+        ZKT wm.eval_c 0.027704
+        ZKT wm.fft_c_and_h 0.083398
+        ZKT g16.h_to_repr 0.001141
+        ZKT g16.msm_h 0.490718
+        ZKT g16.aux_to_repr 0.002115
+        ZKT g16.msm_l 0.114237
+        ZKT g16.misc_before_a 0.001177
+        ZKT g16.msm_a 0.091128
+        ZKT g16.msm_b_g1 0.069400
+        ZKT g16.msm_b_g2 0.224422
+        ZKT g16.create_proof_total 1.272830
+        ZKT cli.backend_generate_proof 1.409915
+        Proof written to 'proof.json'
+    --- verify: host 0.404 s, inside 0.008 s, exit code 0
+        Performing verification...
+        PASSED
+>>> eddsa_sha256 replicate 0: constraints=94181 status=OK | host c/s/w/p/v = 6.373/7.782/2.730/1.881/0.404 | inside = 5.982/7.406/2.366/1.431/0.008
+
+[main pass 0, circuit 2/2, elapsed 00:00:25] eddsa_poseidon: BabyJubJub EdDSA verify Poseidon challenge (variant)
+    --- compile: host 2.125 s, inside 1.752 s, exit code 0
+        Compiling eddsa_poseidon_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 15211
+    --- setup: host 1.071 s, inside 0.623 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+        ZKT setup.prep_synthesis 0.135992
+        ZKT setup.prep_write 0.001297
+    --- witness: host 0.475 s, inside 0.109 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.738 s, inside 0.340 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.002405
+        ZKT zok.public_inputs 0.000098
+        ZKT zok.pk_deserialize 0.011350
+        ZKT fast.load_matrices 0.001350
+        ZKT fast.assignment 0.001966
+        ZKT wm.eval_ab 0.001744
+        ZKT wm.fft_ab 0.016260
+        ZKT wm.eval_c 0.000441
+        ZKT wm.fft_c_and_h 0.017487
+        ZKT g16.h_to_repr 0.000492
+        ZKT g16.msm_h 0.055294
+        ZKT g16.aux_to_repr 0.000343
+        ZKT g16.msm_l 0.049872
+        ZKT g16.misc_before_a 0.000486
+        ZKT g16.msm_a 0.042802
+        ZKT g16.msm_b_g1 0.029012
+        ZKT g16.msm_b_g2 0.102542
+        ZKT g16.create_proof_total 0.317138
+        ZKT cli.backend_generate_proof 0.332483
+        Proof written to 'proof.json'
+    --- verify: host 0.387 s, inside 0.008 s, exit code 0
+        Performing verification...
+        PASSED
+>>> eddsa_poseidon replicate 0: constraints=15211 status=OK | host c/s/w/p/v = 2.125/1.071/0.475/0.738/0.387 | inside = 1.752/0.623/0.109/0.340/0.008
+
+================ pass 1 of 5 [main] ================
+
+[main pass 1, circuit 1/2, elapsed 00:00:37] eddsa_sha256: BabyJubJub EdDSA verify SHA-256 challenge (standard library)
+    --- compile: host 6.357 s, inside 6.005 s, exit code 0
+        Compiling eddsa_sha256_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 94181
+    --- setup: host 7.945 s, inside 7.593 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+        ZKT setup.prep_synthesis 2.684886
+        ZKT setup.prep_write 0.016256
+    --- witness: host 2.744 s, inside 2.360 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.715 s, inside 1.270 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.016555
+        ZKT zok.public_inputs 0.000812
+        ZKT zok.pk_deserialize 0.073674
+        ZKT fast.load_matrices 0.045776
+        ZKT fast.assignment 0.009335
+        ZKT wm.eval_ab 0.004841
+        ZKT wm.fft_ab 0.106151
+        ZKT wm.eval_c 0.028039
+        ZKT wm.fft_c_and_h 0.090747
+        ZKT g16.h_to_repr 0.001313
+        ZKT g16.msm_h 0.464637
+        ZKT g16.aux_to_repr 0.001587
+        ZKT g16.msm_l 0.088392
+        ZKT g16.misc_before_a 0.001060
+        ZKT g16.msm_a 0.073533
+        ZKT g16.msm_b_g1 0.051280
+        ZKT g16.msm_b_g2 0.198095
+        ZKT g16.create_proof_total 1.110137
+        ZKT cli.backend_generate_proof 1.244521
+        Proof written to 'proof.json'
+    --- verify: host 0.453 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> eddsa_sha256 replicate 1: constraints=94181 status=OK | host c/s/w/p/v = 6.357/7.945/2.744/1.715/0.453 | inside = 6.005/7.593/2.360/1.270/0.010
+
+[main pass 1, circuit 2/2, elapsed 00:01:00] eddsa_poseidon: BabyJubJub EdDSA verify Poseidon challenge (variant)
+    --- compile: host 2.180 s, inside 1.789 s, exit code 0
+        Compiling eddsa_poseidon_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 15211
+    --- setup: host 0.958 s, inside 0.569 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+        ZKT setup.prep_synthesis 0.129690
+        ZKT setup.prep_write 0.001274
+    --- witness: host 0.471 s, inside 0.104 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.704 s, inside 0.304 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.002135
+        ZKT zok.public_inputs 0.000098
+        ZKT zok.pk_deserialize 0.010511
+        ZKT fast.load_matrices 0.001270
+        ZKT fast.assignment 0.001370
+        ZKT wm.eval_ab 0.001465
+        ZKT wm.fft_ab 0.018509
+        ZKT wm.eval_c 0.000701
+        ZKT wm.fft_c_and_h 0.012716
+        ZKT g16.h_to_repr 0.000633
+        ZKT g16.msm_h 0.054278
+        ZKT g16.aux_to_repr 0.000337
+        ZKT g16.msm_l 0.048840
+        ZKT g16.misc_before_a 0.000421
+        ZKT g16.msm_a 0.036737
+        ZKT g16.msm_b_g1 0.024064
+        ZKT g16.msm_b_g2 0.082997
+        ZKT g16.create_proof_total 0.282019
+        ZKT cli.backend_generate_proof 0.295874
+        Proof written to 'proof.json'
+    --- verify: host 0.383 s, inside 0.008 s, exit code 0
+        Performing verification...
+        PASSED
+>>> eddsa_poseidon replicate 1: constraints=15211 status=OK | host c/s/w/p/v = 2.180/0.958/0.471/0.704/0.383 | inside = 1.789/0.569/0.104/0.304/0.008
+
+================ pass 2 of 5 [main] ================
+
+[main pass 2, circuit 1/2, elapsed 00:01:12] eddsa_poseidon: BabyJubJub EdDSA verify Poseidon challenge (variant)
+    --- compile: host 2.109 s, inside 1.751 s, exit code 0
+        Compiling eddsa_poseidon_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 15211
+    --- setup: host 0.953 s, inside 0.582 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+        ZKT setup.prep_synthesis 0.133379
+        ZKT setup.prep_write 0.001290
+    --- witness: host 0.463 s, inside 0.105 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.717 s, inside 0.326 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.002252
+        ZKT zok.public_inputs 0.000087
+        ZKT zok.pk_deserialize 0.010736
+        ZKT fast.load_matrices 0.001297
+        ZKT fast.assignment 0.001383
+        ZKT wm.eval_ab 0.001450
+        ZKT wm.fft_ab 0.028421
+        ZKT wm.eval_c 0.002818
+        ZKT wm.fft_c_and_h 0.016056
+        ZKT g16.h_to_repr 0.000654
+        ZKT g16.msm_h 0.055158
+        ZKT g16.aux_to_repr 0.002390
+        ZKT g16.msm_l 0.049702
+        ZKT g16.misc_before_a 0.000426
+        ZKT g16.msm_a 0.036920
+        ZKT g16.msm_b_g1 0.024812
+        ZKT g16.msm_b_g2 0.085232
+        ZKT g16.create_proof_total 0.304376
+        ZKT cli.backend_generate_proof 0.318403
+        Proof written to 'proof.json'
+    --- verify: host 0.384 s, inside 0.008 s, exit code 0
+        Performing verification...
+        PASSED
+>>> eddsa_poseidon replicate 2: constraints=15211 status=OK | host c/s/w/p/v = 2.109/0.953/0.463/0.717/0.384 | inside = 1.751/0.582/0.105/0.326/0.008
+
+[main pass 2, circuit 2/2, elapsed 00:01:20] eddsa_sha256: BabyJubJub EdDSA verify SHA-256 challenge (standard library)
+    --- compile: host 6.286 s, inside 5.924 s, exit code 0
+        Compiling eddsa_sha256_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 94181
+    --- setup: host 7.907 s, inside 7.541 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+        ZKT setup.prep_synthesis 2.865042
+        ZKT setup.prep_write 0.016425
+    --- witness: host 2.665 s, inside 2.305 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.662 s, inside 1.267 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.013719
+        ZKT zok.public_inputs 0.000938
+        ZKT zok.pk_deserialize 0.070413
+        ZKT fast.load_matrices 0.042852
+        ZKT fast.assignment 0.009276
+        ZKT wm.eval_ab 0.004847
+        ZKT wm.fft_ab 0.119443
+        ZKT wm.eval_c 0.029219
+        ZKT wm.fft_c_and_h 0.092676
+        ZKT g16.h_to_repr 0.001307
+        ZKT g16.msm_h 0.462198
+        ZKT g16.aux_to_repr 0.001227
+        ZKT g16.msm_l 0.087941
+        ZKT g16.misc_before_a 0.000932
+        ZKT g16.msm_a 0.072220
+        ZKT g16.msm_b_g1 0.051264
+        ZKT g16.msm_b_g2 0.192253
+        ZKT g16.create_proof_total 1.115990
+        ZKT cli.backend_generate_proof 1.244388
+        Proof written to 'proof.json'
+    --- verify: host 0.382 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> eddsa_sha256 replicate 2: constraints=94181 status=OK | host c/s/w/p/v = 6.286/7.907/2.665/1.662/0.382 | inside = 5.924/7.541/2.305/1.267/0.009
+
+================ pass 3 of 5 [main] ================
+
+[main pass 3, circuit 1/2, elapsed 00:01:46] eddsa_sha256: BabyJubJub EdDSA verify SHA-256 challenge (standard library)
+    --- compile: host 6.399 s, inside 6.041 s, exit code 0
+        Compiling eddsa_sha256_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 94181
+    --- setup: host 8.333 s, inside 7.962 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+        ZKT setup.prep_synthesis 2.673817
+        ZKT setup.prep_write 0.016574
+    --- witness: host 2.675 s, inside 2.320 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.606 s, inside 1.234 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.014373
+        ZKT zok.public_inputs 0.001037
+        ZKT zok.pk_deserialize 0.068668
+        ZKT fast.load_matrices 0.042772
+        ZKT fast.assignment 0.009244
+        ZKT wm.eval_ab 0.004211
+        ZKT wm.fft_ab 0.102673
+        ZKT wm.eval_c 0.026028
+        ZKT wm.fft_c_and_h 0.092495
+        ZKT g16.h_to_repr 0.001230
+        ZKT g16.msm_h 0.453982
+        ZKT g16.aux_to_repr 0.001285
+        ZKT g16.msm_l 0.088434
+        ZKT g16.misc_before_a 0.000921
+        ZKT g16.msm_a 0.072634
+        ZKT g16.msm_b_g1 0.051530
+        ZKT g16.msm_b_g2 0.190436
+        ZKT g16.create_proof_total 1.086271
+        ZKT cli.backend_generate_proof 1.212681
+        Proof written to 'proof.json'
+    --- verify: host 0.373 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> eddsa_sha256 replicate 3: constraints=94181 status=OK | host c/s/w/p/v = 6.399/8.333/2.675/1.606/0.373 | inside = 6.041/7.962/2.320/1.234/0.009
+
+[main pass 3, circuit 2/2, elapsed 00:02:08] eddsa_poseidon: BabyJubJub EdDSA verify Poseidon challenge (variant)
+    --- compile: host 2.128 s, inside 1.766 s, exit code 0
+        Compiling eddsa_poseidon_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 15211
+    --- setup: host 0.924 s, inside 0.561 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+        ZKT setup.prep_synthesis 0.130277
+        ZKT setup.prep_write 0.001163
+    --- witness: host 0.479 s, inside 0.107 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.675 s, inside 0.312 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.002134
+        ZKT zok.public_inputs 0.000089
+        ZKT zok.pk_deserialize 0.010630
+        ZKT fast.load_matrices 0.001360
+        ZKT fast.assignment 0.001399
+        ZKT wm.eval_ab 0.001427
+        ZKT wm.fft_ab 0.019892
+        ZKT wm.eval_c 0.000482
+        ZKT wm.fft_c_and_h 0.012787
+        ZKT g16.h_to_repr 0.000409
+        ZKT g16.msm_h 0.054343
+        ZKT g16.aux_to_repr 0.000493
+        ZKT g16.msm_l 0.050965
+        ZKT g16.misc_before_a 0.000432
+        ZKT g16.msm_a 0.036471
+        ZKT g16.msm_b_g1 0.024643
+        ZKT g16.msm_b_g2 0.086879
+        ZKT g16.create_proof_total 0.289538
+        ZKT cli.backend_generate_proof 0.303750
+        Proof written to 'proof.json'
+    --- verify: host 0.368 s, inside 0.008 s, exit code 0
+        Performing verification...
+        PASSED
+>>> eddsa_poseidon replicate 3: constraints=15211 status=OK | host c/s/w/p/v = 2.128/0.924/0.479/0.675/0.368 | inside = 1.766/0.561/0.107/0.312/0.008
+
+================ pass 4 of 5 [main] ================
+
+[main pass 4, circuit 1/2, elapsed 00:02:21] eddsa_sha256: BabyJubJub EdDSA verify SHA-256 challenge (standard library)
+    --- compile: host 6.265 s, inside 5.924 s, exit code 0
+        Compiling eddsa_sha256_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 94181
+    --- setup: host 8.051 s, inside 7.680 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+        ZKT setup.prep_synthesis 2.669615
+        ZKT setup.prep_write 0.017390
+    --- witness: host 2.696 s, inside 2.327 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.692 s, inside 1.315 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.013895
+        ZKT zok.public_inputs 0.000929
+        ZKT zok.pk_deserialize 0.066854
+        ZKT fast.load_matrices 0.040558
+        ZKT fast.assignment 0.008872
+        ZKT wm.eval_ab 0.004410
+        ZKT wm.fft_ab 0.169736
+        ZKT wm.eval_c 0.027518
+        ZKT wm.fft_c_and_h 0.091731
+        ZKT g16.h_to_repr 0.001291
+        ZKT g16.msm_h 0.460567
+        ZKT g16.aux_to_repr 0.001271
+        ZKT g16.msm_l 0.089047
+        ZKT g16.misc_before_a 0.000941
+        ZKT g16.msm_a 0.073231
+        ZKT g16.msm_b_g1 0.058661
+        ZKT g16.msm_b_g2 0.193148
+        ZKT g16.create_proof_total 1.172060
+        ZKT cli.backend_generate_proof 1.294209
+        Proof written to 'proof.json'
+    --- verify: host 0.396 s, inside 0.008 s, exit code 0
+        Performing verification...
+        PASSED
+>>> eddsa_sha256 replicate 4: constraints=94181 status=OK | host c/s/w/p/v = 6.265/8.051/2.696/1.692/0.396 | inside = 5.924/7.680/2.327/1.315/0.008
+
+[main pass 4, circuit 2/2, elapsed 00:02:43] eddsa_poseidon: BabyJubJub EdDSA verify Poseidon challenge (variant)
+    --- compile: host 2.115 s, inside 1.758 s, exit code 0
+        Compiling eddsa_poseidon_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 15211
+    --- setup: host 1.037 s, inside 0.626 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+        ZKT setup.prep_synthesis 0.139707
+        ZKT setup.prep_write 0.001392
+    --- witness: host 0.545 s, inside 0.113 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.690 s, inside 0.318 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.002224
+        ZKT zok.public_inputs 0.000094
+        ZKT zok.pk_deserialize 0.010750
+        ZKT fast.load_matrices 0.001264
+        ZKT fast.assignment 0.001416
+        ZKT wm.eval_ab 0.001550
+        ZKT wm.fft_ab 0.026220
+        ZKT wm.eval_c 0.000388
+        ZKT wm.fft_c_and_h 0.017316
+        ZKT g16.h_to_repr 0.000466
+        ZKT g16.msm_h 0.054072
+        ZKT g16.aux_to_repr 0.000509
+        ZKT g16.msm_l 0.048156
+        ZKT g16.misc_before_a 0.000407
+        ZKT g16.msm_a 0.038164
+        ZKT g16.msm_b_g1 0.024517
+        ZKT g16.msm_b_g2 0.083766
+        ZKT g16.create_proof_total 0.295877
+        ZKT cli.backend_generate_proof 0.309993
+        Proof written to 'proof.json'
+    --- verify: host 0.370 s, inside 0.008 s, exit code 0
+        Performing verification...
+        PASSED
+>>> eddsa_poseidon replicate 4: constraints=15211 status=OK | host c/s/w/p/v = 2.115/1.037/0.545/0.690/0.370 | inside = 1.758/0.626/0.113/0.318/0.008
+
+================ pass 5 of 5 [main] ================
+
+[main pass 5, circuit 1/2, elapsed 00:02:55] eddsa_sha256: BabyJubJub EdDSA verify SHA-256 challenge (standard library)
+    --- compile: host 6.577 s, inside 6.242 s, exit code 0
+        Compiling eddsa_sha256_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 94181
+    --- setup: host 7.786 s, inside 7.391 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+        ZKT setup.prep_synthesis 2.644042
+        ZKT setup.prep_write 0.020075
+    --- witness: host 2.712 s, inside 2.334 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.602 s, inside 1.221 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.014909
+        ZKT zok.public_inputs 0.000966
+        ZKT zok.pk_deserialize 0.071580
+        ZKT fast.load_matrices 0.042343
+        ZKT fast.assignment 0.015059
+        ZKT wm.eval_ab 0.004372
+        ZKT wm.fft_ab 0.112985
+        ZKT wm.eval_c 0.025650
+        ZKT wm.fft_c_and_h 0.089689
+        ZKT g16.h_to_repr 0.001201
+        ZKT g16.msm_h 0.436385
+        ZKT g16.aux_to_repr 0.001257
+        ZKT g16.msm_l 0.089341
+        ZKT g16.misc_before_a 0.000936
+        ZKT g16.msm_a 0.072890
+        ZKT g16.msm_b_g1 0.051983
+        ZKT g16.msm_b_g2 0.176535
+        ZKT g16.create_proof_total 1.063680
+        ZKT cli.backend_generate_proof 1.197591
+        Proof written to 'proof.json'
+    --- verify: host 0.388 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> eddsa_sha256 replicate 5: constraints=94181 status=OK | host c/s/w/p/v = 6.577/7.786/2.712/1.602/0.388 | inside = 6.242/7.391/2.334/1.221/0.009
+
+[main pass 5, circuit 2/2, elapsed 00:03:17] eddsa_poseidon: BabyJubJub EdDSA verify Poseidon challenge (variant)
+    --- compile: host 2.139 s, inside 1.780 s, exit code 0
+        Compiling eddsa_poseidon_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 15211
+    --- setup: host 0.956 s, inside 0.580 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+        ZKT setup.prep_synthesis 0.131941
+        ZKT setup.prep_write 0.001162
+    --- witness: host 0.505 s, inside 0.111 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.682 s, inside 0.320 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.002188
+        ZKT zok.public_inputs 0.000093
+        ZKT zok.pk_deserialize 0.010761
+        ZKT fast.load_matrices 0.001400
+        ZKT fast.assignment 0.001404
+        ZKT wm.eval_ab 0.001562
+        ZKT wm.fft_ab 0.024757
+        ZKT wm.eval_c 0.000354
+        ZKT wm.fft_c_and_h 0.017576
+        ZKT g16.h_to_repr 0.000485
+        ZKT g16.msm_h 0.055546
+        ZKT g16.aux_to_repr 0.000461
+        ZKT g16.msm_l 0.050655
+        ZKT g16.misc_before_a 0.000426
+        ZKT g16.msm_a 0.036161
+        ZKT g16.msm_b_g1 0.024864
+        ZKT g16.msm_b_g2 0.083835
+        ZKT g16.create_proof_total 0.297017
+        ZKT cli.backend_generate_proof 0.311462
+        Proof written to 'proof.json'
+    --- verify: host 0.396 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> eddsa_poseidon replicate 5: constraints=15211 status=OK | host c/s/w/p/v = 2.139/0.956/0.505/0.682/0.396 | inside = 1.780/0.580/0.111/0.320/0.009
+
+================ finished 2026-11-18T05:54:37Z ================
+phases_fast_20261118_112019_eddsa/results.csv: 12 rows OK, 0 rows with a problem
+circuit            reps   proof_s | front-end evaluation    FFT    MSM    I/O |  covered
+eddsa_sha256          5     1.267 |      4.2%       2.5%  16.6%  68.3%   6.8% |    98.9%
+eddsa_poseidon        5     0.318 |      0.9%       0.6%  13.2%  78.5%   4.1% |    97.7%
+rows written to phases_fast_20261118_112019_eddsa\phases.csv
+Send back the whole folder phases_fast_20261118_112019_eddsa (right-click it > Compress to ZIP file, then attach the zip).

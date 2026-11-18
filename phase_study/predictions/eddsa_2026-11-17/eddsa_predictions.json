@@ -1,0 +1,321 @@
+{
+ "created_utc": "2026-11-17",
+ "statement": "Predictions of the inner generate-proof time (median of 5 measured passes after one warm-up) of two circuits that were never timed on the study machines when this file was written.",
+ "circuits": {
+  "eddsa_sha256": "BabyJubJub EdDSA verifier of the ZoKrates 0.8.7 standard library (SHA-256 challenge), standard-library test signature",
+  "eddsa_poseidon": "variant with a Poseidon challenge hash (table_ecc/eddsa_poseidon_variant.zok), signature generated for this test"
+ },
+ "features": {
+  "eddsa_sha256": {
+   "n_constraints": 94181,
+   "nnz": 3059718,
+   "domain": 131072,
+   "msm_work": 61835042.0
+  },
+  "eddsa_poseidon": {
+   "n_constraints": 15211,
+   "nnz": 68420,
+   "domain": 16384,
+   "msm_work": 23277010.0
+  }
+ },
+ "training_range": {
+  "n_constraints": [
+   1962,
+   842212
+  ],
+  "nnz_per_constraint": [
+   3.75,
+   28.24
+  ]
+ },
+ "model_coefficients_published_sessions": {
+  "lap/M0": [
+   0.1157694732519917,
+   2.4576974713879447e-05
+  ],
+  "lap/M1": [
+   0.08646049962492766,
+   1.598875132265968e-05,
+   1.080035030730075e-06
+  ],
+  "lap/M3": [
+   0.05963470720146014,
+   1.195385815475534e-05,
+   4.547445051610875e-07,
+   9.421118256950698e-08
+  ],
+  "desk/M0": [
+   0.09760286596974575,
+   1.2904411834717715e-05
+  ],
+  "desk/M1": [
+   0.0786914866703591,
+   9.209473988418797e-06,
+   4.6251344203561855e-07
+  ],
+  "desk/M3": [
+   0.0701287441865324,
+   7.822404210026059e-06,
+   3.136340801731385e-07,
+   5.002151060687091e-08
+  ],
+  "colab/M0": [
+   0.06824676575260316,
+   7.262067044713457e-05
+  ],
+  "colab/M1": [
+   0.06358917248865506,
+   3.5288608330705164e-05,
+   4.868169069023761e-06
+  ],
+  "colab/M3": [
+   0.0,
+   1.7248112511241888e-05,
+   1.2321815840403128e-06,
+   1.265184582293232e-07
+  ]
+ },
+ "predictions": [
+  {
+   "machine": "laptop",
+   "backend": "ark",
+   "circuit": "eddsa_sha256",
+   "model": "M0",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 2.4305
+  },
+  {
+   "machine": "laptop",
+   "backend": "ark",
+   "circuit": "eddsa_poseidon",
+   "model": "M0",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 0.4896
+  },
+  {
+   "machine": "laptop",
+   "backend": "ark",
+   "circuit": "eddsa_sha256",
+   "model": "M1",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 4.8969
+  },
+  {
+   "machine": "laptop",
+   "backend": "ark",
+   "circuit": "eddsa_poseidon",
+   "model": "M1",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 0.4036
+  },
+  {
+   "machine": "laptop",
+   "backend": "ark",
+   "circuit": "eddsa_sha256",
+   "model": "M3",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 3.3969
+  },
+  {
+   "machine": "laptop",
+   "backend": "ark",
+   "circuit": "eddsa_poseidon",
+   "model": "M3",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 0.5562
+  },
+  {
+   "machine": "desktop",
+   "backend": "ark",
+   "circuit": "eddsa_sha256",
+   "model": "M0",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 1.313
+  },
+  {
+   "machine": "desktop",
+   "backend": "ark",
+   "circuit": "eddsa_poseidon",
+   "model": "M0",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 0.2939
+  },
+  {
+   "machine": "desktop",
+   "backend": "ark",
+   "circuit": "eddsa_sha256",
+   "model": "M1",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 2.3612
+  },
+  {
+   "machine": "desktop",
+   "backend": "ark",
+   "circuit": "eddsa_poseidon",
+   "model": "M1",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 0.2504
+  },
+  {
+   "machine": "desktop",
+   "backend": "ark",
+   "circuit": "eddsa_sha256",
+   "model": "M3",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 1.9842
+  },
+  {
+   "machine": "desktop",
+   "backend": "ark",
+   "circuit": "eddsa_poseidon",
+   "model": "M3",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 0.2859
+  },
+  {
+   "machine": "vm",
+   "backend": "ark",
+   "circuit": "eddsa_sha256",
+   "model": "M0",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 6.9077
+  },
+  {
+   "machine": "vm",
+   "backend": "ark",
+   "circuit": "eddsa_poseidon",
+   "model": "M0",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 1.1729
+  },
+  {
+   "machine": "vm",
+   "backend": "ark",
+   "circuit": "eddsa_sha256",
+   "model": "M1",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 18.2823
+  },
+  {
+   "machine": "vm",
+   "backend": "ark",
+   "circuit": "eddsa_poseidon",
+   "model": "M1",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 0.9334
+  },
+  {
+   "machine": "vm",
+   "backend": "ark",
+   "circuit": "eddsa_sha256",
+   "model": "M3",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 9.7996
+  },
+  {
+   "machine": "vm",
+   "backend": "ark",
+   "circuit": "eddsa_poseidon",
+   "model": "M3",
+   "source": "published 13 Nov sessions (results.csv in the repository)",
+   "predicted_proof_s": 1.8699
+  },
+  {
+   "machine": "laptop",
+   "backend": "ark",
+   "circuit": "eddsa_sha256",
+   "model": "phase",
+   "source": "instrumented runs of 16-17 Nov 2026",
+   "predicted_proof_s": 3.1151,
+   "predicted_front_end_s": 1.8626,
+   "predicted_fft_s": 0.1896,
+   "predicted_msm_s": 0.8656,
+   "predicted_rest_s": 0.1973
+  },
+  {
+   "machine": "laptop",
+   "backend": "ark",
+   "circuit": "eddsa_poseidon",
+   "model": "phase",
+   "source": "instrumented runs of 16-17 Nov 2026",
+   "predicted_proof_s": 0.4942,
+   "predicted_front_end_s": 0.1071,
+   "predicted_fft_s": 0.0195,
+   "predicted_msm_s": 0.3259,
+   "predicted_rest_s": 0.0418
+  },
+  {
+   "machine": "laptop",
+   "backend": "bellman",
+   "circuit": "eddsa_sha256",
+   "model": "phase",
+   "source": "instrumented runs of 16-17 Nov 2026",
+   "predicted_proof_s": 2.9192,
+   "predicted_front_end_s": 1.6428,
+   "predicted_fft_s": 0.3689,
+   "predicted_msm_s": 0.7216,
+   "predicted_rest_s": 0.1858
+  },
+  {
+   "machine": "laptop",
+   "backend": "bellman",
+   "circuit": "eddsa_poseidon",
+   "model": "phase",
+   "source": "instrumented runs of 16-17 Nov 2026",
+   "predicted_proof_s": 0.4232,
+   "predicted_front_end_s": 0.0734,
+   "predicted_fft_s": 0.038,
+   "predicted_msm_s": 0.2716,
+   "predicted_rest_s": 0.0402
+  },
+  {
+   "machine": "desktop",
+   "backend": "ark",
+   "circuit": "eddsa_sha256",
+   "model": "phase",
+   "source": "instrumented runs of 16-17 Nov 2026",
+   "predicted_proof_s": 1.7638,
+   "predicted_front_end_s": 1.2333,
+   "predicted_fft_s": 0.0853,
+   "predicted_msm_s": 0.3125,
+   "predicted_rest_s": 0.1328
+  },
+  {
+   "machine": "desktop",
+   "backend": "ark",
+   "circuit": "eddsa_poseidon",
+   "model": "phase",
+   "source": "instrumented runs of 16-17 Nov 2026",
+   "predicted_proof_s": 0.2286,
+   "predicted_front_end_s": 0.0739,
+   "predicted_fft_s": 0.0088,
+   "predicted_msm_s": 0.1176,
+   "predicted_rest_s": 0.0283
+  },
+  {
+   "machine": "desktop",
+   "backend": "bellman",
+   "circuit": "eddsa_sha256",
+   "model": "phase",
+   "source": "instrumented runs of 16-17 Nov 2026",
+   "predicted_proof_s": 1.6201,
+   "predicted_front_end_s": 1.0774,
+   "predicted_fft_s": 0.1899,
+   "predicted_msm_s": 0.2305,
+   "predicted_rest_s": 0.1224
+  },
+  {
+   "machine": "desktop",
+   "backend": "bellman",
+   "circuit": "eddsa_poseidon",
+   "model": "phase",
+   "source": "instrumented runs of 16-17 Nov 2026",
+   "predicted_proof_s": 0.1832,
+   "predicted_front_end_s": 0.0507,
+   "predicted_fft_s": 0.0195,
+   "predicted_msm_s": 0.0868,
+   "predicted_rest_s": 0.0262
+  }
+ ]
+}

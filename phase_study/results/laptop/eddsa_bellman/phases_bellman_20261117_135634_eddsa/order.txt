@@ -1,0 +1,6 @@
+pass 0 (main): eddsa_sha256 eddsa_poseidon
+pass 1 (main): eddsa_sha256 eddsa_poseidon
+pass 2 (main): eddsa_poseidon eddsa_sha256
+pass 3 (main): eddsa_sha256 eddsa_poseidon
+pass 4 (main): eddsa_sha256 eddsa_poseidon
+pass 5 (main): eddsa_sha256 eddsa_poseidon

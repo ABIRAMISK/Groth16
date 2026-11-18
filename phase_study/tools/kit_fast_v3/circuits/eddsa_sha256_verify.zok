@@ -1,0 +1,9 @@
+import "signatures/verifyEddsa" as verify;
+import "ecc/babyjubjubParams" as params;
+from "ecc/babyjubjubParams" import BabyJubJubParams;
+def main(private field[2] R, private field S, field[2] A, u32[8] M0, u32[8] M1) -> bool {
+    BabyJubJubParams ctx = params();
+    bool ok = verify(R, S, A, M0, M1, ctx);
+    assert(ok);
+    return ok;
+}

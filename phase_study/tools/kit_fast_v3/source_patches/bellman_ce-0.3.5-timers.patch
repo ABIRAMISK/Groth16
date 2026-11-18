@@ -1,0 +1,60 @@
+diff -ru bellman-orig/src/groth16/prover.rs bellman_ce-0.3.5/src/groth16/prover.rs
+--- bellman_ce-0.3.5.orig/src/groth16/prover.rs	2026-11-17 03:53:38.176008911 +0000
++++ bellman_ce-0.3.5/src/groth16/prover.rs	2026-11-17 03:53:38.221418422 +0000
+@@ -164,6 +164,7 @@
+         aux_assignment: vec![]
+     };
+ 
++    let zt = std::time::Instant::now();
+     prover.alloc_input(|| "", || Ok(E::Fr::one()))?;
+ 
+     circuit.synthesize(&mut prover)?;
+@@ -176,6 +177,7 @@
+         );
+     }
+ 
++    eprintln!("ZKT {} {:.6}", "bm.synthesis", zt.elapsed().as_secs_f64());
+     let prepared = PreparedProver {
+         assignment: prover
+     };
+@@ -207,9 +209,11 @@
+         let prover = self.assignment;
+         let worker = Worker::new();
+ 
++        let zt_all = std::time::Instant::now();
+         let vk = params.get_vk(prover.input_assignment.len())?;
+ 
+         let _stopwatch = Stopwatch::new();
++        let zt = std::time::Instant::now();
+ 
+         let h = {
+             let mut a = EvaluationDomain::from_coeffs(prover.a)?;
+@@ -237,6 +241,8 @@
+             a.divide_by_z_on_coset(&worker);
+             // interpolate back in coset
+             a.icoset_fft(&worker);
++            eprintln!("ZKT {} {:.6}", "bm.fft", zt.elapsed().as_secs_f64());
++            let zt = std::time::Instant::now();
+             let mut a = a.into_coeffs();
+             let a_len = a.len() - 1;
+             a.truncate(a_len);
+@@ -245,8 +251,10 @@
+             let a = Arc::new(scalars_into_representations::<E>(&worker, a)?);
+             // let a = Arc::new(a.into_iter().map(|s| s.0.into_repr()).collect::<Vec<_>>());
+ 
++            eprintln!("ZKT {} {:.6}", "bm.h_to_repr", zt.elapsed().as_secs_f64());
+             multiexp(&worker, params.get_h(a.len())?, FullDensity, a)
+         };
++        let zt = std::time::Instant::now();
+ 
+         elog_verbose!("{} seconds for prover for H evaluation (mostly FFT)", _stopwatch.elapsed());
+ 
+@@ -334,6 +342,8 @@
+         g_c.add_assign(&h.wait()?);
+         g_c.add_assign(&l.wait()?);
+ 
++        eprintln!("ZKT {} {:.6}", "bm.msm_all", zt.elapsed().as_secs_f64());
++        eprintln!("ZKT {} {:.6}", "bm.create_proof_total", zt_all.elapsed().as_secs_f64());
+         elog_verbose!("{} seconds for prover for point multiplication", _stopwatch.elapsed());
+ 
+         Ok(Proof {

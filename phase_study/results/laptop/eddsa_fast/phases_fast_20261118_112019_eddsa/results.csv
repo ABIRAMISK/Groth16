@@ -1,0 +1,13 @@
+family,parameter,constraints,replicate,compile_s,setup_s,witness_s,proof_s,verify_s,verify_passed,source_log,compile_inner_s,setup_inner_s,witness_inner_s,proof_inner_s,verify_inner_s,storage,visit_position,timestamp_utc,status
+"BabyJubJub EdDSA verify","SHA-256 challenge (standard library)",94181,0,6.373,7.782,2.730,1.881,0.404,True,raw_run.log,5.982,7.406,2.366,1.431,0.008,local,1,2026-11-18T05:51:33Z,"OK"
+"BabyJubJub EdDSA verify","Poseidon challenge (variant)",15211,0,2.125,1.071,0.475,0.738,0.387,True,raw_run.log,1.752,0.623,0.109,0.340,0.008,local,2,2026-11-18T05:51:41Z,"OK"
+"BabyJubJub EdDSA verify","SHA-256 challenge (standard library)",94181,1,6.357,7.945,2.744,1.715,0.453,True,raw_run.log,6.005,7.593,2.360,1.270,0.010,local,1,2026-11-18T05:52:08Z,"OK"
+"BabyJubJub EdDSA verify","Poseidon challenge (variant)",15211,1,2.180,0.958,0.471,0.704,0.383,True,raw_run.log,1.789,0.569,0.104,0.304,0.008,local,2,2026-11-18T05:52:16Z,"OK"
+"BabyJubJub EdDSA verify","Poseidon challenge (variant)",15211,2,2.109,0.953,0.463,0.717,0.384,True,raw_run.log,1.751,0.582,0.105,0.326,0.008,local,1,2026-11-18T05:52:28Z,"OK"
+"BabyJubJub EdDSA verify","SHA-256 challenge (standard library)",94181,2,6.286,7.907,2.665,1.662,0.382,True,raw_run.log,5.924,7.541,2.305,1.267,0.009,local,2,2026-11-18T05:52:50Z,"OK"
+"BabyJubJub EdDSA verify","SHA-256 challenge (standard library)",94181,3,6.399,8.333,2.675,1.606,0.373,True,raw_run.log,6.041,7.962,2.320,1.234,0.009,local,1,2026-11-18T05:53:17Z,"OK"
+"BabyJubJub EdDSA verify","Poseidon challenge (variant)",15211,3,2.128,0.924,0.479,0.675,0.368,True,raw_run.log,1.766,0.561,0.107,0.312,0.008,local,2,2026-11-18T05:53:25Z,"OK"
+"BabyJubJub EdDSA verify","SHA-256 challenge (standard library)",94181,4,6.265,8.051,2.696,1.692,0.396,True,raw_run.log,5.924,7.680,2.327,1.315,0.008,local,1,2026-11-18T05:53:51Z,"OK"
+"BabyJubJub EdDSA verify","Poseidon challenge (variant)",15211,4,2.115,1.037,0.545,0.690,0.370,True,raw_run.log,1.758,0.626,0.113,0.318,0.008,local,2,2026-11-18T05:53:59Z,"OK"
+"BabyJubJub EdDSA verify","SHA-256 challenge (standard library)",94181,5,6.577,7.786,2.712,1.602,0.388,True,raw_run.log,6.242,7.391,2.334,1.221,0.009,local,1,2026-11-18T05:54:26Z,"OK"
+"BabyJubJub EdDSA verify","Poseidon challenge (variant)",15211,5,2.139,0.956,0.505,0.682,0.396,True,raw_run.log,1.780,0.580,0.111,0.320,0.009,local,2,2026-11-18T05:54:34Z,"OK"

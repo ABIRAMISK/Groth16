@@ -1,0 +1,12 @@
+pass 0 (main) start 2026-11-17T10:00:58Z  battery_status(2=AC)=  cpu_clock_mhz=2200  host_free_gb=106.4  c_free_gb=106.4 load=1.58 1.33 0.83 steal_jiffies=49
+pass 0 (main) end   2026-11-17T11:03:26Z  battery_status(2=AC)=  cpu_clock_mhz=2200  host_free_gb=102.0  c_free_gb=102.0 load=2.48 2.57 2.55 steal_jiffies=145
+pass 1 (main) start 2026-11-17T11:03:26Z  battery_status(2=AC)=  cpu_clock_mhz=2200  host_free_gb=102.0  c_free_gb=102.0 load=2.48 2.57 2.55 steal_jiffies=145
+pass 1 (main) end   2026-11-17T12:07:29Z  battery_status(2=AC)=  cpu_clock_mhz=2200  host_free_gb=102.0  c_free_gb=102.0 load=2.44 2.69 2.56 steal_jiffies=251
+pass 2 (main) start 2026-11-17T12:07:30Z  battery_status(2=AC)=  cpu_clock_mhz=2200  host_free_gb=102.0  c_free_gb=102.0 load=2.44 2.69 2.56 steal_jiffies=251
+pass 2 (main) end   2026-11-17T13:11:34Z  battery_status(2=AC)=  cpu_clock_mhz=2200  host_free_gb=102.0  c_free_gb=102.0 load=2.58 2.59 2.55 steal_jiffies=369
+pass 3 (main) start 2026-11-17T13:11:34Z  battery_status(2=AC)=  cpu_clock_mhz=2200  host_free_gb=102.0  c_free_gb=102.0 load=2.58 2.59 2.55 steal_jiffies=369
+pass 3 (main) end   2026-11-17T14:15:44Z  battery_status(2=AC)=  cpu_clock_mhz=2200  host_free_gb=102.0  c_free_gb=102.0 load=2.59 2.34 2.38 steal_jiffies=504
+pass 4 (main) start 2026-11-17T14:15:44Z  battery_status(2=AC)=  cpu_clock_mhz=2200  host_free_gb=102.0  c_free_gb=102.0 load=2.78 2.39 2.39 steal_jiffies=504
+pass 4 (main) end   2026-11-17T15:20:06Z  battery_status(2=AC)=  cpu_clock_mhz=2200  host_free_gb=102.0  c_free_gb=102.0 load=2.62 2.46 2.47 steal_jiffies=625
+pass 5 (main) start 2026-11-17T15:20:06Z  battery_status(2=AC)=  cpu_clock_mhz=2200  host_free_gb=102.0  c_free_gb=102.0 load=2.62 2.46 2.47 steal_jiffies=625
+pass 5 (main) end   2026-11-17T16:24:29Z  battery_status(2=AC)=  cpu_clock_mhz=2200  host_free_gb=102.0  c_free_gb=102.0 load=2.52 2.57 2.65 steal_jiffies=744

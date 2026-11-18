@@ -1,0 +1,4027 @@
+Run folder: phases_bellman_20261117_100553   mode=full REPS=5 WARMUP=1 CONTROL=0 ONLY='merkle_8 merkle_16 merkle_32 poseidon_64 poseidon_256 poseidon_512 poseidon_1024 rsa_256_1 rsa_256_64 rsa_1024_64 rsa1024real rsa2048real rsa3072real rsa4096real ecdsa_secp256k1 sha256_ecc sha256_rsa synth_full_100k synth_bool_100k synth_full_300k synth_bool_300k'
+battery status now (2 = on AC power, 1 = on battery): 2
+Windows Power mode setting (overlay GUID; Best performance = ded574b5-45a0-4f42-8737-46345c09c238): plugged in = ded574b5-45a0-4f42-8737-46345c09c238   on battery = 961cc777-2547-4f9d-8174-7d86181b8a7a
+Before this starts: plug in the charger, set Settings > System > Power > Power mode to Best performance, set sleep to Never
+while plugged in, close other programs, and leave the laptop alone. Starting in 15 s (Ctrl-C to cancel).
+ZoKrates 0.8.7
+--- prepare merkle_8 (Merkle path d=8)
+    21:const u32 DEPTH = 8;
+        return-only variant: Number of constraints: 1961
+        discovered expected root: 7028720585430303887570002302278980460894336162115285260509585927530919019891
+    READY merkle_poseidon_8.zok
+    same value as in the old log: circuit and inputs are unchanged
+--- prepare merkle_16 (Merkle path d=16)
+    21:const u32 DEPTH = 16;
+        return-only variant: Number of constraints: 3921
+        discovered expected root: 16583262526602274908326067473715682454713032735441436283661755515998944202415
+    READY merkle_poseidon_16.zok
+    same value as in the old log: circuit and inputs are unchanged
+--- prepare merkle_32 (Merkle path d=32)
+    21:const u32 DEPTH = 32;
+        return-only variant: Number of constraints: 7841
+        discovered expected root: 20423030625995436285279479924046495790834672715859007564257505760766364087270
+    READY merkle_poseidon_32.zok
+    same value as in the old log: circuit and inputs are unchanged
+--- prepare poseidon_64 (Poseidon chain n=64)
+    18:const u32 ROUNDS = 64;
+        return-only variant: Number of constraints: 13633
+        discovered expected value: 12977603586150215176737170700933411671521376300841946324188299489382731017410
+    READY poseidon_chain_64.zok
+    same value as in the old log: circuit and inputs are unchanged
+--- prepare poseidon_256 (Poseidon chain n=256)
+    18:const u32 ROUNDS = 256;
+        return-only variant: Number of constraints: 54529
+        discovered expected value: 6625781724567783151019659453048597576755659058242974169987516206580194996227
+    READY poseidon_chain_256.zok
+    same value as in the old log: circuit and inputs are unchanged
+--- prepare poseidon_512 (Poseidon chain n=512)
+    18:const u32 ROUNDS = 512;
+        return-only variant: Number of constraints: 109057
+        discovered expected value: 5272706100675861572954429260300407996236585194829985617281545191578970831668
+    READY poseidon_chain_512.zok
+    same value as in the old log: circuit and inputs are unchanged
+--- prepare poseidon_1024 (Poseidon chain n=1024)
+    18:const u32 ROUNDS = 1024;
+        return-only variant: Number of constraints: 218113
+        discovered expected value: 12201746564020505244764431712123948954006357598207025395494458562047888457121
+    READY poseidon_chain_1024.zok
+    same value as in the old log: circuit and inputs are unchanged
+--- prepare rsa_256_1 (RSA accumulator b=256,r=1)
+    27:const u32 EXP_BITS = 256;
+    28:const u32 REPS = 1;
+    READY rsa_accumulator_256_1.zok
+--- prepare rsa_256_64 (RSA accumulator b=256,r=64)
+    27:const u32 EXP_BITS = 256;
+    28:const u32 REPS = 64;
+    READY rsa_accumulator_256_64.zok
+--- prepare rsa_1024_64 (RSA accumulator b=1024,r=64)
+    27:const u32 EXP_BITS = 1024;
+    28:const u32 REPS = 64;
+    READY rsa_accumulator_1024_64.zok
+--- prepare rsa1024real (RSA-1024 verify (real) e=65537 W=121 K=9)
+    READY rsa1024_verify.zok
+--- prepare rsa2048real (RSA-2048 verify (real) e=65537 W=121 K=17)
+    READY rsa2048_verify.zok
+--- prepare rsa3072real (RSA-3072 verify (real) e=65537 W=121 K=26)
+    READY rsa3072_verify.zok
+--- prepare rsa4096real (RSA-4096 verify (real) e=65537 W=121 K=34)
+    READY rsa4096_verify.zok
+--- prepare ecdsa_secp256k1 (ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir)
+    READY ecdsa_verify.zok
+--- prepare sha256_ecc (SHA-256 compression commitment circuit, ECC-derived input)
+    READY sha256_hash_circuit.zok
+--- prepare sha256_rsa (SHA-256 compression commitment circuit, RSA-derived input)
+    READY sha256_hash_circuit.zok
+--- prepare synth_full_100k (Synthetic full-width chain N=100000, x=x*x+1 chain)
+    READY synth_full_100k.zok
+--- prepare synth_bool_100k (Synthetic boolean chain N=50000, XOR/OR chain of bits)
+    READY synth_bool_100k.zok
+--- prepare synth_full_300k (Synthetic full-width chain N=300000, x=x*x+1 chain)
+    READY synth_full_300k.zok
+--- prepare synth_bool_300k (Synthetic boolean chain N=150000, XOR/OR chain of bits)
+    READY synth_bool_300k.zok
+
+================ pass 0 of 5 (warm-up) [main] ================
+
+[main pass 0, circuit 1/21, elapsed 00:00:05] sha256_rsa: SHA-256 compression commitment circuit, RSA-derived input
+    --- compile: host 2.019 s, inside 1.544 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 5.286 s, inside 4.767 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.091 s, inside 0.594 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.566 s, inside 1.015 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.006012
+        ZKT zok.pk_deserialize 0.041415
+        ZKT bm.synthesis 0.585026
+        ZKT bm.fft 0.141012
+        ZKT bm.h_to_repr 0.001861
+        ZKT bm.msm_all 0.222118
+        ZKT bm.create_proof_total 0.365156
+        ZKT zok.self_verify 0.007047
+        ZKT cli.backend_generate_proof 1.001623
+        Proof written to 'proof.json'
+    --- verify: host 0.453 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_rsa replicate 0: constraints=27214 status=OK | host c/s/w/p/v = 2.019/5.286/1.091/1.566/0.453 | inside = 1.544/4.767/0.594/1.015/0.011
+
+[main pass 0, circuit 2/21, elapsed 00:00:19] rsa_1024_64: RSA accumulator b=1024,r=64
+    --- compile: host 25.533 s, inside 25.106 s, exit code 0
+        Compiling rsa_accumulator_1024_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 268161
+    --- setup: host 79.310 s, inside 78.810 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.750 s, inside 1.304 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 6.965 s, inside 6.522 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.069053
+        ZKT zok.pk_deserialize 0.605828
+        ZKT bm.synthesis 1.377338
+        ZKT bm.fft 1.973039
+        ZKT bm.h_to_repr 0.010392
+        ZKT bm.msm_all 2.459038
+        ZKT bm.create_proof_total 4.442640
+        ZKT zok.self_verify 0.005497
+        ZKT cli.backend_generate_proof 6.445268
+        Proof written to 'proof.json'
+    --- verify: host 0.478 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_1024_64 replicate 0: constraints=268161 status=OK | host c/s/w/p/v = 25.533/79.310/1.750/6.965/0.478 | inside = 25.106/78.810/1.304/6.522/0.012
+
+[main pass 0, circuit 3/21, elapsed 00:02:16] synth_bool_100k: Synthetic boolean chain N=50000, XOR/OR chain of bits
+    --- compile: host 6.902 s, inside 6.425 s, exit code 0
+        Compiling synth_bool_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100002
+    --- setup: host 28.943 s, inside 28.505 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.421 s, inside 0.956 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.818 s, inside 2.350 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.026063
+        ZKT zok.pk_deserialize 0.219008
+        ZKT bm.synthesis 0.916848
+        ZKT bm.fft 0.433371
+        ZKT bm.h_to_repr 0.003086
+        ZKT bm.msm_all 0.730970
+        ZKT bm.create_proof_total 1.167593
+        ZKT zok.self_verify 0.006135
+        ZKT cli.backend_generate_proof 2.316306
+        Proof written to 'proof.json'
+    --- verify: host 0.493 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_100k replicate 0: constraints=100002 status=OK | host c/s/w/p/v = 6.902/28.943/1.421/2.818/0.493 | inside = 6.425/28.505/0.956/2.350/0.011
+
+[main pass 0, circuit 4/21, elapsed 00:03:01] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 116.436 s, inside 115.954 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 196.450 s, inside 195.920 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 4.883 s, inside 4.497 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 14.371 s, inside 13.998 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.161053
+        ZKT zok.pk_deserialize 1.557405
+        ZKT bm.synthesis 4.299812
+        ZKT bm.fft 3.156587
+        ZKT bm.h_to_repr 0.029322
+        ZKT bm.msm_all 4.735791
+        ZKT bm.create_proof_total 7.921880
+        ZKT zok.self_verify 0.004956
+        ZKT cli.backend_generate_proof 13.814032
+        Proof written to 'proof.json'
+    --- verify: host 0.403 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 0: constraints=842212 status=OK | host c/s/w/p/v = 116.436/196.450/4.883/14.371/0.403 | inside = 115.954/195.920/4.497/13.998/0.010
+
+[main pass 0, circuit 5/21, elapsed 00:08:36] synth_full_100k: Synthetic full-width chain N=100000, x=x*x+1 chain
+    --- compile: host 4.173 s, inside 3.746 s, exit code 0
+        Compiling synth_full_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100001
+    --- setup: host 22.557 s, inside 22.190 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.814 s, inside 0.445 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.004 s, inside 3.624 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.018552
+        ZKT zok.pk_deserialize 0.158633
+        ZKT bm.synthesis 0.443060
+        ZKT bm.fft 0.324216
+        ZKT bm.h_to_repr 0.002661
+        ZKT bm.msm_all 2.656050
+        ZKT bm.create_proof_total 2.983128
+        ZKT zok.self_verify 0.006055
+        ZKT cli.backend_generate_proof 3.599076
+        Proof written to 'proof.json'
+    --- verify: host 0.417 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_100k replicate 0: constraints=100001 status=OK | host c/s/w/p/v = 4.173/22.557/0.814/4.004/0.417 | inside = 3.746/22.190/0.445/3.624/0.010
+
+[main pass 0, circuit 6/21, elapsed 00:09:11] poseidon_256: Poseidon chain n=256
+    --- compile: host 26.819 s, inside 26.463 s, exit code 0
+        Compiling poseidon_chain_256.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 54530
+    --- setup: host 13.004 s, inside 12.635 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.073 s, inside 0.679 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 3.082 s, inside 2.689 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.009888
+        ZKT zok.pk_deserialize 0.084446
+        ZKT bm.synthesis 0.859150
+        ZKT bm.fft 0.181271
+        ZKT bm.h_to_repr 0.001504
+        ZKT bm.msm_all 1.535201
+        ZKT bm.create_proof_total 1.718127
+        ZKT zok.self_verify 0.006858
+        ZKT cli.backend_generate_proof 2.673642
+        Proof written to 'proof.json'
+    --- verify: host 0.394 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_256 replicate 0: constraints=54530 status=OK | host c/s/w/p/v = 26.819/13.004/1.073/3.082/0.394 | inside = 26.463/12.635/0.679/2.689/0.011
+
+[main pass 0, circuit 7/21, elapsed 00:09:59] rsa_256_1: RSA accumulator b=256,r=1
+    --- compile: host 0.491 s, inside 0.094 s, exit code 0
+        Compiling rsa_accumulator_256_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 2559
+    --- setup: host 0.944 s, inside 0.566 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.380 s, inside 0.015 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.453 s, inside 0.078 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000400
+        ZKT zok.pk_deserialize 0.005009
+        ZKT bm.synthesis 0.011535
+        ZKT bm.fft 0.027290
+        ZKT bm.h_to_repr 0.000747
+        ZKT bm.msm_all 0.020447
+        ZKT bm.create_proof_total 0.048600
+        ZKT zok.self_verify 0.004598
+        ZKT cli.backend_generate_proof 0.073192
+        Proof written to 'proof.json'
+    --- verify: host 0.383 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_1 replicate 0: constraints=2559 status=OK | host c/s/w/p/v = 0.491/0.944/0.380/0.453/0.383 | inside = 0.094/0.566/0.015/0.078/0.009
+
+[main pass 0, circuit 8/21, elapsed 00:10:05] rsa1024real: RSA-1024 verify (real) e=65537 W=121 K=9
+    --- compile: host 11.266 s, inside 10.920 s, exit code 0
+        Compiling rsa1024_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 76604
+    --- setup: host 18.387 s, inside 18.006 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.794 s, inside 0.417 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.952 s, inside 1.564 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.013431
+        ZKT zok.pk_deserialize 0.130061
+        ZKT bm.synthesis 0.377673
+        ZKT bm.fft 0.377468
+        ZKT bm.h_to_repr 0.003436
+        ZKT bm.msm_all 0.642758
+        ZKT bm.create_proof_total 1.023807
+        ZKT zok.self_verify 0.007070
+        ZKT cli.backend_generate_proof 1.543866
+        Proof written to 'proof.json'
+    --- verify: host 0.384 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa1024real replicate 0: constraints=76604 status=OK | host c/s/w/p/v = 11.266/18.387/0.794/1.952/0.384 | inside = 10.920/18.006/0.417/1.564/0.010
+
+[main pass 0, circuit 9/21, elapsed 00:10:40] synth_bool_300k: Synthetic boolean chain N=150000, XOR/OR chain of bits
+    --- compile: host 18.627 s, inside 18.245 s, exit code 0
+        Compiling synth_bool_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300002
+    --- setup: host 71.192 s, inside 70.703 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.587 s, inside 2.213 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 6.732 s, inside 6.366 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.061313
+        ZKT zok.pk_deserialize 0.506223
+        ZKT bm.synthesis 2.197713
+        ZKT bm.fft 1.485234
+        ZKT bm.h_to_repr 0.009259
+        ZKT bm.msm_all 2.077273
+        ZKT bm.create_proof_total 3.571934
+        ZKT zok.self_verify 0.004896
+        ZKT cli.backend_generate_proof 6.296864
+        Proof written to 'proof.json'
+    --- verify: host 0.398 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_300k replicate 0: constraints=300002 status=OK | host c/s/w/p/v = 18.627/71.192/2.587/6.732/0.398 | inside = 18.245/70.703/2.213/6.366/0.009
+
+[main pass 0, circuit 10/21, elapsed 00:12:23] merkle_8: Merkle path d=8
+    --- compile: host 2.631 s, inside 2.252 s, exit code 0
+        Compiling merkle_poseidon_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 1962
+    --- setup: host 0.795 s, inside 0.414 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.395 s, inside 0.031 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.529 s, inside 0.139 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.005992
+        ZKT zok.pk_deserialize 0.003006
+        ZKT bm.synthesis 0.028617
+        ZKT bm.fft 0.021228
+        ZKT bm.h_to_repr 0.000852
+        ZKT bm.msm_all 0.067733
+        ZKT bm.create_proof_total 0.089945
+        ZKT zok.self_verify 0.005419
+        ZKT cli.backend_generate_proof 0.128023
+        Proof written to 'proof.json'
+    --- verify: host 0.370 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_8 replicate 0: constraints=1962 status=OK | host c/s/w/p/v = 2.631/0.795/0.395/0.529/0.370 | inside = 2.252/0.414/0.031/0.139/0.009
+
+[main pass 0, circuit 11/21, elapsed 00:12:31] merkle_32: Merkle path d=32
+    --- compile: host 5.064 s, inside 4.700 s, exit code 0
+        Compiling merkle_poseidon_32.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 7842
+    --- setup: host 2.130 s, inside 1.731 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.485 s, inside 0.104 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.815 s, inside 0.430 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.001431
+        ZKT zok.pk_deserialize 0.013089
+        ZKT bm.synthesis 0.126791
+        ZKT bm.fft 0.038962
+        ZKT bm.h_to_repr 0.000856
+        ZKT bm.msm_all 0.234951
+        ZKT bm.create_proof_total 0.274940
+        ZKT zok.self_verify 0.006103
+        ZKT cli.backend_generate_proof 0.423769
+        Proof written to 'proof.json'
+    --- verify: host 0.386 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_32 replicate 0: constraints=7842 status=OK | host c/s/w/p/v = 5.064/2.130/0.485/0.815/0.386 | inside = 4.700/1.731/0.104/0.430/0.010
+
+[main pass 0, circuit 12/21, elapsed 00:12:43] sha256_ecc: SHA-256 compression commitment circuit, ECC-derived input
+    --- compile: host 1.463 s, inside 1.073 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 4.041 s, inside 3.665 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.798 s, inside 0.430 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.088 s, inside 0.717 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.004530
+        ZKT zok.pk_deserialize 0.026081
+        ZKT bm.synthesis 0.410088
+        ZKT bm.fft 0.094342
+        ZKT bm.h_to_repr 0.001116
+        ZKT bm.msm_all 0.166548
+        ZKT bm.create_proof_total 0.262135
+        ZKT zok.self_verify 0.005999
+        ZKT cli.backend_generate_proof 0.706716
+        Proof written to 'proof.json'
+    --- verify: host 0.388 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_ecc replicate 0: constraints=27214 status=OK | host c/s/w/p/v = 1.463/4.041/0.798/1.088/0.388 | inside = 1.073/3.665/0.430/0.717/0.010
+
+[main pass 0, circuit 13/21, elapsed 00:12:54] rsa2048real: RSA-2048 verify (real) e=65537 W=121 K=17
+    --- compile: host 24.698 s, inside 24.330 s, exit code 0
+        Compiling rsa2048_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 153484
+    --- setup: host 37.361 s, inside 36.971 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.510 s, inside 1.072 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 3.566 s, inside 3.166 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.027837
+        ZKT zok.pk_deserialize 0.256644
+        ZKT bm.synthesis 0.863128
+        ZKT bm.fft 0.734104
+        ZKT bm.h_to_repr 0.004903
+        ZKT bm.msm_all 1.254691
+        ZKT bm.create_proof_total 1.993853
+        ZKT zok.self_verify 0.007454
+        ZKT cli.backend_generate_proof 3.129917
+        Proof written to 'proof.json'
+    --- verify: host 0.391 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa2048real replicate 0: constraints=153484 status=OK | host c/s/w/p/v = 24.698/37.361/1.510/3.566/0.391 | inside = 24.330/36.971/1.072/3.166/0.011
+
+[main pass 0, circuit 14/21, elapsed 00:14:04] rsa3072real: RSA-3072 verify (real) e=65537 W=121 K=26
+    --- compile: host 38.932 s, inside 38.554 s, exit code 0
+        Compiling rsa3072_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 244870
+    --- setup: host 55.064 s, inside 54.652 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.075 s, inside 1.692 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.978 s, inside 4.600 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.046031
+        ZKT zok.pk_deserialize 0.362978
+        ZKT bm.synthesis 1.812898
+        ZKT bm.fft 0.744406
+        ZKT bm.h_to_repr 0.003995
+        ZKT bm.msm_all 1.597262
+        ZKT bm.create_proof_total 2.345848
+        ZKT zok.self_verify 0.008633
+        ZKT cli.backend_generate_proof 4.543235
+        Proof written to 'proof.json'
+    --- verify: host 0.407 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa3072real replicate 0: constraints=244870 status=OK | host c/s/w/p/v = 38.932/55.064/2.075/4.978/0.407 | inside = 38.554/54.652/1.692/4.600/0.011
+
+[main pass 0, circuit 15/21, elapsed 00:15:49] rsa_256_64: RSA accumulator b=256,r=64
+    --- compile: host 3.099 s, inside 2.724 s, exit code 0
+        Compiling rsa_accumulator_256_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 66945
+    --- setup: host 15.802 s, inside 15.405 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.238 s, inside 0.672 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.060 s, inside 1.546 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.016194
+        ZKT zok.pk_deserialize 0.152417
+        ZKT bm.synthesis 0.361418
+        ZKT bm.fft 0.431588
+        ZKT bm.h_to_repr 0.002724
+        ZKT bm.msm_all 0.562758
+        ZKT bm.create_proof_total 0.997228
+        ZKT zok.self_verify 0.006179
+        ZKT cli.backend_generate_proof 1.522494
+        Proof written to 'proof.json'
+    --- verify: host 0.417 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_64 replicate 0: constraints=66945 status=OK | host c/s/w/p/v = 3.099/15.802/1.238/2.060/0.417 | inside = 2.724/15.405/0.672/1.546/0.010
+
+[main pass 0, circuit 16/21, elapsed 00:16:15] poseidon_512: Poseidon chain n=512
+    --- compile: host 63.313 s, inside 62.890 s, exit code 0
+        Compiling poseidon_chain_512.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 109058
+    --- setup: host 25.921 s, inside 25.484 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.729 s, inside 1.331 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.291 s, inside 4.887 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.020965
+        ZKT zok.pk_deserialize 0.172151
+        ZKT bm.synthesis 1.539235
+        ZKT bm.fft 0.355831
+        ZKT bm.h_to_repr 0.002473
+        ZKT bm.msm_all 2.776863
+        ZKT bm.create_proof_total 3.135338
+        ZKT zok.self_verify 0.006434
+        ZKT cli.backend_generate_proof 4.859456
+        Proof written to 'proof.json'
+    --- verify: host 0.420 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_512 replicate 0: constraints=109058 status=OK | host c/s/w/p/v = 63.313/25.921/1.729/5.291/0.420 | inside = 62.890/25.484/1.331/4.887/0.010
+
+[main pass 0, circuit 17/21, elapsed 00:17:55] synth_full_300k: Synthetic full-width chain N=300000, x=x*x+1 chain
+    --- compile: host 12.944 s, inside 12.570 s, exit code 0
+        Compiling synth_full_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300001
+    --- setup: host 70.098 s, inside 69.640 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.992 s, inside 1.554 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 12.309 s, inside 11.876 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.076253
+        ZKT zok.pk_deserialize 0.665678
+        ZKT bm.synthesis 1.489130
+        ZKT bm.fft 1.555063
+        ZKT bm.h_to_repr 0.010072
+        ZKT bm.msm_all 8.053123
+        ZKT bm.create_proof_total 9.618447
+        ZKT zok.self_verify 0.005114
+        ZKT cli.backend_generate_proof 11.793258
+        Proof written to 'proof.json'
+    --- verify: host 0.412 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_300k replicate 0: constraints=300001 status=OK | host c/s/w/p/v = 12.944/70.098/1.992/12.309/0.412 | inside = 12.570/69.640/1.554/11.876/0.009
+
+[main pass 0, circuit 18/21, elapsed 00:19:35] poseidon_64: Poseidon chain n=64
+    --- compile: host 7.051 s, inside 6.693 s, exit code 0
+        Compiling poseidon_chain_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 13634
+    --- setup: host 3.347 s, inside 2.946 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.611 s, inside 0.202 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.095 s, inside 0.686 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.002469
+        ZKT zok.pk_deserialize 0.022241
+        ZKT bm.synthesis 0.205932
+        ZKT bm.fft 0.059777
+        ZKT bm.h_to_repr 0.001038
+        ZKT bm.msm_all 0.380961
+        ZKT bm.create_proof_total 0.441905
+        ZKT zok.self_verify 0.006258
+        ZKT cli.backend_generate_proof 0.678295
+        Proof written to 'proof.json'
+    --- verify: host 0.372 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_64 replicate 0: constraints=13634 status=OK | host c/s/w/p/v = 7.051/3.347/0.611/1.095/0.372 | inside = 6.693/2.946/0.202/0.686/0.010
+
+[main pass 0, circuit 19/21, elapsed 00:19:51] merkle_16: Merkle path d=16
+    --- compile: host 3.183 s, inside 2.809 s, exit code 0
+        Compiling merkle_poseidon_16.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 3922
+    --- setup: host 1.230 s, inside 0.850 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.513 s, inside 0.061 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.665 s, inside 0.286 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000679
+        ZKT zok.pk_deserialize 0.007213
+        ZKT bm.synthesis 0.065121
+        ZKT bm.fft 0.032038
+        ZKT bm.h_to_repr 0.001328
+        ZKT bm.msm_all 0.166476
+        ZKT bm.create_proof_total 0.199985
+        ZKT zok.self_verify 0.006196
+        ZKT cli.backend_generate_proof 0.279950
+        Proof written to 'proof.json'
+    --- verify: host 0.397 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_16 replicate 0: constraints=3922 status=OK | host c/s/w/p/v = 3.183/1.230/0.513/0.665/0.397 | inside = 2.809/0.850/0.061/0.286/0.009
+
+[main pass 0, circuit 20/21, elapsed 00:20:00] rsa4096real: RSA-4096 verify (real) e=65537 W=121 K=34
+    --- compile: host 57.154 s, inside 56.766 s, exit code 0
+        Compiling rsa4096_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 331848
+    --- setup: host 78.631 s, inside 78.206 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.181 s, inside 2.815 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 8.191 s, inside 7.818 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.064766
+        ZKT zok.pk_deserialize 0.531683
+        ZKT bm.synthesis 2.995470
+        ZKT bm.fft 1.458062
+        ZKT bm.h_to_repr 0.007798
+        ZKT bm.msm_all 2.721066
+        ZKT bm.create_proof_total 4.187086
+        ZKT zok.self_verify 0.008875
+        ZKT cli.backend_generate_proof 7.741760
+        Proof written to 'proof.json'
+    --- verify: host 0.473 s, inside 0.015 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa4096real replicate 0: constraints=331848 status=OK | host c/s/w/p/v = 57.154/78.631/3.181/8.191/0.473 | inside = 56.766/78.206/2.815/7.818/0.015
+
+[main pass 0, circuit 21/21, elapsed 00:22:31] poseidon_1024: Poseidon chain n=1024
+    --- compile: host 147.398 s, inside 147.038 s, exit code 0
+        Compiling poseidon_chain_1024.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 218114
+    --- setup: host 50.330 s, inside 49.996 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.048 s, inside 2.674 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 9.917 s, inside 9.549 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.042740
+        ZKT zok.pk_deserialize 0.345206
+        ZKT bm.synthesis 3.164275
+        ZKT bm.fft 0.664537
+        ZKT bm.h_to_repr 0.004729
+        ZKT bm.msm_all 5.300275
+        ZKT bm.create_proof_total 5.969670
+        ZKT zok.self_verify 0.006095
+        ZKT cli.backend_generate_proof 9.497888
+        Proof written to 'proof.json'
+    --- verify: host 0.411 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_1024 replicate 0: constraints=218114 status=OK | host c/s/w/p/v = 147.398/50.330/3.048/9.917/0.411 | inside = 147.038/49.996/2.674/9.549/0.010
+
+================ pass 1 of 5 [main] ================
+
+[main pass 1, circuit 1/21, elapsed 00:26:10] synth_bool_300k: Synthetic boolean chain N=150000, XOR/OR chain of bits
+    --- compile: host 16.998 s, inside 16.661 s, exit code 0
+        Compiling synth_bool_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300002
+    --- setup: host 71.098 s, inside 70.728 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.645 s, inside 2.261 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 6.636 s, inside 6.254 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.062503
+        ZKT zok.pk_deserialize 0.511554
+        ZKT bm.synthesis 2.184467
+        ZKT bm.fft 1.422281
+        ZKT bm.h_to_repr 0.008808
+        ZKT bm.msm_all 2.033642
+        ZKT bm.create_proof_total 3.464902
+        ZKT zok.self_verify 0.004921
+        ZKT cli.backend_generate_proof 6.183163
+        Proof written to 'proof.json'
+    --- verify: host 0.409 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_300k replicate 1: constraints=300002 status=OK | host c/s/w/p/v = 16.998/71.098/2.645/6.636/0.409 | inside = 16.661/70.728/2.261/6.254/0.009
+
+[main pass 1, circuit 2/21, elapsed 00:27:51] merkle_32: Merkle path d=32
+    --- compile: host 5.072 s, inside 4.702 s, exit code 0
+        Compiling merkle_poseidon_32.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 7842
+    --- setup: host 2.231 s, inside 1.836 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.497 s, inside 0.108 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.772 s, inside 0.399 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.001298
+        ZKT zok.pk_deserialize 0.012784
+        ZKT bm.synthesis 0.114016
+        ZKT bm.fft 0.037006
+        ZKT bm.h_to_repr 0.000944
+        ZKT bm.msm_all 0.220330
+        ZKT bm.create_proof_total 0.258412
+        ZKT zok.self_verify 0.005950
+        ZKT cli.backend_generate_proof 0.392883
+        Proof written to 'proof.json'
+    --- verify: host 0.392 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_32 replicate 1: constraints=7842 status=OK | host c/s/w/p/v = 5.072/2.231/0.497/0.772/0.392 | inside = 4.702/1.836/0.108/0.399/0.009
+
+[main pass 1, circuit 3/21, elapsed 00:28:03] sha256_ecc: SHA-256 compression commitment circuit, ECC-derived input
+    --- compile: host 1.424 s, inside 1.045 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 4.065 s, inside 3.697 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.807 s, inside 0.441 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.096 s, inside 0.722 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.004452
+        ZKT zok.pk_deserialize 0.025508
+        ZKT bm.synthesis 0.406645
+        ZKT bm.fft 0.090878
+        ZKT bm.h_to_repr 0.000980
+        ZKT bm.msm_all 0.178213
+        ZKT bm.create_proof_total 0.270212
+        ZKT zok.self_verify 0.007120
+        ZKT cli.backend_generate_proof 0.712444
+        Proof written to 'proof.json'
+    --- verify: host 0.375 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_ecc replicate 1: constraints=27214 status=OK | host c/s/w/p/v = 1.424/4.065/0.807/1.096/0.375 | inside = 1.045/3.697/0.441/0.722/0.009
+
+[main pass 1, circuit 4/21, elapsed 00:28:14] poseidon_64: Poseidon chain n=64
+    --- compile: host 7.167 s, inside 6.800 s, exit code 0
+        Compiling poseidon_chain_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 13634
+    --- setup: host 3.487 s, inside 3.096 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.564 s, inside 0.181 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.051 s, inside 0.678 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.002390
+        ZKT zok.pk_deserialize 0.021318
+        ZKT bm.synthesis 0.198934
+        ZKT bm.fft 0.061370
+        ZKT bm.h_to_repr 0.000975
+        ZKT bm.msm_all 0.379523
+        ZKT bm.create_proof_total 0.441995
+        ZKT zok.self_verify 0.006198
+        ZKT cli.backend_generate_proof 0.670211
+        Proof written to 'proof.json'
+    --- verify: host 0.388 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_64 replicate 1: constraints=13634 status=OK | host c/s/w/p/v = 7.167/3.487/0.564/1.051/0.388 | inside = 6.800/3.096/0.181/0.678/0.009
+
+[main pass 1, circuit 5/21, elapsed 00:28:29] rsa3072real: RSA-3072 verify (real) e=65537 W=121 K=26
+    --- compile: host 38.813 s, inside 38.440 s, exit code 0
+        Compiling rsa3072_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 244870
+    --- setup: host 54.557 s, inside 54.152 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.104 s, inside 1.726 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.913 s, inside 4.521 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.051341
+        ZKT zok.pk_deserialize 0.398761
+        ZKT bm.synthesis 1.753403
+        ZKT bm.fft 0.697299
+        ZKT bm.h_to_repr 0.004342
+        ZKT bm.msm_all 1.581792
+        ZKT bm.create_proof_total 2.283586
+        ZKT zok.self_verify 0.008620
+        ZKT cli.backend_generate_proof 4.458829
+        Proof written to 'proof.json'
+    --- verify: host 0.395 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa3072real replicate 1: constraints=244870 status=OK | host c/s/w/p/v = 38.813/54.557/2.104/4.913/0.395 | inside = 38.440/54.152/1.726/4.521/0.012
+
+[main pass 1, circuit 6/21, elapsed 00:30:13] rsa_1024_64: RSA accumulator b=1024,r=64
+    --- compile: host 20.176 s, inside 19.798 s, exit code 0
+        Compiling rsa_accumulator_1024_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 268161
+    --- setup: host 62.093 s, inside 61.755 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.447 s, inside 1.072 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.484 s, inside 5.118 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.052692
+        ZKT zok.pk_deserialize 0.449016
+        ZKT bm.synthesis 1.108464
+        ZKT bm.fft 1.520668
+        ZKT bm.h_to_repr 0.008715
+        ZKT bm.msm_all 1.951579
+        ZKT bm.create_proof_total 3.481127
+        ZKT zok.self_verify 0.005271
+        ZKT cli.backend_generate_proof 5.058157
+        Proof written to 'proof.json'
+    --- verify: host 0.399 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_1024_64 replicate 1: constraints=268161 status=OK | host c/s/w/p/v = 20.176/62.093/1.447/5.484/0.399 | inside = 19.798/61.755/1.072/5.118/0.009
+
+[main pass 1, circuit 7/21, elapsed 00:31:46] poseidon_256: Poseidon chain n=256
+    --- compile: host 27.232 s, inside 26.864 s, exit code 0
+        Compiling poseidon_chain_256.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 54530
+    --- setup: host 13.119 s, inside 12.715 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.064 s, inside 0.666 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.859 s, inside 2.469 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.010004
+        ZKT zok.pk_deserialize 0.085102
+        ZKT bm.synthesis 0.771090
+        ZKT bm.fft 0.169499
+        ZKT bm.h_to_repr 0.001666
+        ZKT bm.msm_all 1.414406
+        ZKT bm.create_proof_total 1.585707
+        ZKT zok.self_verify 0.006868
+        ZKT cli.backend_generate_proof 2.453114
+        Proof written to 'proof.json'
+    --- verify: host 0.405 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_256 replicate 1: constraints=54530 status=OK | host c/s/w/p/v = 27.232/13.119/1.064/2.859/0.405 | inside = 26.864/12.715/0.666/2.469/0.009
+
+[main pass 1, circuit 8/21, elapsed 00:32:33] sha256_rsa: SHA-256 compression commitment circuit, RSA-derived input
+    --- compile: host 1.473 s, inside 1.091 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 4.168 s, inside 3.795 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.931 s, inside 0.495 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.109 s, inside 0.737 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.004569
+        ZKT zok.pk_deserialize 0.026238
+        ZKT bm.synthesis 0.422370
+        ZKT bm.fft 0.093619
+        ZKT bm.h_to_repr 0.000925
+        ZKT bm.msm_all 0.174967
+        ZKT bm.create_proof_total 0.269674
+        ZKT zok.self_verify 0.006101
+        ZKT cli.backend_generate_proof 0.727210
+        Proof written to 'proof.json'
+    --- verify: host 0.389 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_rsa replicate 1: constraints=27214 status=OK | host c/s/w/p/v = 1.473/4.168/0.931/1.109/0.389 | inside = 1.091/3.795/0.495/0.737/0.010
+
+[main pass 1, circuit 9/21, elapsed 00:32:44] poseidon_1024: Poseidon chain n=1024
+    --- compile: host 142.804 s, inside 142.415 s, exit code 0
+        Compiling poseidon_chain_1024.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 218114
+    --- setup: host 51.007 s, inside 50.598 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.052 s, inside 2.690 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 9.930 s, inside 9.557 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.049212
+        ZKT zok.pk_deserialize 0.342805
+        ZKT bm.synthesis 3.194905
+        ZKT bm.fft 0.683289
+        ZKT bm.h_to_repr 0.004251
+        ZKT bm.msm_all 5.254785
+        ZKT bm.create_proof_total 5.942455
+        ZKT zok.self_verify 0.005861
+        ZKT cli.backend_generate_proof 9.499406
+        Proof written to 'proof.json'
+    --- verify: host 0.426 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_1024 replicate 1: constraints=218114 status=OK | host c/s/w/p/v = 142.804/51.007/3.052/9.930/0.426 | inside = 142.415/50.598/2.690/9.557/0.010
+
+[main pass 1, circuit 10/21, elapsed 00:36:15] merkle_8: Merkle path d=8
+    --- compile: host 2.332 s, inside 1.930 s, exit code 0
+        Compiling merkle_poseidon_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 1962
+    --- setup: host 0.847 s, inside 0.472 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.424 s, inside 0.029 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.504 s, inside 0.136 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000345
+        ZKT zok.pk_deserialize 0.003209
+        ZKT bm.synthesis 0.029183
+        ZKT bm.fft 0.022101
+        ZKT bm.h_to_repr 0.001059
+        ZKT bm.msm_all 0.068228
+        ZKT bm.create_proof_total 0.091526
+        ZKT zok.self_verify 0.005400
+        ZKT cli.backend_generate_proof 0.130588
+        Proof written to 'proof.json'
+    --- verify: host 0.366 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_8 replicate 1: constraints=1962 status=OK | host c/s/w/p/v = 2.332/0.847/0.424/0.504/0.366 | inside = 1.930/0.472/0.029/0.136/0.009
+
+[main pass 1, circuit 11/21, elapsed 00:36:22] synth_full_300k: Synthetic full-width chain N=300000, x=x*x+1 chain
+    --- compile: host 12.236 s, inside 11.834 s, exit code 0
+        Compiling synth_full_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300001
+    --- setup: host 70.823 s, inside 70.444 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.670 s, inside 1.316 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 11.717 s, inside 11.353 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.059830
+        ZKT zok.pk_deserialize 0.530350
+        ZKT bm.synthesis 1.354923
+        ZKT bm.fft 1.489769
+        ZKT bm.h_to_repr 0.008935
+        ZKT bm.msm_all 7.878738
+        ZKT bm.create_proof_total 9.377619
+        ZKT zok.self_verify 0.005553
+        ZKT cli.backend_generate_proof 11.285047
+        Proof written to 'proof.json'
+    --- verify: host 0.398 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_300k replicate 1: constraints=300001 status=OK | host c/s/w/p/v = 12.236/70.823/1.670/11.717/0.398 | inside = 11.834/70.444/1.316/11.353/0.009
+
+[main pass 1, circuit 12/21, elapsed 00:38:02] poseidon_512: Poseidon chain n=512
+    --- compile: host 58.158 s, inside 57.805 s, exit code 0
+        Compiling poseidon_chain_512.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 109058
+    --- setup: host 25.531 s, inside 25.160 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.732 s, inside 1.337 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.254 s, inside 4.874 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.023349
+        ZKT zok.pk_deserialize 0.168219
+        ZKT bm.synthesis 1.563478
+        ZKT bm.fft 0.344832
+        ZKT bm.h_to_repr 0.003087
+        ZKT bm.msm_all 2.748720
+        ZKT bm.create_proof_total 3.100963
+        ZKT zok.self_verify 0.006248
+        ZKT cli.backend_generate_proof 4.846240
+        Proof written to 'proof.json'
+    --- verify: host 0.414 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_512 replicate 1: constraints=109058 status=OK | host c/s/w/p/v = 58.158/25.531/1.732/5.254/0.414 | inside = 57.805/25.160/1.337/4.874/0.010
+
+[main pass 1, circuit 13/21, elapsed 00:39:36] rsa4096real: RSA-4096 verify (real) e=65537 W=121 K=34
+    --- compile: host 55.094 s, inside 54.717 s, exit code 0
+        Compiling rsa4096_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 331848
+    --- setup: host 79.248 s, inside 78.835 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.294 s, inside 2.923 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 8.125 s, inside 7.774 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.058862
+        ZKT zok.pk_deserialize 0.529303
+        ZKT bm.synthesis 2.931737
+        ZKT bm.fft 1.480530
+        ZKT bm.h_to_repr 0.008145
+        ZKT bm.msm_all 2.729893
+        ZKT bm.create_proof_total 4.218732
+        ZKT zok.self_verify 0.009034
+        ZKT cli.backend_generate_proof 7.706932
+        Proof written to 'proof.json'
+    --- verify: host 0.421 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa4096real replicate 1: constraints=331848 status=OK | host c/s/w/p/v = 55.094/79.248/3.294/8.125/0.421 | inside = 54.717/78.835/2.923/7.774/0.013
+
+[main pass 1, circuit 14/21, elapsed 00:42:05] rsa1024real: RSA-1024 verify (real) e=65537 W=121 K=9
+    --- compile: host 11.461 s, inside 11.100 s, exit code 0
+        Compiling rsa1024_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 76604
+    --- setup: host 18.483 s, inside 18.127 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.769 s, inside 0.394 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.951 s, inside 1.550 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.013334
+        ZKT zok.pk_deserialize 0.134291
+        ZKT bm.synthesis 0.399715
+        ZKT bm.fft 0.350107
+        ZKT bm.h_to_repr 0.002895
+        ZKT bm.msm_all 0.629477
+        ZKT bm.create_proof_total 0.982627
+        ZKT zok.self_verify 0.007040
+        ZKT cli.backend_generate_proof 1.529154
+        Proof written to 'proof.json'
+    --- verify: host 0.386 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa1024real replicate 1: constraints=76604 status=OK | host c/s/w/p/v = 11.461/18.483/0.769/1.951/0.386 | inside = 11.100/18.127/0.394/1.550/0.010
+
+[main pass 1, circuit 15/21, elapsed 00:42:41] synth_full_100k: Synthetic full-width chain N=100000, x=x*x+1 chain
+    --- compile: host 4.085 s, inside 3.730 s, exit code 0
+        Compiling synth_full_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100001
+    --- setup: host 23.189 s, inside 22.818 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.839 s, inside 0.453 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.077 s, inside 3.700 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.019890
+        ZKT zok.pk_deserialize 0.170616
+        ZKT bm.synthesis 0.426649
+        ZKT bm.fft 0.363795
+        ZKT bm.h_to_repr 0.002528
+        ZKT bm.msm_all 2.695799
+        ZKT bm.create_proof_total 3.062299
+        ZKT zok.self_verify 0.005875
+        ZKT cli.backend_generate_proof 3.673560
+        Proof written to 'proof.json'
+    --- verify: host 0.428 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_100k replicate 1: constraints=100001 status=OK | host c/s/w/p/v = 4.085/23.189/0.839/4.077/0.428 | inside = 3.730/22.818/0.453/3.700/0.009
+
+[main pass 1, circuit 16/21, elapsed 00:43:17] synth_bool_100k: Synthetic boolean chain N=50000, XOR/OR chain of bits
+    --- compile: host 5.552 s, inside 5.167 s, exit code 0
+        Compiling synth_bool_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100002
+    --- setup: host 22.973 s, inside 22.582 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.140 s, inside 0.759 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.298 s, inside 1.930 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.018623
+        ZKT zok.pk_deserialize 0.161934
+        ZKT bm.synthesis 0.780307
+        ZKT bm.fft 0.351353
+        ZKT bm.h_to_repr 0.002289
+        ZKT bm.msm_all 0.597987
+        ZKT bm.create_proof_total 0.951771
+        ZKT zok.self_verify 0.005537
+        ZKT cli.backend_generate_proof 1.905441
+        Proof written to 'proof.json'
+    --- verify: host 0.419 s, inside 0.014 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_100k replicate 1: constraints=100002 status=OK | host c/s/w/p/v = 5.552/22.973/1.140/2.298/0.419 | inside = 5.167/22.582/0.759/1.930/0.014
+
+[main pass 1, circuit 17/21, elapsed 00:43:53] rsa_256_1: RSA accumulator b=256,r=1
+    --- compile: host 0.470 s, inside 0.087 s, exit code 0
+        Compiling rsa_accumulator_256_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 2559
+    --- setup: host 0.941 s, inside 0.564 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.410 s, inside 0.016 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.460 s, inside 0.082 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000378
+        ZKT zok.pk_deserialize 0.004605
+        ZKT bm.synthesis 0.011818
+        ZKT bm.fft 0.025729
+        ZKT bm.h_to_repr 0.000746
+        ZKT bm.msm_all 0.020659
+        ZKT bm.create_proof_total 0.047247
+        ZKT zok.self_verify 0.004605
+        ZKT cli.backend_generate_proof 0.069465
+        Proof written to 'proof.json'
+    --- verify: host 0.386 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_1 replicate 1: constraints=2559 status=OK | host c/s/w/p/v = 0.470/0.941/0.410/0.460/0.386 | inside = 0.087/0.564/0.016/0.082/0.009
+
+[main pass 1, circuit 18/21, elapsed 00:43:58] rsa2048real: RSA-2048 verify (real) e=65537 W=121 K=17
+    --- compile: host 24.045 s, inside 23.678 s, exit code 0
+        Compiling rsa2048_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 153484
+    --- setup: host 36.926 s, inside 36.601 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.301 s, inside 0.919 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 3.609 s, inside 3.231 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.028667
+        ZKT zok.pk_deserialize 0.283656
+        ZKT bm.synthesis 0.916202
+        ZKT bm.fft 0.727461
+        ZKT bm.h_to_repr 0.004698
+        ZKT bm.msm_all 1.247058
+        ZKT bm.create_proof_total 1.979376
+        ZKT zok.self_verify 0.007713
+        ZKT cli.backend_generate_proof 3.196899
+        Proof written to 'proof.json'
+    --- verify: host 0.403 s, inside 0.017 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa2048real replicate 1: constraints=153484 status=OK | host c/s/w/p/v = 24.045/36.926/1.301/3.609/0.403 | inside = 23.678/36.601/0.919/3.231/0.017
+
+[main pass 1, circuit 19/21, elapsed 00:45:07] merkle_16: Merkle path d=16
+    --- compile: host 3.210 s, inside 2.830 s, exit code 0
+        Compiling merkle_poseidon_16.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 3922
+    --- setup: host 1.241 s, inside 0.838 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.432 s, inside 0.054 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.619 s, inside 0.231 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000628
+        ZKT zok.pk_deserialize 0.006338
+        ZKT bm.synthesis 0.057920
+        ZKT bm.fft 0.031300
+        ZKT bm.h_to_repr 0.001381
+        ZKT bm.msm_all 0.121483
+        ZKT bm.create_proof_total 0.154288
+        ZKT zok.self_verify 0.005495
+        ZKT cli.backend_generate_proof 0.225204
+        Proof written to 'proof.json'
+    --- verify: host 0.388 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_16 replicate 1: constraints=3922 status=OK | host c/s/w/p/v = 3.210/1.241/0.432/0.619/0.388 | inside = 2.830/0.838/0.054/0.231/0.009
+
+[main pass 1, circuit 20/21, elapsed 00:45:16] rsa_256_64: RSA accumulator b=256,r=64
+    --- compile: host 3.000 s, inside 2.626 s, exit code 0
+        Compiling rsa_accumulator_256_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 66945
+    --- setup: host 15.967 s, inside 15.573 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.686 s, inside 0.295 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.668 s, inside 1.292 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.013672
+        ZKT zok.pk_deserialize 0.124643
+        ZKT bm.synthesis 0.280089
+        ZKT bm.fft 0.337536
+        ZKT bm.h_to_repr 0.002660
+        ZKT bm.msm_all 0.515641
+        ZKT bm.create_proof_total 0.855983
+        ZKT zok.self_verify 0.005827
+        ZKT cli.backend_generate_proof 1.272772
+        Proof written to 'proof.json'
+    --- verify: host 0.391 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_64 replicate 1: constraints=66945 status=OK | host c/s/w/p/v = 3.000/15.967/0.686/1.668/0.391 | inside = 2.626/15.573/0.295/1.292/0.009
+
+[main pass 1, circuit 21/21, elapsed 00:45:41] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 88.847 s, inside 88.463 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 181.351 s, inside 180.922 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 4.654 s, inside 4.254 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 14.431 s, inside 14.073 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.175257
+        ZKT zok.pk_deserialize 1.267756
+        ZKT bm.synthesis 4.450842
+        ZKT bm.fft 3.218350
+        ZKT bm.h_to_repr 0.026746
+        ZKT bm.msm_all 4.868371
+        ZKT bm.create_proof_total 8.113643
+        ZKT zok.self_verify 0.005058
+        ZKT cli.backend_generate_proof 13.872730
+        Proof written to 'proof.json'
+    --- verify: host 0.393 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 1: constraints=842212 status=OK | host c/s/w/p/v = 88.847/181.351/4.654/14.431/0.393 | inside = 88.463/180.922/4.254/14.073/0.010
+
+================ pass 2 of 5 [main] ================
+
+[main pass 2, circuit 1/21, elapsed 00:50:39] poseidon_1024: Poseidon chain n=1024
+    --- compile: host 147.430 s, inside 147.086 s, exit code 0
+        Compiling poseidon_chain_1024.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 218114
+    --- setup: host 50.957 s, inside 50.521 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.100 s, inside 2.697 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 9.924 s, inside 9.568 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.041642
+        ZKT zok.pk_deserialize 0.323954
+        ZKT bm.synthesis 3.149313
+        ZKT bm.fft 0.700849
+        ZKT bm.h_to_repr 0.005276
+        ZKT bm.msm_all 5.322734
+        ZKT bm.create_proof_total 6.029004
+        ZKT zok.self_verify 0.006217
+        ZKT cli.backend_generate_proof 9.520501
+        Proof written to 'proof.json'
+    --- verify: host 0.388 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_1024 replicate 2: constraints=218114 status=OK | host c/s/w/p/v = 147.430/50.957/3.100/9.924/0.388 | inside = 147.086/50.521/2.697/9.568/0.010
+
+[main pass 2, circuit 2/21, elapsed 00:54:14] sha256_ecc: SHA-256 compression commitment circuit, ECC-derived input
+    --- compile: host 1.433 s, inside 1.052 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 4.069 s, inside 3.698 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.808 s, inside 0.438 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.081 s, inside 0.707 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.004522
+        ZKT zok.pk_deserialize 0.031790
+        ZKT bm.synthesis 0.398577
+        ZKT bm.fft 0.095296
+        ZKT bm.h_to_repr 0.000954
+        ZKT bm.msm_all 0.163368
+        ZKT bm.create_proof_total 0.259747
+        ZKT zok.self_verify 0.005876
+        ZKT cli.backend_generate_proof 0.697990
+        Proof written to 'proof.json'
+    --- verify: host 0.385 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_ecc replicate 2: constraints=27214 status=OK | host c/s/w/p/v = 1.433/4.069/0.808/1.081/0.385 | inside = 1.052/3.698/0.438/0.707/0.009
+
+[main pass 2, circuit 3/21, elapsed 00:54:25] sha256_rsa: SHA-256 compression commitment circuit, RSA-derived input
+    --- compile: host 1.412 s, inside 1.041 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 4.056 s, inside 3.696 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.803 s, inside 0.420 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.111 s, inside 0.735 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.004572
+        ZKT zok.pk_deserialize 0.026165
+        ZKT bm.synthesis 0.419896
+        ZKT bm.fft 0.099799
+        ZKT bm.h_to_repr 0.001017
+        ZKT bm.msm_all 0.169398
+        ZKT bm.create_proof_total 0.270340
+        ZKT zok.self_verify 0.005937
+        ZKT cli.backend_generate_proof 0.724919
+        Proof written to 'proof.json'
+    --- verify: host 0.384 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_rsa replicate 2: constraints=27214 status=OK | host c/s/w/p/v = 1.412/4.056/0.803/1.111/0.384 | inside = 1.041/3.696/0.420/0.735/0.009
+
+[main pass 2, circuit 4/21, elapsed 00:54:36] poseidon_64: Poseidon chain n=64
+    --- compile: host 7.129 s, inside 6.761 s, exit code 0
+        Compiling poseidon_chain_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 13634
+    --- setup: host 3.392 s, inside 3.004 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.603 s, inside 0.195 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.066 s, inside 0.686 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.002444
+        ZKT zok.pk_deserialize 0.022402
+        ZKT bm.synthesis 0.206526
+        ZKT bm.fft 0.061221
+        ZKT bm.h_to_repr 0.000764
+        ZKT bm.msm_all 0.379480
+        ZKT bm.create_proof_total 0.441594
+        ZKT zok.self_verify 0.006241
+        ZKT cli.backend_generate_proof 0.678701
+        Proof written to 'proof.json'
+    --- verify: host 0.392 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_64 replicate 2: constraints=13634 status=OK | host c/s/w/p/v = 7.129/3.392/0.603/1.066/0.392 | inside = 6.761/3.004/0.195/0.686/0.010
+
+[main pass 2, circuit 5/21, elapsed 00:54:52] synth_full_100k: Synthetic full-width chain N=100000, x=x*x+1 chain
+    --- compile: host 4.036 s, inside 3.673 s, exit code 0
+        Compiling synth_full_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100001
+    --- setup: host 22.322 s, inside 21.955 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.853 s, inside 0.459 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.052 s, inside 3.671 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.019525
+        ZKT zok.pk_deserialize 0.164563
+        ZKT bm.synthesis 0.438968
+        ZKT bm.fft 0.361714
+        ZKT bm.h_to_repr 0.002855
+        ZKT bm.msm_all 2.661813
+        ZKT bm.create_proof_total 3.026536
+        ZKT zok.self_verify 0.006335
+        ZKT cli.backend_generate_proof 3.644794
+        Proof written to 'proof.json'
+    --- verify: host 0.414 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_100k replicate 2: constraints=100001 status=OK | host c/s/w/p/v = 4.036/22.322/0.853/4.052/0.414 | inside = 3.673/21.955/0.459/3.671/0.009
+
+[main pass 2, circuit 6/21, elapsed 00:55:26] merkle_16: Merkle path d=16
+    --- compile: host 3.204 s, inside 2.835 s, exit code 0
+        Compiling merkle_poseidon_16.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 3922
+    --- setup: host 1.284 s, inside 0.896 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.420 s, inside 0.055 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.605 s, inside 0.223 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000631
+        ZKT zok.pk_deserialize 0.006660
+        ZKT bm.synthesis 0.058458
+        ZKT bm.fft 0.024618
+        ZKT bm.h_to_repr 0.000780
+        ZKT bm.msm_all 0.120048
+        ZKT bm.create_proof_total 0.145586
+        ZKT zok.self_verify 0.005483
+        ZKT cli.backend_generate_proof 0.217469
+        Proof written to 'proof.json'
+    --- verify: host 0.396 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_16 replicate 2: constraints=3922 status=OK | host c/s/w/p/v = 3.204/1.284/0.420/0.605/0.396 | inside = 2.835/0.896/0.055/0.223/0.009
+
+[main pass 2, circuit 7/21, elapsed 00:55:35] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 88.412 s, inside 88.033 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 182.549 s, inside 182.166 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 4.842 s, inside 4.446 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 14.407 s, inside 14.047 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.169364
+        ZKT zok.pk_deserialize 1.353281
+        ZKT bm.synthesis 4.165449
+        ZKT bm.fft 3.281989
+        ZKT bm.h_to_repr 0.031065
+        ZKT bm.msm_all 4.977804
+        ZKT bm.create_proof_total 8.291025
+        ZKT zok.self_verify 0.005143
+        ZKT cli.backend_generate_proof 13.851972
+        Proof written to 'proof.json'
+    --- verify: host 0.398 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 2: constraints=842212 status=OK | host c/s/w/p/v = 88.412/182.549/4.842/14.407/0.398 | inside = 88.033/182.166/4.446/14.047/0.010
+
+[main pass 2, circuit 8/21, elapsed 01:00:29] merkle_8: Merkle path d=8
+    --- compile: host 2.329 s, inside 1.968 s, exit code 0
+        Compiling merkle_poseidon_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 1962
+    --- setup: host 1.024 s, inside 0.530 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.416 s, inside 0.032 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.499 s, inside 0.141 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000290
+        ZKT zok.pk_deserialize 0.003039
+        ZKT bm.synthesis 0.028816
+        ZKT bm.fft 0.032400
+        ZKT bm.h_to_repr 0.001315
+        ZKT bm.msm_all 0.063909
+        ZKT bm.create_proof_total 0.097751
+        ZKT zok.self_verify 0.005198
+        ZKT cli.backend_generate_proof 0.135814
+        Proof written to 'proof.json'
+    --- verify: host 0.387 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_8 replicate 2: constraints=1962 status=OK | host c/s/w/p/v = 2.329/1.024/0.416/0.499/0.387 | inside = 1.968/0.530/0.032/0.141/0.009
+
+[main pass 2, circuit 9/21, elapsed 01:00:37] rsa_1024_64: RSA accumulator b=1024,r=64
+    --- compile: host 19.999 s, inside 19.585 s, exit code 0
+        Compiling rsa_accumulator_1024_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 268161
+    --- setup: host 62.448 s, inside 62.105 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.434 s, inside 1.063 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.494 s, inside 5.120 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.053178
+        ZKT zok.pk_deserialize 0.450851
+        ZKT bm.synthesis 1.106975
+        ZKT bm.fft 1.493646
+        ZKT bm.h_to_repr 0.009953
+        ZKT bm.msm_all 1.980218
+        ZKT bm.create_proof_total 3.483996
+        ZKT zok.self_verify 0.005011
+        ZKT cli.backend_generate_proof 5.061134
+        Proof written to 'proof.json'
+    --- verify: host 0.404 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_1024_64 replicate 2: constraints=268161 status=OK | host c/s/w/p/v = 19.999/62.448/1.434/5.494/0.404 | inside = 19.585/62.105/1.063/5.120/0.010
+
+[main pass 2, circuit 10/21, elapsed 01:02:09] poseidon_256: Poseidon chain n=256
+    --- compile: host 26.731 s, inside 26.367 s, exit code 0
+        Compiling poseidon_chain_256.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 54530
+    --- setup: host 12.866 s, inside 12.508 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.068 s, inside 0.690 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.885 s, inside 2.486 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.010072
+        ZKT zok.pk_deserialize 0.087058
+        ZKT bm.synthesis 0.778264
+        ZKT bm.fft 0.177575
+        ZKT bm.h_to_repr 0.001869
+        ZKT bm.msm_all 1.412366
+        ZKT bm.create_proof_total 1.591955
+        ZKT zok.self_verify 0.007076
+        ZKT cli.backend_generate_proof 2.469619
+        Proof written to 'proof.json'
+    --- verify: host 0.388 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_256 replicate 2: constraints=54530 status=OK | host c/s/w/p/v = 26.731/12.866/1.068/2.885/0.388 | inside = 26.367/12.508/0.690/2.486/0.010
+
+[main pass 2, circuit 11/21, elapsed 01:02:56] synth_bool_300k: Synthetic boolean chain N=150000, XOR/OR chain of bits
+    --- compile: host 16.815 s, inside 16.435 s, exit code 0
+        Compiling synth_bool_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300002
+    --- setup: host 71.438 s, inside 71.093 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.785 s, inside 2.409 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 6.590 s, inside 6.245 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.055052
+        ZKT zok.pk_deserialize 0.499724
+        ZKT bm.synthesis 2.252003
+        ZKT bm.fft 1.361973
+        ZKT bm.h_to_repr 0.009667
+        ZKT bm.msm_all 2.035541
+        ZKT bm.create_proof_total 3.407335
+        ZKT zok.self_verify 0.005220
+        ZKT cli.backend_generate_proof 6.182306
+        Proof written to 'proof.json'
+    --- verify: host 0.404 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_300k replicate 2: constraints=300002 status=OK | host c/s/w/p/v = 16.815/71.438/2.785/6.590/0.404 | inside = 16.435/71.093/2.409/6.245/0.009
+
+[main pass 2, circuit 12/21, elapsed 01:04:37] rsa2048real: RSA-2048 verify (real) e=65537 W=121 K=17
+    --- compile: host 23.533 s, inside 23.154 s, exit code 0
+        Compiling rsa2048_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 153484
+    --- setup: host 35.807 s, inside 35.433 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.303 s, inside 0.918 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 3.614 s, inside 3.226 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.030233
+        ZKT zok.pk_deserialize 0.268263
+        ZKT bm.synthesis 0.929763
+        ZKT bm.fft 0.718144
+        ZKT bm.h_to_repr 0.005007
+        ZKT bm.msm_all 1.246527
+        ZKT bm.create_proof_total 1.969832
+        ZKT zok.self_verify 0.007935
+        ZKT cli.backend_generate_proof 3.186819
+        Proof written to 'proof.json'
+    --- verify: host 0.430 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa2048real replicate 2: constraints=153484 status=OK | host c/s/w/p/v = 23.533/35.807/1.303/3.614/0.430 | inside = 23.154/35.433/0.918/3.226/0.011
+
+[main pass 2, circuit 13/21, elapsed 01:05:45] rsa1024real: RSA-1024 verify (real) e=65537 W=121 K=9
+    --- compile: host 11.291 s, inside 10.947 s, exit code 0
+        Compiling rsa1024_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 76604
+    --- setup: host 18.520 s, inside 18.159 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.810 s, inside 0.408 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.908 s, inside 1.532 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.013407
+        ZKT zok.pk_deserialize 0.130958
+        ZKT bm.synthesis 0.384638
+        ZKT bm.fft 0.343937
+        ZKT bm.h_to_repr 0.002300
+        ZKT bm.msm_all 0.637267
+        ZKT bm.create_proof_total 0.983643
+        ZKT zok.self_verify 0.007131
+        ZKT cli.backend_generate_proof 1.512057
+        Proof written to 'proof.json'
+    --- verify: host 0.405 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa1024real replicate 2: constraints=76604 status=OK | host c/s/w/p/v = 11.291/18.520/0.810/1.908/0.405 | inside = 10.947/18.159/0.408/1.532/0.010
+
+[main pass 2, circuit 14/21, elapsed 01:06:21] poseidon_512: Poseidon chain n=512
+    --- compile: host 60.168 s, inside 59.799 s, exit code 0
+        Compiling poseidon_chain_512.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 109058
+    --- setup: host 25.313 s, inside 24.918 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.750 s, inside 1.354 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.333 s, inside 4.950 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.021467
+        ZKT zok.pk_deserialize 0.171536
+        ZKT bm.synthesis 1.514559
+        ZKT bm.fft 0.356014
+        ZKT bm.h_to_repr 0.004189
+        ZKT bm.msm_all 2.857058
+        ZKT bm.create_proof_total 3.221630
+        ZKT zok.self_verify 0.006395
+        ZKT cli.backend_generate_proof 4.921279
+        Proof written to 'proof.json'
+    --- verify: host 0.414 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_512 replicate 2: constraints=109058 status=OK | host c/s/w/p/v = 60.168/25.313/1.750/5.333/0.414 | inside = 59.799/24.918/1.354/4.950/0.010
+
+[main pass 2, circuit 15/21, elapsed 01:07:57] merkle_32: Merkle path d=32
+    --- compile: host 5.139 s, inside 4.760 s, exit code 0
+        Compiling merkle_poseidon_32.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 7842
+    --- setup: host 2.108 s, inside 1.709 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.490 s, inside 0.101 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.778 s, inside 0.400 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.001378
+        ZKT zok.pk_deserialize 0.012776
+        ZKT bm.synthesis 0.115371
+        ZKT bm.fft 0.037323
+        ZKT bm.h_to_repr 0.001234
+        ZKT bm.msm_all 0.218909
+        ZKT bm.create_proof_total 0.257598
+        ZKT zok.self_verify 0.006197
+        ZKT cli.backend_generate_proof 0.393524
+        Proof written to 'proof.json'
+    --- verify: host 0.365 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_32 replicate 2: constraints=7842 status=OK | host c/s/w/p/v = 5.139/2.108/0.490/0.778/0.365 | inside = 4.760/1.709/0.101/0.400/0.009
+
+[main pass 2, circuit 16/21, elapsed 01:08:09] synth_full_300k: Synthetic full-width chain N=300000, x=x*x+1 chain
+    --- compile: host 11.888 s, inside 11.497 s, exit code 0
+        Compiling synth_full_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300001
+    --- setup: host 70.307 s, inside 69.946 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.676 s, inside 1.308 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 11.802 s, inside 11.437 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.064841
+        ZKT zok.pk_deserialize 0.528315
+        ZKT bm.synthesis 1.360729
+        ZKT bm.fft 1.432773
+        ZKT bm.h_to_repr 0.010118
+        ZKT bm.msm_all 8.008046
+        ZKT bm.create_proof_total 9.451129
+        ZKT zok.self_verify 0.005312
+        ZKT cli.backend_generate_proof 11.363360
+        Proof written to 'proof.json'
+    --- verify: host 0.404 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_300k replicate 2: constraints=300001 status=OK | host c/s/w/p/v = 11.888/70.307/1.676/11.802/0.404 | inside = 11.497/69.946/1.308/11.437/0.010
+
+[main pass 2, circuit 17/21, elapsed 01:09:48] synth_bool_100k: Synthetic boolean chain N=50000, XOR/OR chain of bits
+    --- compile: host 5.527 s, inside 5.159 s, exit code 0
+        Compiling synth_bool_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100002
+    --- setup: host 22.837 s, inside 22.462 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.154 s, inside 0.774 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.262 s, inside 1.896 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.020520
+        ZKT zok.pk_deserialize 0.169130
+        ZKT bm.synthesis 0.743791
+        ZKT bm.fft 0.339446
+        ZKT bm.h_to_repr 0.002848
+        ZKT bm.msm_all 0.599545
+        ZKT bm.create_proof_total 0.941985
+        ZKT zok.self_verify 0.005392
+        ZKT cli.backend_generate_proof 1.867134
+        Proof written to 'proof.json'
+    --- verify: host 0.383 s, inside 0.014 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_100k replicate 2: constraints=100002 status=OK | host c/s/w/p/v = 5.527/22.837/1.154/2.262/0.383 | inside = 5.159/22.462/0.774/1.896/0.014
+
+[main pass 2, circuit 18/21, elapsed 01:10:23] rsa_256_1: RSA accumulator b=256,r=1
+    --- compile: host 0.542 s, inside 0.108 s, exit code 0
+        Compiling rsa_accumulator_256_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 2559
+    --- setup: host 0.966 s, inside 0.578 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.415 s, inside 0.017 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.500 s, inside 0.089 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000497
+        ZKT zok.pk_deserialize 0.004884
+        ZKT bm.synthesis 0.011983
+        ZKT bm.fft 0.030933
+        ZKT bm.h_to_repr 0.001326
+        ZKT bm.msm_all 0.022661
+        ZKT bm.create_proof_total 0.055048
+        ZKT zok.self_verify 0.005085
+        ZKT cli.backend_generate_proof 0.078262
+        Proof written to 'proof.json'
+    --- verify: host 0.373 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_1 replicate 2: constraints=2559 status=OK | host c/s/w/p/v = 0.542/0.966/0.415/0.500/0.373 | inside = 0.108/0.578/0.017/0.089/0.009
+
+[main pass 2, circuit 19/21, elapsed 01:10:29] rsa3072real: RSA-3072 verify (real) e=65537 W=121 K=26
+    --- compile: host 39.255 s, inside 38.878 s, exit code 0
+        Compiling rsa3072_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 244870
+    --- setup: host 54.662 s, inside 54.240 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.121 s, inside 1.751 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.028 s, inside 4.633 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.054067
+        ZKT zok.pk_deserialize 0.399630
+        ZKT bm.synthesis 1.807906
+        ZKT bm.fft 0.719436
+        ZKT bm.h_to_repr 0.004270
+        ZKT bm.msm_all 1.608484
+        ZKT bm.create_proof_total 2.332339
+        ZKT zok.self_verify 0.010554
+        ZKT cli.backend_generate_proof 4.566053
+        Proof written to 'proof.json'
+    --- verify: host 0.409 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa3072real replicate 2: constraints=244870 status=OK | host c/s/w/p/v = 39.255/54.662/2.121/5.028/0.409 | inside = 38.878/54.240/1.751/4.633/0.012
+
+[main pass 2, circuit 20/21, elapsed 01:12:14] rsa4096real: RSA-4096 verify (real) e=65537 W=121 K=34
+    --- compile: host 57.723 s, inside 57.344 s, exit code 0
+        Compiling rsa4096_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 331848
+    --- setup: host 79.343 s, inside 78.979 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.314 s, inside 2.940 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 8.333 s, inside 7.962 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.063798
+        ZKT zok.pk_deserialize 0.533941
+        ZKT bm.synthesis 3.149884
+        ZKT bm.fft 1.461504
+        ZKT bm.h_to_repr 0.008534
+        ZKT bm.msm_all 2.700719
+        ZKT bm.create_proof_total 4.170926
+        ZKT zok.self_verify 0.009410
+        ZKT cli.backend_generate_proof 7.885566
+        Proof written to 'proof.json'
+    --- verify: host 0.420 s, inside 0.016 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa4096real replicate 2: constraints=331848 status=OK | host c/s/w/p/v = 57.723/79.343/3.314/8.333/0.420 | inside = 57.344/78.979/2.940/7.962/0.016
+
+[main pass 2, circuit 21/21, elapsed 01:14:46] rsa_256_64: RSA accumulator b=256,r=64
+    --- compile: host 3.049 s, inside 2.681 s, exit code 0
+        Compiling rsa_accumulator_256_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 66945
+    --- setup: host 15.963 s, inside 15.543 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.662 s, inside 0.292 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.686 s, inside 1.303 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.012826
+        ZKT zok.pk_deserialize 0.122343
+        ZKT bm.synthesis 0.277630
+        ZKT bm.fft 0.348679
+        ZKT bm.h_to_repr 0.003020
+        ZKT bm.msm_all 0.521388
+        ZKT bm.create_proof_total 0.873225
+        ZKT zok.self_verify 0.005508
+        ZKT cli.backend_generate_proof 1.284156
+        Proof written to 'proof.json'
+    --- verify: host 0.389 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_64 replicate 2: constraints=66945 status=OK | host c/s/w/p/v = 3.049/15.963/0.662/1.686/0.389 | inside = 2.681/15.543/0.292/1.303/0.010
+
+================ pass 3 of 5 [main] ================
+
+[main pass 3, circuit 1/21, elapsed 01:15:16] poseidon_512: Poseidon chain n=512
+    --- compile: host 59.573 s, inside 59.195 s, exit code 0
+        Compiling poseidon_chain_512.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 109058
+    --- setup: host 25.428 s, inside 25.058 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.741 s, inside 1.365 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.311 s, inside 4.925 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.024971
+        ZKT zok.pk_deserialize 0.175571
+        ZKT bm.synthesis 1.577149
+        ZKT bm.fft 0.353565
+        ZKT bm.h_to_repr 0.002346
+        ZKT bm.msm_all 2.768835
+        ZKT bm.create_proof_total 3.124935
+        ZKT zok.self_verify 0.006593
+        ZKT cli.backend_generate_proof 4.892087
+        Proof written to 'proof.json'
+    --- verify: host 0.389 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_512 replicate 3: constraints=109058 status=OK | host c/s/w/p/v = 59.573/25.428/1.741/5.311/0.389 | inside = 59.195/25.058/1.365/4.925/0.009
+
+[main pass 3, circuit 2/21, elapsed 01:16:52] rsa_256_64: RSA accumulator b=256,r=64
+    --- compile: host 3.082 s, inside 2.708 s, exit code 0
+        Compiling rsa_accumulator_256_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 66945
+    --- setup: host 15.790 s, inside 15.419 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.680 s, inside 0.294 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.694 s, inside 1.317 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.012839
+        ZKT zok.pk_deserialize 0.118174
+        ZKT bm.synthesis 0.279633
+        ZKT bm.fft 0.360311
+        ZKT bm.h_to_repr 0.002958
+        ZKT bm.msm_all 0.526200
+        ZKT bm.create_proof_total 0.889617
+        ZKT zok.self_verify 0.005555
+        ZKT cli.backend_generate_proof 1.298053
+        Proof written to 'proof.json'
+    --- verify: host 0.421 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_64 replicate 3: constraints=66945 status=OK | host c/s/w/p/v = 3.082/15.790/0.680/1.694/0.421 | inside = 2.708/15.419/0.294/1.317/0.009
+
+[main pass 3, circuit 3/21, elapsed 01:17:16] rsa2048real: RSA-2048 verify (real) e=65537 W=121 K=17
+    --- compile: host 23.328 s, inside 22.930 s, exit code 0
+        Compiling rsa2048_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 153484
+    --- setup: host 37.280 s, inside 36.954 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.299 s, inside 0.920 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 3.572 s, inside 3.200 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.028772
+        ZKT zok.pk_deserialize 0.260245
+        ZKT bm.synthesis 0.880630
+        ZKT bm.fft 0.745191
+        ZKT bm.h_to_repr 0.004912
+        ZKT bm.msm_all 1.254067
+        ZKT bm.create_proof_total 2.004325
+        ZKT zok.self_verify 0.007388
+        ZKT cli.backend_generate_proof 3.162515
+        Proof written to 'proof.json'
+    --- verify: host 0.407 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa2048real replicate 3: constraints=153484 status=OK | host c/s/w/p/v = 23.328/37.280/1.299/3.572/0.407 | inside = 22.930/36.954/0.920/3.200/0.010
+
+[main pass 3, circuit 4/21, elapsed 01:18:25] merkle_32: Merkle path d=32
+    --- compile: host 5.282 s, inside 4.834 s, exit code 0
+        Compiling merkle_poseidon_32.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 7842
+    --- setup: host 2.116 s, inside 1.726 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.488 s, inside 0.105 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.801 s, inside 0.410 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.001576
+        ZKT zok.pk_deserialize 0.013087
+        ZKT bm.synthesis 0.121822
+        ZKT bm.fft 0.037947
+        ZKT bm.h_to_repr 0.000783
+        ZKT bm.msm_all 0.221448
+        ZKT bm.create_proof_total 0.260322
+        ZKT zok.self_verify 0.005921
+        ZKT cli.backend_generate_proof 0.403070
+        Proof written to 'proof.json'
+    --- verify: host 0.389 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_32 replicate 3: constraints=7842 status=OK | host c/s/w/p/v = 5.282/2.116/0.488/0.801/0.389 | inside = 4.834/1.726/0.105/0.410/0.009
+
+[main pass 3, circuit 5/21, elapsed 01:18:37] sha256_ecc: SHA-256 compression commitment circuit, ECC-derived input
+    --- compile: host 1.453 s, inside 1.079 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 4.282 s, inside 3.889 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.808 s, inside 0.439 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.130 s, inside 0.751 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.004653
+        ZKT zok.pk_deserialize 0.026202
+        ZKT bm.synthesis 0.426470
+        ZKT bm.fft 0.102937
+        ZKT bm.h_to_repr 0.001436
+        ZKT bm.msm_all 0.174741
+        ZKT bm.create_proof_total 0.279243
+        ZKT zok.self_verify 0.006260
+        ZKT cli.backend_generate_proof 0.740502
+        Proof written to 'proof.json'
+    --- verify: host 0.407 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_ecc replicate 3: constraints=27214 status=OK | host c/s/w/p/v = 1.453/4.282/0.808/1.130/0.407 | inside = 1.079/3.889/0.439/0.751/0.010
+
+[main pass 3, circuit 6/21, elapsed 01:18:48] synth_full_100k: Synthetic full-width chain N=100000, x=x*x+1 chain
+    --- compile: host 4.030 s, inside 3.644 s, exit code 0
+        Compiling synth_full_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100001
+    --- setup: host 22.627 s, inside 22.256 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.902 s, inside 0.478 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.105 s, inside 3.735 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.019362
+        ZKT zok.pk_deserialize 0.166645
+        ZKT bm.synthesis 0.436169
+        ZKT bm.fft 0.355524
+        ZKT bm.h_to_repr 0.003083
+        ZKT bm.msm_all 2.733313
+        ZKT bm.create_proof_total 3.092076
+        ZKT zok.self_verify 0.006172
+        ZKT cli.backend_generate_proof 3.709474
+        Proof written to 'proof.json'
+    --- verify: host 0.401 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_100k replicate 3: constraints=100001 status=OK | host c/s/w/p/v = 4.030/22.627/0.902/4.105/0.401 | inside = 3.644/22.256/0.478/3.735/0.009
+
+[main pass 3, circuit 7/21, elapsed 01:19:23] merkle_8: Merkle path d=8
+    --- compile: host 2.425 s, inside 1.984 s, exit code 0
+        Compiling merkle_poseidon_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 1962
+    --- setup: host 0.908 s, inside 0.462 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.407 s, inside 0.030 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.523 s, inside 0.131 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000314
+        ZKT zok.pk_deserialize 0.003285
+        ZKT bm.synthesis 0.029589
+        ZKT bm.fft 0.020068
+        ZKT bm.h_to_repr 0.000815
+        ZKT bm.msm_all 0.065463
+        ZKT bm.create_proof_total 0.086447
+        ZKT zok.self_verify 0.005296
+        ZKT cli.backend_generate_proof 0.125706
+        Proof written to 'proof.json'
+    --- verify: host 0.429 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_8 replicate 3: constraints=1962 status=OK | host c/s/w/p/v = 2.425/0.908/0.407/0.523/0.429 | inside = 1.984/0.462/0.030/0.131/0.011
+
+[main pass 3, circuit 8/21, elapsed 01:19:31] rsa3072real: RSA-3072 verify (real) e=65537 W=121 K=26
+    --- compile: host 38.744 s, inside 38.354 s, exit code 0
+        Compiling rsa3072_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 244870
+    --- setup: host 55.455 s, inside 55.063 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.096 s, inside 1.714 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.013 s, inside 4.622 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.050654
+        ZKT zok.pk_deserialize 0.389042
+        ZKT bm.synthesis 1.868831
+        ZKT bm.fft 0.694741
+        ZKT bm.h_to_repr 0.004191
+        ZKT bm.msm_all 1.580942
+        ZKT bm.create_proof_total 2.280032
+        ZKT zok.self_verify 0.008188
+        ZKT cli.backend_generate_proof 4.560610
+        Proof written to 'proof.json'
+    --- verify: host 0.405 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa3072real replicate 3: constraints=244870 status=OK | host c/s/w/p/v = 38.744/55.455/2.096/5.013/0.405 | inside = 38.354/55.063/1.714/4.622/0.012
+
+[main pass 3, circuit 9/21, elapsed 01:21:16] poseidon_1024: Poseidon chain n=1024
+    --- compile: host 145.835 s, inside 145.435 s, exit code 0
+        Compiling poseidon_chain_1024.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 218114
+    --- setup: host 50.903 s, inside 50.508 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.147 s, inside 2.752 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 9.939 s, inside 9.597 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.039964
+        ZKT zok.pk_deserialize 0.333760
+        ZKT bm.synthesis 3.138254
+        ZKT bm.fft 0.702740
+        ZKT bm.h_to_repr 0.004477
+        ZKT bm.msm_all 5.349349
+        ZKT bm.create_proof_total 6.056714
+        ZKT zok.self_verify 0.005568
+        ZKT cli.backend_generate_proof 9.547197
+        Proof written to 'proof.json'
+    --- verify: host 0.410 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_1024 replicate 3: constraints=218114 status=OK | host c/s/w/p/v = 145.835/50.903/3.147/9.939/0.410 | inside = 145.435/50.508/2.752/9.597/0.010
+
+[main pass 3, circuit 10/21, elapsed 01:24:49] poseidon_64: Poseidon chain n=64
+    --- compile: host 7.279 s, inside 6.901 s, exit code 0
+        Compiling poseidon_chain_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 13634
+    --- setup: host 3.551 s, inside 3.192 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.559 s, inside 0.182 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.075 s, inside 0.685 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.002371
+        ZKT zok.pk_deserialize 0.022140
+        ZKT bm.synthesis 0.204241
+        ZKT bm.fft 0.058300
+        ZKT bm.h_to_repr 0.001184
+        ZKT bm.msm_all 0.385027
+        ZKT bm.create_proof_total 0.444642
+        ZKT zok.self_verify 0.006291
+        ZKT cli.backend_generate_proof 0.679482
+        Proof written to 'proof.json'
+    --- verify: host 0.393 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_64 replicate 3: constraints=13634 status=OK | host c/s/w/p/v = 7.279/3.551/0.559/1.075/0.393 | inside = 6.901/3.192/0.182/0.685/0.009
+
+[main pass 3, circuit 11/21, elapsed 01:25:05] merkle_16: Merkle path d=16
+    --- compile: host 3.190 s, inside 2.839 s, exit code 0
+        Compiling merkle_poseidon_16.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 3922
+    --- setup: host 1.257 s, inside 0.879 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.433 s, inside 0.054 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.607 s, inside 0.221 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000635
+        ZKT zok.pk_deserialize 0.006430
+        ZKT bm.synthesis 0.057273
+        ZKT bm.fft 0.026884
+        ZKT bm.h_to_repr 0.000945
+        ZKT bm.msm_all 0.117529
+        ZKT bm.create_proof_total 0.145484
+        ZKT zok.self_verify 0.005470
+        ZKT cli.backend_generate_proof 0.215801
+        Proof written to 'proof.json'
+    --- verify: host 0.388 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_16 replicate 3: constraints=3922 status=OK | host c/s/w/p/v = 3.190/1.257/0.433/0.607/0.388 | inside = 2.839/0.879/0.054/0.221/0.010
+
+[main pass 3, circuit 12/21, elapsed 01:25:14] synth_bool_300k: Synthetic boolean chain N=150000, XOR/OR chain of bits
+    --- compile: host 16.654 s, inside 16.266 s, exit code 0
+        Compiling synth_bool_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300002
+    --- setup: host 71.318 s, inside 70.960 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.589 s, inside 2.222 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 6.705 s, inside 6.349 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.060412
+        ZKT zok.pk_deserialize 0.539030
+        ZKT bm.synthesis 2.179618
+        ZKT bm.fft 1.448747
+        ZKT bm.h_to_repr 0.009833
+        ZKT bm.msm_all 2.081460
+        ZKT bm.create_proof_total 3.540200
+        ZKT zok.self_verify 0.004791
+        ZKT cli.backend_generate_proof 6.280504
+        Proof written to 'proof.json'
+    --- verify: host 0.364 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_300k replicate 3: constraints=300002 status=OK | host c/s/w/p/v = 16.654/71.318/2.589/6.705/0.364 | inside = 16.266/70.960/2.222/6.349/0.009
+
+[main pass 3, circuit 13/21, elapsed 01:26:55] rsa4096real: RSA-4096 verify (real) e=65537 W=121 K=34
+    --- compile: host 55.199 s, inside 54.804 s, exit code 0
+        Compiling rsa4096_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 331848
+    --- setup: host 79.000 s, inside 78.618 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.258 s, inside 2.889 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 8.143 s, inside 7.759 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.065860
+        ZKT zok.pk_deserialize 0.539225
+        ZKT bm.synthesis 2.925597
+        ZKT bm.fft 1.466554
+        ZKT bm.h_to_repr 0.009252
+        ZKT bm.msm_all 2.709271
+        ZKT bm.create_proof_total 4.185241
+        ZKT zok.self_verify 0.009360
+        ZKT cli.backend_generate_proof 7.680835
+        Proof written to 'proof.json'
+    --- verify: host 0.398 s, inside 0.013 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa4096real replicate 3: constraints=331848 status=OK | host c/s/w/p/v = 55.199/79.000/3.258/8.143/0.398 | inside = 54.804/78.618/2.889/7.759/0.013
+
+[main pass 3, circuit 14/21, elapsed 01:29:24] synth_full_300k: Synthetic full-width chain N=300000, x=x*x+1 chain
+    --- compile: host 12.250 s, inside 11.766 s, exit code 0
+        Compiling synth_full_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300001
+    --- setup: host 69.787 s, inside 69.430 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.711 s, inside 1.343 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 11.775 s, inside 11.406 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.064203
+        ZKT zok.pk_deserialize 0.521839
+        ZKT bm.synthesis 1.321747
+        ZKT bm.fft 1.517379
+        ZKT bm.h_to_repr 0.010136
+        ZKT bm.msm_all 7.938401
+        ZKT bm.create_proof_total 9.466103
+        ZKT zok.self_verify 0.005378
+        ZKT cli.backend_generate_proof 11.333003
+        Proof written to 'proof.json'
+    --- verify: host 0.394 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_300k replicate 3: constraints=300001 status=OK | host c/s/w/p/v = 12.250/69.787/1.711/11.775/0.394 | inside = 11.766/69.430/1.343/11.406/0.009
+
+[main pass 3, circuit 15/21, elapsed 01:31:03] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 88.319 s, inside 87.969 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 180.860 s, inside 180.494 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 4.735 s, inside 4.349 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 14.162 s, inside 13.787 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.160329
+        ZKT zok.pk_deserialize 1.383975
+        ZKT bm.synthesis 4.154472
+        ZKT bm.fft 3.143302
+        ZKT bm.h_to_repr 0.027062
+        ZKT bm.msm_all 4.846627
+        ZKT bm.create_proof_total 8.017199
+        ZKT zok.self_verify 0.005058
+        ZKT cli.backend_generate_proof 13.599389
+        Proof written to 'proof.json'
+    --- verify: host 0.408 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 3: constraints=842212 status=OK | host c/s/w/p/v = 88.319/180.860/4.735/14.162/0.408 | inside = 87.969/180.494/4.349/13.787/0.011
+
+[main pass 3, circuit 16/21, elapsed 01:35:55] rsa_1024_64: RSA accumulator b=1024,r=64
+    --- compile: host 19.538 s, inside 19.155 s, exit code 0
+        Compiling rsa_accumulator_1024_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 268161
+    --- setup: host 62.284 s, inside 61.909 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.520 s, inside 1.131 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.532 s, inside 5.171 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.052055
+        ZKT zok.pk_deserialize 0.469921
+        ZKT bm.synthesis 1.077205
+        ZKT bm.fft 1.505692
+        ZKT bm.h_to_repr 0.011901
+        ZKT bm.msm_all 2.024907
+        ZKT bm.create_proof_total 3.542704
+        ZKT zok.self_verify 0.004859
+        ZKT cli.backend_generate_proof 5.110985
+        Proof written to 'proof.json'
+    --- verify: host 0.372 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_1024_64 replicate 3: constraints=268161 status=OK | host c/s/w/p/v = 19.538/62.284/1.520/5.532/0.372 | inside = 19.155/61.909/1.131/5.171/0.009
+
+[main pass 3, circuit 17/21, elapsed 01:37:27] rsa1024real: RSA-1024 verify (real) e=65537 W=121 K=9
+    --- compile: host 11.294 s, inside 10.921 s, exit code 0
+        Compiling rsa1024_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 76604
+    --- setup: host 18.351 s, inside 17.979 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.784 s, inside 0.404 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.939 s, inside 1.567 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.013936
+        ZKT zok.pk_deserialize 0.131843
+        ZKT bm.synthesis 0.397513
+        ZKT bm.fft 0.370388
+        ZKT bm.h_to_repr 0.002350
+        ZKT bm.msm_all 0.629199
+        ZKT bm.create_proof_total 1.002069
+        ZKT zok.self_verify 0.007026
+        ZKT cli.backend_generate_proof 1.545506
+        Proof written to 'proof.json'
+    --- verify: host 0.410 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa1024real replicate 3: constraints=76604 status=OK | host c/s/w/p/v = 11.294/18.351/0.784/1.939/0.410 | inside = 10.921/17.979/0.404/1.567/0.010
+
+[main pass 3, circuit 18/21, elapsed 01:38:02] rsa_256_1: RSA accumulator b=256,r=1
+    --- compile: host 0.452 s, inside 0.086 s, exit code 0
+        Compiling rsa_accumulator_256_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 2559
+    --- setup: host 0.929 s, inside 0.550 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.378 s, inside 0.017 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.453 s, inside 0.081 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000368
+        ZKT zok.pk_deserialize 0.006275
+        ZKT bm.synthesis 0.011470
+        ZKT bm.fft 0.030323
+        ZKT bm.h_to_repr 0.001105
+        ZKT bm.msm_all 0.020506
+        ZKT bm.create_proof_total 0.052051
+        ZKT zok.self_verify 0.004784
+        ZKT cli.backend_generate_proof 0.075829
+        Proof written to 'proof.json'
+    --- verify: host 0.375 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_1 replicate 3: constraints=2559 status=OK | host c/s/w/p/v = 0.452/0.929/0.378/0.453/0.375 | inside = 0.086/0.550/0.017/0.081/0.009
+
+[main pass 3, circuit 19/21, elapsed 01:38:08] sha256_rsa: SHA-256 compression commitment circuit, RSA-derived input
+    --- compile: host 1.444 s, inside 1.060 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 4.019 s, inside 3.650 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.793 s, inside 0.414 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.098 s, inside 0.725 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.004737
+        ZKT zok.pk_deserialize 0.027382
+        ZKT bm.synthesis 0.413618
+        ZKT bm.fft 0.096813
+        ZKT bm.h_to_repr 0.001174
+        ZKT bm.msm_all 0.167228
+        ZKT bm.create_proof_total 0.265350
+        ZKT zok.self_verify 0.005984
+        ZKT cli.backend_generate_proof 0.714968
+        Proof written to 'proof.json'
+    --- verify: host 0.371 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_rsa replicate 3: constraints=27214 status=OK | host c/s/w/p/v = 1.444/4.019/0.793/1.098/0.371 | inside = 1.060/3.650/0.414/0.725/0.010
+
+[main pass 3, circuit 20/21, elapsed 01:38:19] synth_bool_100k: Synthetic boolean chain N=50000, XOR/OR chain of bits
+    --- compile: host 5.386 s, inside 5.010 s, exit code 0
+        Compiling synth_bool_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100002
+    --- setup: host 22.784 s, inside 22.412 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.128 s, inside 0.746 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.246 s, inside 1.857 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.019596
+        ZKT zok.pk_deserialize 0.168685
+        ZKT bm.synthesis 0.707553
+        ZKT bm.fft 0.342564
+        ZKT bm.h_to_repr 0.002453
+        ZKT bm.msm_all 0.596388
+        ZKT bm.create_proof_total 0.941547
+        ZKT zok.self_verify 0.005358
+        ZKT cli.backend_generate_proof 1.830913
+        Proof written to 'proof.json'
+    --- verify: host 0.387 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_100k replicate 3: constraints=100002 status=OK | host c/s/w/p/v = 5.386/22.784/1.128/2.246/0.387 | inside = 5.010/22.412/0.746/1.857/0.009
+
+[main pass 3, circuit 21/21, elapsed 01:38:54] poseidon_256: Poseidon chain n=256
+    --- compile: host 26.186 s, inside 25.825 s, exit code 0
+        Compiling poseidon_chain_256.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 54530
+    --- setup: host 12.742 s, inside 12.347 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.091 s, inside 0.679 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.830 s, inside 2.454 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.010144
+        ZKT zok.pk_deserialize 0.084974
+        ZKT bm.synthesis 0.775708
+        ZKT bm.fft 0.172976
+        ZKT bm.h_to_repr 0.001440
+        ZKT bm.msm_all 1.390394
+        ZKT bm.create_proof_total 1.564945
+        ZKT zok.self_verify 0.006677
+        ZKT cli.backend_generate_proof 2.436953
+        Proof written to 'proof.json'
+    --- verify: host 0.374 s, inside 0.017 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_256 replicate 3: constraints=54530 status=OK | host c/s/w/p/v = 26.186/12.742/1.091/2.830/0.374 | inside = 25.825/12.347/0.679/2.454/0.017
+
+================ pass 4 of 5 [main] ================
+
+[main pass 4, circuit 1/21, elapsed 01:39:45] merkle_8: Merkle path d=8
+    --- compile: host 2.223 s, inside 1.879 s, exit code 0
+        Compiling merkle_poseidon_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 1962
+    --- setup: host 0.803 s, inside 0.417 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.412 s, inside 0.029 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.499 s, inside 0.129 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000303
+        ZKT zok.pk_deserialize 0.003250
+        ZKT bm.synthesis 0.029255
+        ZKT bm.fft 0.020010
+        ZKT bm.h_to_repr 0.001294
+        ZKT bm.msm_all 0.063798
+        ZKT bm.create_proof_total 0.085227
+        ZKT zok.self_verify 0.005251
+        ZKT cli.backend_generate_proof 0.124123
+        Proof written to 'proof.json'
+    --- verify: host 0.383 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_8 replicate 4: constraints=1962 status=OK | host c/s/w/p/v = 2.223/0.803/0.412/0.499/0.383 | inside = 1.879/0.417/0.029/0.129/0.009
+
+[main pass 4, circuit 2/21, elapsed 01:39:53] sha256_rsa: SHA-256 compression commitment circuit, RSA-derived input
+    --- compile: host 1.620 s, inside 1.220 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 4.833 s, inside 4.449 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.808 s, inside 0.420 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.095 s, inside 0.709 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.004634
+        ZKT zok.pk_deserialize 0.026001
+        ZKT bm.synthesis 0.402843
+        ZKT bm.fft 0.091252
+        ZKT bm.h_to_repr 0.001071
+        ZKT bm.msm_all 0.168594
+        ZKT bm.create_proof_total 0.261040
+        ZKT zok.self_verify 0.005982
+        ZKT cli.backend_generate_proof 0.698306
+        Proof written to 'proof.json'
+    --- verify: host 0.398 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_rsa replicate 4: constraints=27214 status=OK | host c/s/w/p/v = 1.620/4.833/0.808/1.095/0.398 | inside = 1.220/4.449/0.420/0.709/0.009
+
+[main pass 4, circuit 3/21, elapsed 01:40:05] synth_bool_100k: Synthetic boolean chain N=50000, XOR/OR chain of bits
+    --- compile: host 5.547 s, inside 5.177 s, exit code 0
+        Compiling synth_bool_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100002
+    --- setup: host 23.046 s, inside 22.655 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.180 s, inside 0.771 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.234 s, inside 1.873 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.018948
+        ZKT zok.pk_deserialize 0.164431
+        ZKT bm.synthesis 0.743626
+        ZKT bm.fft 0.333789
+        ZKT bm.h_to_repr 0.002187
+        ZKT bm.msm_all 0.590563
+        ZKT bm.create_proof_total 0.926676
+        ZKT zok.self_verify 0.005428
+        ZKT cli.backend_generate_proof 1.847907
+        Proof written to 'proof.json'
+    --- verify: host 0.378 s, inside 0.015 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_100k replicate 4: constraints=100002 status=OK | host c/s/w/p/v = 5.547/23.046/1.180/2.234/0.378 | inside = 5.177/22.655/0.771/1.873/0.015
+
+[main pass 4, circuit 4/21, elapsed 01:40:40] sha256_ecc: SHA-256 compression commitment circuit, ECC-derived input
+    --- compile: host 1.455 s, inside 1.084 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 4.084 s, inside 3.717 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.823 s, inside 0.438 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.078 s, inside 0.718 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.004536
+        ZKT zok.pk_deserialize 0.025324
+        ZKT bm.synthesis 0.402082
+        ZKT bm.fft 0.090926
+        ZKT bm.h_to_repr 0.001295
+        ZKT bm.msm_all 0.179369
+        ZKT bm.create_proof_total 0.271733
+        ZKT zok.self_verify 0.007122
+        ZKT cli.backend_generate_proof 0.708520
+        Proof written to 'proof.json'
+    --- verify: host 0.407 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_ecc replicate 4: constraints=27214 status=OK | host c/s/w/p/v = 1.455/4.084/0.823/1.078/0.407 | inside = 1.084/3.717/0.438/0.718/0.010
+
+[main pass 4, circuit 5/21, elapsed 01:40:51] synth_full_300k: Synthetic full-width chain N=300000, x=x*x+1 chain
+    --- compile: host 11.967 s, inside 11.601 s, exit code 0
+        Compiling synth_full_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300001
+    --- setup: host 70.584 s, inside 70.204 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.643 s, inside 1.286 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 11.799 s, inside 11.432 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.058936
+        ZKT zok.pk_deserialize 0.510317
+        ZKT bm.synthesis 1.283854
+        ZKT bm.fft 1.548531
+        ZKT bm.h_to_repr 0.010024
+        ZKT bm.msm_all 7.988409
+        ZKT bm.create_proof_total 9.547139
+        ZKT zok.self_verify 0.005138
+        ZKT cli.backend_generate_proof 11.364778
+        Proof written to 'proof.json'
+    --- verify: host 0.390 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_300k replicate 4: constraints=300001 status=OK | host c/s/w/p/v = 11.967/70.584/1.643/11.799/0.390 | inside = 11.601/70.204/1.286/11.432/0.009
+
+[main pass 4, circuit 6/21, elapsed 01:42:30] merkle_32: Merkle path d=32
+    --- compile: host 5.165 s, inside 4.778 s, exit code 0
+        Compiling merkle_poseidon_32.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 7842
+    --- setup: host 2.069 s, inside 1.686 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.485 s, inside 0.103 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.804 s, inside 0.407 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.001424
+        ZKT zok.pk_deserialize 0.012837
+        ZKT bm.synthesis 0.116322
+        ZKT bm.fft 0.036256
+        ZKT bm.h_to_repr 0.001495
+        ZKT bm.msm_all 0.222508
+        ZKT bm.create_proof_total 0.260418
+        ZKT zok.self_verify 0.006063
+        ZKT cli.backend_generate_proof 0.399171
+        Proof written to 'proof.json'
+    --- verify: host 0.387 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_32 replicate 4: constraints=7842 status=OK | host c/s/w/p/v = 5.165/2.069/0.485/0.804/0.387 | inside = 4.778/1.686/0.103/0.407/0.010
+
+[main pass 4, circuit 7/21, elapsed 01:42:42] poseidon_256: Poseidon chain n=256
+    --- compile: host 26.815 s, inside 26.445 s, exit code 0
+        Compiling poseidon_chain_256.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 54530
+    --- setup: host 12.981 s, inside 12.572 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.054 s, inside 0.680 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.855 s, inside 2.468 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.010282
+        ZKT zok.pk_deserialize 0.084916
+        ZKT bm.synthesis 0.766675
+        ZKT bm.fft 0.173039
+        ZKT bm.h_to_repr 0.001519
+        ZKT bm.msm_all 1.415134
+        ZKT bm.create_proof_total 1.589832
+        ZKT zok.self_verify 0.006445
+        ZKT cli.backend_generate_proof 2.451909
+        Proof written to 'proof.json'
+    --- verify: host 0.407 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_256 replicate 4: constraints=54530 status=OK | host c/s/w/p/v = 26.815/12.981/1.054/2.855/0.407 | inside = 26.445/12.572/0.680/2.468/0.009
+
+[main pass 4, circuit 8/21, elapsed 01:43:29] rsa2048real: RSA-2048 verify (real) e=65537 W=121 K=17
+    --- compile: host 23.722 s, inside 23.367 s, exit code 0
+        Compiling rsa2048_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 153484
+    --- setup: host 37.072 s, inside 36.673 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.520 s, inside 1.084 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 3.628 s, inside 3.232 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.030367
+        ZKT zok.pk_deserialize 0.267780
+        ZKT bm.synthesis 0.878076
+        ZKT bm.fft 0.712681
+        ZKT bm.h_to_repr 0.004894
+        ZKT bm.msm_all 1.310496
+        ZKT bm.create_proof_total 2.028302
+        ZKT zok.self_verify 0.007544
+        ZKT cli.backend_generate_proof 3.191999
+        Proof written to 'proof.json'
+    --- verify: host 0.423 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa2048real replicate 4: constraints=153484 status=OK | host c/s/w/p/v = 23.722/37.072/1.520/3.628/0.423 | inside = 23.367/36.673/1.084/3.232/0.011
+
+[main pass 4, circuit 9/21, elapsed 01:44:39] rsa_256_64: RSA accumulator b=256,r=64
+    --- compile: host 3.068 s, inside 2.698 s, exit code 0
+        Compiling rsa_accumulator_256_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 66945
+    --- setup: host 15.886 s, inside 15.501 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.654 s, inside 0.295 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.724 s, inside 1.337 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.012222
+        ZKT zok.pk_deserialize 0.116628
+        ZKT bm.synthesis 0.284634
+        ZKT bm.fft 0.375177
+        ZKT bm.h_to_repr 0.002899
+        ZKT bm.msm_all 0.528238
+        ZKT bm.create_proof_total 0.906456
+        ZKT zok.self_verify 0.005585
+        ZKT cli.backend_generate_proof 1.318487
+        Proof written to 'proof.json'
+    --- verify: host 0.381 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_64 replicate 4: constraints=66945 status=OK | host c/s/w/p/v = 3.068/15.886/0.654/1.724/0.381 | inside = 2.698/15.501/0.295/1.337/0.009
+
+[main pass 4, circuit 10/21, elapsed 01:45:04] rsa3072real: RSA-3072 verify (real) e=65537 W=121 K=26
+    --- compile: host 38.818 s, inside 38.436 s, exit code 0
+        Compiling rsa3072_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 244870
+    --- setup: host 53.969 s, inside 53.548 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.076 s, inside 1.706 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.982 s, inside 4.588 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.047382
+        ZKT zok.pk_deserialize 0.384928
+        ZKT bm.synthesis 1.770888
+        ZKT bm.fft 0.726914
+        ZKT bm.h_to_repr 0.004244
+        ZKT bm.msm_all 1.618005
+        ZKT bm.create_proof_total 2.349320
+        ZKT zok.self_verify 0.008929
+        ZKT cli.backend_generate_proof 4.529683
+        Proof written to 'proof.json'
+    --- verify: host 0.392 s, inside 0.012 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa3072real replicate 4: constraints=244870 status=OK | host c/s/w/p/v = 38.818/53.969/2.076/4.982/0.392 | inside = 38.436/53.548/1.706/4.588/0.012
+
+[main pass 4, circuit 11/21, elapsed 01:46:47] poseidon_1024: Poseidon chain n=1024
+    --- compile: host 146.618 s, inside 146.229 s, exit code 0
+        Compiling poseidon_chain_1024.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 218114
+    --- setup: host 50.864 s, inside 50.449 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.137 s, inside 2.761 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 10.215 s, inside 9.786 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.055840
+        ZKT zok.pk_deserialize 0.430258
+        ZKT bm.synthesis 3.219170
+        ZKT bm.fft 0.692433
+        ZKT bm.h_to_repr 0.005055
+        ZKT bm.msm_all 5.355055
+        ZKT bm.create_proof_total 6.052748
+        ZKT zok.self_verify 0.005487
+        ZKT cli.backend_generate_proof 9.721274
+        Proof written to 'proof.json'
+    --- verify: host 0.388 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_1024 replicate 4: constraints=218114 status=OK | host c/s/w/p/v = 146.618/50.864/3.137/10.215/0.388 | inside = 146.229/50.449/2.761/9.786/0.009
+
+[main pass 4, circuit 12/21, elapsed 01:50:21] poseidon_512: Poseidon chain n=512
+    --- compile: host 57.309 s, inside 56.941 s, exit code 0
+        Compiling poseidon_chain_512.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 109058
+    --- setup: host 24.544 s, inside 24.137 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.701 s, inside 1.318 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.357 s, inside 4.919 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.025855
+        ZKT zok.pk_deserialize 0.208853
+        ZKT bm.synthesis 1.548839
+        ZKT bm.fft 0.328017
+        ZKT bm.h_to_repr 0.002281
+        ZKT bm.msm_all 2.782808
+        ZKT bm.create_proof_total 3.113277
+        ZKT zok.self_verify 0.007111
+        ZKT cli.backend_generate_proof 4.885506
+        Proof written to 'proof.json'
+    --- verify: host 0.418 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_512 replicate 4: constraints=109058 status=OK | host c/s/w/p/v = 57.309/24.544/1.701/5.357/0.418 | inside = 56.941/24.137/1.318/4.919/0.010
+
+[main pass 4, circuit 13/21, elapsed 01:51:54] merkle_16: Merkle path d=16
+    --- compile: host 3.620 s, inside 3.178 s, exit code 0
+        Compiling merkle_poseidon_16.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 3922
+    --- setup: host 1.409 s, inside 1.014 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.429 s, inside 0.056 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.659 s, inside 0.238 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000749
+        ZKT zok.pk_deserialize 0.006754
+        ZKT bm.synthesis 0.061779
+        ZKT bm.fft 0.033027
+        ZKT bm.h_to_repr 0.001431
+        ZKT bm.msm_all 0.121643
+        ZKT bm.create_proof_total 0.156238
+        ZKT zok.self_verify 0.006070
+        ZKT cli.backend_generate_proof 0.232407
+        Proof written to 'proof.json'
+    --- verify: host 0.442 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_16 replicate 4: constraints=3922 status=OK | host c/s/w/p/v = 3.620/1.409/0.429/0.659/0.442 | inside = 3.178/1.014/0.056/0.238/0.011
+
+[main pass 4, circuit 14/21, elapsed 01:52:04] rsa_256_1: RSA accumulator b=256,r=1
+    --- compile: host 0.465 s, inside 0.084 s, exit code 0
+        Compiling rsa_accumulator_256_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 2559
+    --- setup: host 0.942 s, inside 0.539 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.392 s, inside 0.015 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.439 s, inside 0.073 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000383
+        ZKT zok.pk_deserialize 0.004633
+        ZKT bm.synthesis 0.011538
+        ZKT bm.fft 0.025009
+        ZKT bm.h_to_repr 0.000913
+        ZKT bm.msm_all 0.020052
+        ZKT bm.create_proof_total 0.046134
+        ZKT zok.self_verify 0.004647
+        ZKT cli.backend_generate_proof 0.068052
+        Proof written to 'proof.json'
+    --- verify: host 0.383 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_1 replicate 4: constraints=2559 status=OK | host c/s/w/p/v = 0.465/0.942/0.392/0.439/0.383 | inside = 0.084/0.539/0.015/0.073/0.009
+
+[main pass 4, circuit 15/21, elapsed 01:52:09] synth_bool_300k: Synthetic boolean chain N=150000, XOR/OR chain of bits
+    --- compile: host 16.781 s, inside 16.411 s, exit code 0
+        Compiling synth_bool_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300002
+    --- setup: host 71.533 s, inside 71.142 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.598 s, inside 2.247 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 6.588 s, inside 6.226 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.060080
+        ZKT zok.pk_deserialize 0.510437
+        ZKT bm.synthesis 2.171949
+        ZKT bm.fft 1.387118
+        ZKT bm.h_to_repr 0.009539
+        ZKT bm.msm_all 2.058369
+        ZKT bm.create_proof_total 3.455194
+        ZKT zok.self_verify 0.004867
+        ZKT cli.backend_generate_proof 6.157638
+        Proof written to 'proof.json'
+    --- verify: host 0.392 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_300k replicate 4: constraints=300002 status=OK | host c/s/w/p/v = 16.781/71.533/2.598/6.588/0.392 | inside = 16.411/71.142/2.247/6.226/0.009
+
+[main pass 4, circuit 16/21, elapsed 01:53:50] rsa1024real: RSA-1024 verify (real) e=65537 W=121 K=9
+    --- compile: host 11.463 s, inside 11.086 s, exit code 0
+        Compiling rsa1024_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 76604
+    --- setup: host 20.707 s, inside 20.316 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.131 s, inside 0.596 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.005 s, inside 1.608 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.014323
+        ZKT zok.pk_deserialize 0.134467
+        ZKT bm.synthesis 0.408042
+        ZKT bm.fft 0.363170
+        ZKT bm.h_to_repr 0.002364
+        ZKT bm.msm_all 0.665193
+        ZKT bm.create_proof_total 1.030870
+        ZKT zok.self_verify 0.007153
+        ZKT cli.backend_generate_proof 1.586732
+        Proof written to 'proof.json'
+    --- verify: host 0.389 s, inside 0.015 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa1024real replicate 4: constraints=76604 status=OK | host c/s/w/p/v = 11.463/20.707/1.131/2.005/0.389 | inside = 11.086/20.316/0.596/1.608/0.015
+
+[main pass 4, circuit 17/21, elapsed 01:54:29] rsa_1024_64: RSA accumulator b=1024,r=64
+    --- compile: host 21.618 s, inside 21.234 s, exit code 0
+        Compiling rsa_accumulator_1024_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 268161
+    --- setup: host 64.876 s, inside 64.497 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.458 s, inside 1.081 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.445 s, inside 5.081 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.051902
+        ZKT zok.pk_deserialize 0.446342
+        ZKT bm.synthesis 1.086116
+        ZKT bm.fft 1.517446
+        ZKT bm.h_to_repr 0.009720
+        ZKT bm.msm_all 1.943901
+        ZKT bm.create_proof_total 3.471246
+        ZKT zok.self_verify 0.005251
+        ZKT cli.backend_generate_proof 5.024433
+        Proof written to 'proof.json'
+    --- verify: host 0.403 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_1024_64 replicate 4: constraints=268161 status=OK | host c/s/w/p/v = 21.618/64.876/1.458/5.445/0.403 | inside = 21.234/64.497/1.081/5.081/0.009
+
+[main pass 4, circuit 18/21, elapsed 01:56:06] rsa4096real: RSA-4096 verify (real) e=65537 W=121 K=34
+    --- compile: host 54.650 s, inside 54.287 s, exit code 0
+        Compiling rsa4096_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 331848
+    --- setup: host 78.220 s, inside 77.829 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.148 s, inside 2.795 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 8.122 s, inside 7.733 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.066093
+        ZKT zok.pk_deserialize 0.529237
+        ZKT bm.synthesis 2.868091
+        ZKT bm.fft 1.475161
+        ZKT bm.h_to_repr 0.010203
+        ZKT bm.msm_all 2.741596
+        ZKT bm.create_proof_total 4.227205
+        ZKT zok.self_verify 0.009013
+        ZKT cli.backend_generate_proof 7.654582
+        Proof written to 'proof.json'
+    --- verify: host 0.399 s, inside 0.014 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa4096real replicate 4: constraints=331848 status=OK | host c/s/w/p/v = 54.650/78.220/3.148/8.122/0.399 | inside = 54.287/77.829/2.795/7.733/0.014
+
+[main pass 4, circuit 19/21, elapsed 01:58:34] synth_full_100k: Synthetic full-width chain N=100000, x=x*x+1 chain
+    --- compile: host 4.048 s, inside 3.652 s, exit code 0
+        Compiling synth_full_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100001
+    --- setup: host 22.249 s, inside 21.864 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.825 s, inside 0.437 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.030 s, inside 3.651 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.019250
+        ZKT zok.pk_deserialize 0.163254
+        ZKT bm.synthesis 0.428305
+        ZKT bm.fft 0.341031
+        ZKT bm.h_to_repr 0.002786
+        ZKT bm.msm_all 2.676801
+        ZKT bm.create_proof_total 3.020773
+        ZKT zok.self_verify 0.006058
+        ZKT cli.backend_generate_proof 3.626928
+        Proof written to 'proof.json'
+    --- verify: host 0.395 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_100k replicate 4: constraints=100001 status=OK | host c/s/w/p/v = 4.048/22.249/0.825/4.030/0.395 | inside = 3.652/21.864/0.437/3.651/0.009
+
+[main pass 4, circuit 20/21, elapsed 01:59:08] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 86.337 s, inside 85.983 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 179.829 s, inside 179.435 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 4.610 s, inside 4.208 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 13.933 s, inside 13.569 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.176970
+        ZKT zok.pk_deserialize 1.253520
+        ZKT bm.synthesis 4.228080
+        ZKT bm.fft 3.053489
+        ZKT bm.h_to_repr 0.028650
+        ZKT bm.msm_all 4.760804
+        ZKT bm.create_proof_total 7.843145
+        ZKT zok.self_verify 0.004806
+        ZKT cli.backend_generate_proof 13.363921
+        Proof written to 'proof.json'
+    --- verify: host 0.407 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 4: constraints=842212 status=OK | host c/s/w/p/v = 86.337/179.829/4.610/13.933/0.407 | inside = 85.983/179.435/4.208/13.569/0.010
+
+[main pass 4, circuit 21/21, elapsed 02:03:56] poseidon_64: Poseidon chain n=64
+    --- compile: host 7.321 s, inside 6.937 s, exit code 0
+        Compiling poseidon_chain_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 13634
+    --- setup: host 3.415 s, inside 3.032 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.554 s, inside 0.179 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.076 s, inside 0.687 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.002449
+        ZKT zok.pk_deserialize 0.022246
+        ZKT bm.synthesis 0.203356
+        ZKT bm.fft 0.064533
+        ZKT bm.h_to_repr 0.000869
+        ZKT bm.msm_all 0.378838
+        ZKT bm.create_proof_total 0.444372
+        ZKT zok.self_verify 0.006156
+        ZKT cli.backend_generate_proof 0.678304
+        Proof written to 'proof.json'
+    --- verify: host 0.387 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_64 replicate 4: constraints=13634 status=OK | host c/s/w/p/v = 7.321/3.415/0.554/1.076/0.387 | inside = 6.937/3.032/0.179/0.687/0.009
+
+================ pass 5 of 5 [main] ================
+
+[main pass 5, circuit 1/21, elapsed 02:04:18] sha256_rsa: SHA-256 compression commitment circuit, RSA-derived input
+    --- compile: host 1.429 s, inside 1.041 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 4.056 s, inside 3.725 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.794 s, inside 0.416 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.088 s, inside 0.710 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.004850
+        ZKT zok.pk_deserialize 0.026834
+        ZKT bm.synthesis 0.402171
+        ZKT bm.fft 0.094143
+        ZKT bm.h_to_repr 0.001082
+        ZKT bm.msm_all 0.166679
+        ZKT bm.create_proof_total 0.262035
+        ZKT zok.self_verify 0.005988
+        ZKT cli.backend_generate_proof 0.699220
+        Proof written to 'proof.json'
+    --- verify: host 0.387 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_rsa replicate 5: constraints=27214 status=OK | host c/s/w/p/v = 1.429/4.056/0.794/1.088/0.387 | inside = 1.041/3.725/0.416/0.710/0.011
+
+[main pass 5, circuit 2/21, elapsed 02:04:29] poseidon_64: Poseidon chain n=64
+    --- compile: host 7.208 s, inside 6.836 s, exit code 0
+        Compiling poseidon_chain_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 13634
+    --- setup: host 3.381 s, inside 2.970 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.599 s, inside 0.185 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.083 s, inside 0.691 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.002478
+        ZKT zok.pk_deserialize 0.022718
+        ZKT bm.synthesis 0.200695
+        ZKT bm.fft 0.058817
+        ZKT bm.h_to_repr 0.001168
+        ZKT bm.msm_all 0.391123
+        ZKT bm.create_proof_total 0.451240
+        ZKT zok.self_verify 0.006216
+        ZKT cli.backend_generate_proof 0.682897
+        Proof written to 'proof.json'
+    --- verify: host 0.391 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_64 replicate 5: constraints=13634 status=OK | host c/s/w/p/v = 7.208/3.381/0.599/1.083/0.391 | inside = 6.836/2.970/0.185/0.691/0.009
+
+[main pass 5, circuit 3/21, elapsed 02:04:44] rsa_256_1: RSA accumulator b=256,r=1
+    --- compile: host 0.460 s, inside 0.083 s, exit code 0
+        Compiling rsa_accumulator_256_1.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 2559
+    --- setup: host 0.951 s, inside 0.557 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.391 s, inside 0.016 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.447 s, inside 0.075 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000451
+        ZKT zok.pk_deserialize 0.005089
+        ZKT bm.synthesis 0.011409
+        ZKT bm.fft 0.027524
+        ZKT bm.h_to_repr 0.000697
+        ZKT bm.msm_all 0.019517
+        ZKT bm.create_proof_total 0.047848
+        ZKT zok.self_verify 0.004647
+        ZKT cli.backend_generate_proof 0.070842
+        Proof written to 'proof.json'
+    --- verify: host 0.382 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_1 replicate 5: constraints=2559 status=OK | host c/s/w/p/v = 0.460/0.951/0.391/0.447/0.382 | inside = 0.083/0.557/0.016/0.075/0.009
+
+[main pass 5, circuit 4/21, elapsed 02:04:50] rsa4096real: RSA-4096 verify (real) e=65537 W=121 K=34
+    --- compile: host 54.136 s, inside 53.741 s, exit code 0
+        Compiling rsa4096_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 331848
+    --- setup: host 78.595 s, inside 78.235 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.224 s, inside 2.858 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 8.184 s, inside 7.771 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.068612
+        ZKT zok.pk_deserialize 0.540751
+        ZKT bm.synthesis 2.913884
+        ZKT bm.fft 1.494819
+        ZKT bm.h_to_repr 0.010027
+        ZKT bm.msm_all 2.700289
+        ZKT bm.create_proof_total 4.205311
+        ZKT zok.self_verify 0.008862
+        ZKT cli.backend_generate_proof 7.690299
+        Proof written to 'proof.json'
+    --- verify: host 0.384 s, inside 0.017 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa4096real replicate 5: constraints=331848 status=OK | host c/s/w/p/v = 54.136/78.595/3.224/8.184/0.384 | inside = 53.741/78.235/2.858/7.771/0.017
+
+[main pass 5, circuit 5/21, elapsed 02:07:18] merkle_8: Merkle path d=8
+    --- compile: host 2.335 s, inside 1.958 s, exit code 0
+        Compiling merkle_poseidon_8.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 1962
+    --- setup: host 0.794 s, inside 0.415 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.438 s, inside 0.030 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.496 s, inside 0.131 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000300
+        ZKT zok.pk_deserialize 0.003201
+        ZKT bm.synthesis 0.030291
+        ZKT bm.fft 0.021678
+        ZKT bm.h_to_repr 0.001109
+        ZKT bm.msm_all 0.062841
+        ZKT bm.create_proof_total 0.085800
+        ZKT zok.self_verify 0.005342
+        ZKT cli.backend_generate_proof 0.125825
+        Proof written to 'proof.json'
+    --- verify: host 0.384 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_8 replicate 5: constraints=1962 status=OK | host c/s/w/p/v = 2.335/0.794/0.438/0.496/0.384 | inside = 1.958/0.415/0.030/0.131/0.009
+
+[main pass 5, circuit 6/21, elapsed 02:07:25] rsa_256_64: RSA accumulator b=256,r=64
+    --- compile: host 3.006 s, inside 2.628 s, exit code 0
+        Compiling rsa_accumulator_256_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 66945
+    --- setup: host 15.743 s, inside 15.359 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.678 s, inside 0.277 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.665 s, inside 1.294 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.012384
+        ZKT zok.pk_deserialize 0.115901
+        ZKT bm.synthesis 0.261055
+        ZKT bm.fft 0.355866
+        ZKT bm.h_to_repr 0.002579
+        ZKT bm.msm_all 0.528796
+        ZKT bm.create_proof_total 0.887380
+        ZKT zok.self_verify 0.005604
+        ZKT cli.backend_generate_proof 1.275720
+        Proof written to 'proof.json'
+    --- verify: host 0.388 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_256_64 replicate 5: constraints=66945 status=OK | host c/s/w/p/v = 3.006/15.743/0.678/1.665/0.388 | inside = 2.628/15.359/0.277/1.294/0.009
+
+[main pass 5, circuit 7/21, elapsed 02:07:49] poseidon_1024: Poseidon chain n=1024
+    --- compile: host 144.344 s, inside 143.964 s, exit code 0
+        Compiling poseidon_chain_1024.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 218114
+    --- setup: host 50.638 s, inside 50.234 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 3.041 s, inside 2.651 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 10.595 s, inside 10.223 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.046154
+        ZKT zok.pk_deserialize 0.331871
+        ZKT bm.synthesis 3.413434
+        ZKT bm.fft 0.814092
+        ZKT bm.h_to_repr 0.006283
+        ZKT bm.msm_all 5.581991
+        ZKT bm.create_proof_total 6.402540
+        ZKT zok.self_verify 0.006055
+        ZKT cli.backend_generate_proof 10.167167
+        Proof written to 'proof.json'
+    --- verify: host 0.397 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_1024 replicate 5: constraints=218114 status=OK | host c/s/w/p/v = 144.344/50.638/3.041/10.595/0.397 | inside = 143.964/50.234/2.651/10.223/0.010
+
+[main pass 5, circuit 8/21, elapsed 02:11:22] synth_full_300k: Synthetic full-width chain N=300000, x=x*x+1 chain
+    --- compile: host 11.711 s, inside 11.329 s, exit code 0
+        Compiling synth_full_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300001
+    --- setup: host 71.290 s, inside 70.910 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.697 s, inside 1.297 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 11.842 s, inside 11.437 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.061180
+        ZKT zok.pk_deserialize 0.508871
+        ZKT bm.synthesis 1.339088
+        ZKT bm.fft 1.471235
+        ZKT bm.h_to_repr 0.009158
+        ZKT bm.msm_all 8.011973
+        ZKT bm.create_proof_total 9.492536
+        ZKT zok.self_verify 0.005773
+        ZKT cli.backend_generate_proof 11.366717
+        Proof written to 'proof.json'
+    --- verify: host 0.380 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_300k replicate 5: constraints=300001 status=OK | host c/s/w/p/v = 11.711/71.290/1.697/11.842/0.380 | inside = 11.329/70.910/1.297/11.437/0.009
+
+[main pass 5, circuit 9/21, elapsed 02:13:02] synth_bool_100k: Synthetic boolean chain N=50000, XOR/OR chain of bits
+    --- compile: host 5.493 s, inside 5.114 s, exit code 0
+        Compiling synth_bool_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100002
+    --- setup: host 22.629 s, inside 22.258 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.162 s, inside 0.788 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.238 s, inside 1.868 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.018938
+        ZKT zok.pk_deserialize 0.161869
+        ZKT bm.synthesis 0.733058
+        ZKT bm.fft 0.339701
+        ZKT bm.h_to_repr 0.002226
+        ZKT bm.msm_all 0.596337
+        ZKT bm.create_proof_total 0.938392
+        ZKT zok.self_verify 0.005297
+        ZKT cli.backend_generate_proof 1.845046
+        Proof written to 'proof.json'
+    --- verify: host 0.386 s, inside 0.014 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_100k replicate 5: constraints=100002 status=OK | host c/s/w/p/v = 5.493/22.629/1.162/2.238/0.386 | inside = 5.114/22.258/0.788/1.868/0.014
+
+[main pass 5, circuit 10/21, elapsed 02:13:37] synth_full_100k: Synthetic full-width chain N=100000, x=x*x+1 chain
+    --- compile: host 4.027 s, inside 3.670 s, exit code 0
+        Compiling synth_full_100k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 100001
+    --- setup: host 22.223 s, inside 21.832 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.822 s, inside 0.448 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.013 s, inside 3.632 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.018798
+        ZKT zok.pk_deserialize 0.164310
+        ZKT bm.synthesis 0.425339
+        ZKT bm.fft 0.354145
+        ZKT bm.h_to_repr 0.002407
+        ZKT bm.msm_all 2.644522
+        ZKT bm.create_proof_total 3.001226
+        ZKT zok.self_verify 0.006321
+        ZKT cli.backend_generate_proof 3.606476
+        Proof written to 'proof.json'
+    --- verify: host 0.390 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_full_100k replicate 5: constraints=100001 status=OK | host c/s/w/p/v = 4.027/22.223/0.822/4.013/0.390 | inside = 3.670/21.832/0.448/3.632/0.009
+
+[main pass 5, circuit 11/21, elapsed 02:14:11] sha256_ecc: SHA-256 compression commitment circuit, ECC-derived input
+    --- compile: host 1.438 s, inside 1.065 s, exit code 0
+        Compiling sha256_hash_circuit.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 27214
+    --- setup: host 4.044 s, inside 3.678 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.821 s, inside 0.412 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.099 s, inside 0.721 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.004555
+        ZKT zok.pk_deserialize 0.025134
+        ZKT bm.synthesis 0.413961
+        ZKT bm.fft 0.094562
+        ZKT bm.h_to_repr 0.001219
+        ZKT bm.msm_all 0.168450
+        ZKT bm.create_proof_total 0.264366
+        ZKT zok.self_verify 0.005900
+        ZKT cli.backend_generate_proof 0.711459
+        Proof written to 'proof.json'
+    --- verify: host 0.361 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> sha256_ecc replicate 5: constraints=27214 status=OK | host c/s/w/p/v = 1.438/4.044/0.821/1.099/0.361 | inside = 1.065/3.678/0.412/0.721/0.009
+
+[main pass 5, circuit 12/21, elapsed 02:14:22] ecdsa_secp256k1: ECDSA secp256k1 verify (real) 5 limbs of 60 bits, 2-bit Strauss-Shamir
+    --- compile: host 85.776 s, inside 85.381 s, exit code 0
+        Compiling ecdsa_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 842212
+    --- setup: host 181.124 s, inside 180.708 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 4.580 s, inside 4.177 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 14.230 s, inside 13.862 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.158722
+        ZKT zok.pk_deserialize 1.240658
+        ZKT bm.synthesis 4.291272
+        ZKT bm.fft 3.216379
+        ZKT bm.h_to_repr 0.030676
+        ZKT bm.msm_all 4.857606
+        ZKT bm.create_proof_total 8.104836
+        ZKT zok.self_verify 0.005015
+        ZKT cli.backend_generate_proof 13.679336
+        Proof written to 'proof.json'
+    --- verify: host 0.375 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> ecdsa_secp256k1 replicate 5: constraints=842212 status=OK | host c/s/w/p/v = 85.776/181.124/4.580/14.230/0.375 | inside = 85.381/180.708/4.177/13.862/0.011
+
+[main pass 5, circuit 13/21, elapsed 02:19:11] rsa3072real: RSA-3072 verify (real) e=65537 W=121 K=26
+    --- compile: host 37.212 s, inside 36.821 s, exit code 0
+        Compiling rsa3072_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 244870
+    --- setup: host 54.195 s, inside 53.866 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.106 s, inside 1.740 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 4.921 s, inside 4.531 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.047297
+        ZKT zok.pk_deserialize 0.359429
+        ZKT bm.synthesis 1.812177
+        ZKT bm.fft 0.692246
+        ZKT bm.h_to_repr 0.004616
+        ZKT bm.msm_all 1.580875
+        ZKT bm.create_proof_total 2.277886
+        ZKT zok.self_verify 0.008207
+        ZKT cli.backend_generate_proof 4.472910
+        Proof written to 'proof.json'
+    --- verify: host 0.397 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa3072real replicate 5: constraints=244870 status=OK | host c/s/w/p/v = 37.212/54.195/2.106/4.921/0.397 | inside = 36.821/53.866/1.740/4.531/0.011
+
+[main pass 5, circuit 14/21, elapsed 02:20:53] merkle_32: Merkle path d=32
+    --- compile: host 5.109 s, inside 4.748 s, exit code 0
+        Compiling merkle_poseidon_32.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 7842
+    --- setup: host 2.374 s, inside 1.973 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.567 s, inside 0.126 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.799 s, inside 0.416 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.001331
+        ZKT zok.pk_deserialize 0.012471
+        ZKT bm.synthesis 0.117353
+        ZKT bm.fft 0.039272
+        ZKT bm.h_to_repr 0.000983
+        ZKT bm.msm_all 0.224091
+        ZKT bm.create_proof_total 0.264647
+        ZKT zok.self_verify 0.005967
+        ZKT cli.backend_generate_proof 0.401907
+        Proof written to 'proof.json'
+    --- verify: host 0.447 s, inside 0.011 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_32 replicate 5: constraints=7842 status=OK | host c/s/w/p/v = 5.109/2.374/0.567/0.799/0.447 | inside = 4.748/1.973/0.126/0.416/0.011
+
+[main pass 5, circuit 15/21, elapsed 02:21:05] synth_bool_300k: Synthetic boolean chain N=150000, XOR/OR chain of bits
+    --- compile: host 16.773 s, inside 16.403 s, exit code 0
+        Compiling synth_bool_300k.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 300002
+    --- setup: host 70.703 s, inside 70.338 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 2.614 s, inside 2.246 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 6.548 s, inside 6.187 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.057763
+        ZKT zok.pk_deserialize 0.494664
+        ZKT bm.synthesis 2.176273
+        ZKT bm.fft 1.413788
+        ZKT bm.h_to_repr 0.010413
+        ZKT bm.msm_all 2.003729
+        ZKT bm.create_proof_total 3.428113
+        ZKT zok.self_verify 0.004993
+        ZKT cli.backend_generate_proof 6.121150
+        Proof written to 'proof.json'
+    --- verify: host 0.412 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> synth_bool_300k replicate 5: constraints=300002 status=OK | host c/s/w/p/v = 16.773/70.703/2.614/6.548/0.412 | inside = 16.403/70.338/2.246/6.187/0.009
+
+[main pass 5, circuit 16/21, elapsed 02:22:45] poseidon_256: Poseidon chain n=256
+    --- compile: host 26.364 s, inside 26.010 s, exit code 0
+        Compiling poseidon_chain_256.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 54530
+    --- setup: host 12.657 s, inside 12.284 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.079 s, inside 0.687 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 2.865 s, inside 2.475 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.010411
+        ZKT zok.pk_deserialize 0.084398
+        ZKT bm.synthesis 0.780868
+        ZKT bm.fft 0.173675
+        ZKT bm.h_to_repr 0.001689
+        ZKT bm.msm_all 1.406746
+        ZKT bm.create_proof_total 1.582251
+        ZKT zok.self_verify 0.006469
+        ZKT cli.backend_generate_proof 2.457997
+        Proof written to 'proof.json'
+    --- verify: host 0.410 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_256 replicate 5: constraints=54530 status=OK | host c/s/w/p/v = 26.364/12.657/1.079/2.865/0.410 | inside = 26.010/12.284/0.687/2.475/0.010
+
+[main pass 5, circuit 17/21, elapsed 02:23:32] rsa2048real: RSA-2048 verify (real) e=65537 W=121 K=17
+    --- compile: host 22.973 s, inside 22.596 s, exit code 0
+        Compiling rsa2048_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 153484
+    --- setup: host 35.642 s, inside 35.264 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.303 s, inside 0.922 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 3.625 s, inside 3.256 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.029009
+        ZKT zok.pk_deserialize 0.269040
+        ZKT bm.synthesis 0.912947
+        ZKT bm.fft 0.767842
+        ZKT bm.h_to_repr 0.005885
+        ZKT bm.msm_all 1.243600
+        ZKT bm.create_proof_total 2.017524
+        ZKT zok.self_verify 0.007657
+        ZKT cli.backend_generate_proof 3.218473
+        Proof written to 'proof.json'
+    --- verify: host 0.383 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa2048real replicate 5: constraints=153484 status=OK | host c/s/w/p/v = 22.973/35.642/1.303/3.625/0.383 | inside = 22.596/35.264/0.922/3.256/0.010
+
+[main pass 5, circuit 18/21, elapsed 02:24:39] merkle_16: Merkle path d=16
+    --- compile: host 3.308 s, inside 2.906 s, exit code 0
+        Compiling merkle_poseidon_16.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 3922
+    --- setup: host 1.219 s, inside 0.822 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.432 s, inside 0.055 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 0.593 s, inside 0.220 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.000625
+        ZKT zok.pk_deserialize 0.006454
+        ZKT bm.synthesis 0.057655
+        ZKT bm.fft 0.025083
+        ZKT bm.h_to_repr 0.000914
+        ZKT bm.msm_all 0.116857
+        ZKT bm.create_proof_total 0.142980
+        ZKT zok.self_verify 0.005669
+        ZKT cli.backend_generate_proof 0.213989
+        Proof written to 'proof.json'
+    --- verify: host 0.371 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> merkle_16 replicate 5: constraints=3922 status=OK | host c/s/w/p/v = 3.308/1.219/0.432/0.593/0.371 | inside = 2.906/0.822/0.055/0.220/0.009
+
+[main pass 5, circuit 19/21, elapsed 02:24:48] rsa_1024_64: RSA accumulator b=1024,r=64
+    --- compile: host 19.474 s, inside 19.040 s, exit code 0
+        Compiling rsa_accumulator_1024_64.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 268161
+    --- setup: host 62.017 s, inside 61.676 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.450 s, inside 1.074 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.485 s, inside 5.127 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.053330
+        ZKT zok.pk_deserialize 0.471764
+        ZKT bm.synthesis 1.095197
+        ZKT bm.fft 1.494847
+        ZKT bm.h_to_repr 0.009157
+        ZKT bm.msm_all 1.973648
+        ZKT bm.create_proof_total 3.477816
+        ZKT zok.self_verify 0.005021
+        ZKT cli.backend_generate_proof 5.066131
+        Proof written to 'proof.json'
+    --- verify: host 0.398 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa_1024_64 replicate 5: constraints=268161 status=OK | host c/s/w/p/v = 19.474/62.017/1.450/5.485/0.398 | inside = 19.040/61.676/1.074/5.127/0.009
+
+[main pass 5, circuit 20/21, elapsed 02:26:19] poseidon_512: Poseidon chain n=512
+    --- compile: host 60.352 s, inside 59.965 s, exit code 0
+        Compiling poseidon_chain_512.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 109058
+    --- setup: host 24.821 s, inside 24.433 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 1.683 s, inside 1.321 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 5.220 s, inside 4.845 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.020375
+        ZKT zok.pk_deserialize 0.169083
+        ZKT bm.synthesis 1.570031
+        ZKT bm.fft 0.326382
+        ZKT bm.h_to_repr 0.004266
+        ZKT bm.msm_all 2.728659
+        ZKT bm.create_proof_total 3.062762
+        ZKT zok.self_verify 0.006277
+        ZKT cli.backend_generate_proof 4.816735
+        Proof written to 'proof.json'
+    --- verify: host 0.419 s, inside 0.009 s, exit code 0
+        Performing verification...
+        PASSED
+>>> poseidon_512 replicate 5: constraints=109058 status=OK | host c/s/w/p/v = 60.352/24.821/1.683/5.220/0.419 | inside = 59.965/24.433/1.321/4.845/0.009
+
+[main pass 5, circuit 21/21, elapsed 02:27:55] rsa1024real: RSA-1024 verify (real) e=65537 W=121 K=9
+    --- compile: host 11.315 s, inside 10.939 s, exit code 0
+        Compiling rsa1024_verify.zok
+        
+        Compiled code written to 'out'
+        Number of constraints: 76604
+    --- setup: host 17.820 s, inside 17.496 s, exit code 0
+        Performing setup...
+        Verification key written to 'verification.key'
+        Proving key written to 'proving.key'
+        Setup completed
+    --- witness: host 0.806 s, inside 0.417 s, exit code 0
+        Computing witness...
+        Witness file written to 'witness'
+    --- proof: host 1.973 s, inside 1.604 s, exit code 0
+        Generating proof...
+        ZKT cli.witness_read 0.013989
+        ZKT zok.pk_deserialize 0.132745
+        ZKT bm.synthesis 0.399913
+        ZKT bm.fft 0.345037
+        ZKT bm.h_to_repr 0.002509
+        ZKT bm.msm_all 0.688892
+        ZKT bm.create_proof_total 1.036585
+        ZKT zok.self_verify 0.007218
+        ZKT cli.backend_generate_proof 1.582719
+        Proof written to 'proof.json'
+    --- verify: host 0.388 s, inside 0.010 s, exit code 0
+        Performing verification...
+        PASSED
+>>> rsa1024real replicate 5: constraints=76604 status=OK | host c/s/w/p/v = 11.315/17.820/0.806/1.973/0.388 | inside = 10.939/17.496/0.417/1.604/0.010
+
+================ finished 2026-11-17T07:10:13Z ================
+phases_bellman_20261117_100553/results.csv: 126 rows OK, 0 rows with a problem
+circuit            reps   proof_s | front-end evaluation    FFT    MSM    I/O |  covered
+sha256_rsa            5     0.725 |     57.1%       0.0%  13.3%  23.5%   4.3% |    98.9%
+rsa_1024_64           5     5.120 |     21.4%       0.0%  29.2%  38.5%   9.8% |    99.6%
+synth_bool_100k       5     1.873 |     39.2%       0.0%  18.2%  31.6%   9.8% |    99.3%
+ecdsa_secp256k1       5    13.862 |     31.0%       0.0%  22.9%  35.1%  10.5% |    99.6%
+synth_full_100k       5     3.671 |     11.7%       0.0%   9.8%  72.9%   5.0% |    99.6%
+poseidon_256          5     2.469 |     31.3%       0.0%   7.0%  56.8%   3.9% |    99.6%
+rsa_256_1             5     0.081 |     14.4%       0.0%  34.8%  25.5%   6.9% |    92.0%
+rsa1024real           5     1.567 |     25.4%       0.0%  22.6%  41.4%   9.3% |    99.2%
+synth_bool_300k       5     6.245 |     34.9%       0.0%  22.7%  32.6%   9.2% |    99.6%
+merkle_8              5     0.131 |     22.6%       0.0%  16.3%  49.5%   2.7% |    95.3%
+merkle_32             5     0.407 |     28.6%       0.0%   9.3%  54.7%   3.5% |    98.2%
+sha256_ecc            5     0.721 |     56.4%       0.0%  13.1%  23.4%   4.1% |    99.0%
+rsa2048real           5     3.231 |     28.0%       0.0%  22.5%  38.6%   9.2% |    99.4%
+rsa3072real           5     4.588 |     39.0%       0.0%  15.4%  34.9%   9.5% |    99.4%
+rsa_256_64            5     1.303 |     21.3%       0.0%  27.4%  40.0%   9.9% |    99.1%
+poseidon_512          5     4.919 |     32.0%       0.0%   7.1%  56.4%   3.9% |    99.7%
+synth_full_300k       5    11.432 |     11.7%       0.0%  13.1%  69.9%   5.1% |    99.8%
+poseidon_64           5     0.686 |     29.6%       0.0%   8.9%  56.0%   3.6% |    98.9%
+merkle_16             5     0.223 |     26.0%       0.0%  12.2%  53.1%   3.2% |    97.2%
+rsa4096real           5     7.771 |     37.7%       0.0%  19.0%  34.9%   7.7% |    99.6%
+poseidon_1024         5     9.597 |     32.9%       0.0%   7.3%  55.0%   3.9% |    99.8%
+rows written to phases_bellman_20261117_100553\phases.csv
+Send back the whole folder phases_bellman_20261117_100553 (right-click it > Compress to ZIP file, then attach the zip).

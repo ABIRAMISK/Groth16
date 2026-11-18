@@ -1,0 +1,1 @@
+# power events at the end (2026-11-17T16:28:30Z); Id 42 = went to sleep, 107 = woke up

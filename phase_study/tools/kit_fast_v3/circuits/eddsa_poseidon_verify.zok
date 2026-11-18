@@ -1,0 +1,22 @@
+import "hashes/poseidon/poseidon" as poseidon;
+import "ecc/edwardsScalarMult" as scalarMult;
+import "ecc/edwardsAdd" as add;
+import "utils/pack/bool/nonStrictUnpack256" as unpack256bool;
+import "ecc/edwardsOnCurve" as onCurve;
+import "ecc/edwardsOrderCheck" as orderCheck;
+import "ecc/babyjubjubParams" as params;
+from "ecc/babyjubjubParams" import BabyJubJubParams;
+def main(private field[2] R, private field S, field[2] A, field[2] M) -> bool {
+    BabyJubJubParams ctx = params();
+    field[2] G = [ctx.Gu, ctx.Gv];
+    assert(onCurve(R, ctx));
+    assert(orderCheck(R, ctx));
+    bool[256] hRAM = unpack256bool(poseidon([R[0], R[1], A[0], A[1], M[0], M[1]]));
+    bool[256] sBits = unpack256bool(S);
+    field[2] lhs = scalarMult(sBits, G, ctx);
+    field[2] AhRAM = scalarMult(hRAM, A, ctx);
+    field[2] rhs = add(R, AhRAM, ctx);
+    bool ok = rhs[0] == lhs[0] && rhs[1] == lhs[1];
+    assert(ok);
+    return ok;
+}

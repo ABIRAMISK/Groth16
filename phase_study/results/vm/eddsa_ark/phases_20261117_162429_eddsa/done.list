@@ -1,0 +1,12 @@
+eddsa_sha256 0
+eddsa_poseidon 0
+eddsa_poseidon 1
+eddsa_sha256 1
+eddsa_sha256 2
+eddsa_poseidon 2
+eddsa_sha256 3
+eddsa_poseidon 3
+eddsa_sha256 4
+eddsa_poseidon 4
+eddsa_sha256 5
+eddsa_poseidon 5

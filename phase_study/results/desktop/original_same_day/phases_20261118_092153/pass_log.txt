@@ -1,0 +1,12 @@
+pass 0 (main) start 2026-11-18T03:55:30Z  battery_status(2=AC)=  cpu_clock_mhz=2904  host_free_gb=19.0  c_free_gb=19.0
+pass 0 (main) end   2026-11-18T04:04:20Z  battery_status(2=AC)=  cpu_clock_mhz=2904  host_free_gb=19.1  c_free_gb=19.1
+pass 1 (main) start 2026-11-18T04:04:22Z  battery_status(2=AC)=  cpu_clock_mhz=2904  host_free_gb=19.1  c_free_gb=19.1
+pass 1 (main) end   2026-11-18T04:13:23Z  battery_status(2=AC)=  cpu_clock_mhz=2904  host_free_gb=19.1  c_free_gb=19.1
+pass 2 (main) start 2026-11-18T04:13:25Z  battery_status(2=AC)=  cpu_clock_mhz=2904  host_free_gb=19.1  c_free_gb=19.1
+pass 2 (main) end   2026-11-18T04:22:11Z  battery_status(2=AC)=  cpu_clock_mhz=2904  host_free_gb=19.1  c_free_gb=19.1
+pass 3 (main) start 2026-11-18T04:22:13Z  battery_status(2=AC)=  cpu_clock_mhz=2904  host_free_gb=19.1  c_free_gb=19.1
+pass 3 (main) end   2026-11-18T04:30:59Z  battery_status(2=AC)=  cpu_clock_mhz=2904  host_free_gb=19.1  c_free_gb=19.1
+pass 4 (main) start 2026-11-18T04:31:01Z  battery_status(2=AC)=  cpu_clock_mhz=2904  host_free_gb=19.1  c_free_gb=19.1
+pass 4 (main) end   2026-11-18T04:39:48Z  battery_status(2=AC)=  cpu_clock_mhz=2904  host_free_gb=19.1  c_free_gb=19.1
+pass 5 (main) start 2026-11-18T04:39:50Z  battery_status(2=AC)=  cpu_clock_mhz=2904  host_free_gb=19.1  c_free_gb=19.1
+pass 5 (main) end   2026-11-18T04:48:34Z  battery_status(2=AC)=  cpu_clock_mhz=2904  host_free_gb=19.1  c_free_gb=19.1
